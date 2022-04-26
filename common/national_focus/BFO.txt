@@ -1,0 +1,49 @@
+focus_tree = {
+	id = BFO_FT
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = BFO
+        }
+	}
+
+	default = yes
+	reset_on_civil_war = yes
+ 
+    initial_show_position = {
+        focus = BFO_Start
+    }
+
+    focus = {
+        id = BFO_Start
+        icon = BFO_Start_GFX
+    
+        cost = 3
+    
+        x = 0
+        y = 0
+    
+        
+        available_if_capitulated = yes
+        cancel_if_invalid = yes
+    
+        select_effect = {
+            <command>
+        }
+        
+        completion_reward = {
+            <effect>
+        }
+        
+        complete_tooltip = {
+            <effect>
+        }
+    }
+}
+
+
+
+
