@@ -41,11 +41,80 @@ focus_tree = {
 	}
 
 	focus = {
+		id = BFO_revolt
+		icon = GFX_goal_support_fascism
+
+		cost = 0
+
+		x = 8
+		y = 0
+
+		#available = { has_idea = BFO_idea_revolt }
+		search_filters = { FOCUS_FILTER_POLITICAL}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+
+			load_oob = "BFO_rebels_army"
+
+			set_division_template_lock = {
+				division_template = BFO_REB_TEMP
+				is_locked = yes
+			}
+
+			declare_war_on = {
+				target = AUS
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = BFO_is_winner
+		icon = GFX_goal_support_fascism
+
+		cost = 0
+
+		prerequisite = { focus = BFO_revolt}
+		relative_position_id = BFO_revolt
+
+		x = 0
+		y = 1
+
+		#available = { has_idea = BFO_idea_revolt }
+		search_filters = { FOCUS_FILTER_POLITICAL}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+
+			load_oob = "BFO_rebels_army"
+			
+			set_division_template_lock = {
+				division_template = BFO_REB_TEMP
+				is_locked = yes
+			}
+
+			declare_war_on = {
+				target = AUS
+				type = annex_everything
+			}
+		}
+	}
+
+
+	focus = {
 		id = BFO_military_revolt
 		icon = GFX_goal_generic_build_navy
 
-		cost = 2
+		cost = 0
 
+		available = { has_war = no }
 		prerequisite = { focus = BFO_the_rise_of_bezbab }
 		relative_position_id = BFO_the_rise_of_bezbab
 

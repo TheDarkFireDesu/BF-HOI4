@@ -2,9 +2,14 @@
 
   BFO_egor: "Егорн фон Журавлефф"
   BFO_egor_desc: ""
+  BFO_david: "Евгения фон Гогенлоэ"
+  BFO_david_desc: ""
+  BFO_agarkoff: "Алина Агаркофф"
+  BFO_agarkoff_desc: ""
   BFO_nikitus: "Никитий Сильваний"
   BFO_nikitus_desc: ""
 
+  BFO_kusya: "Кузя"
   BFO_kirill: "Кирилл фон Гогенлоэ"
   BFO_ruslan: "Руслант фон Шевчукович"
   BFO_sanya_k: "Александр фон Косовштейн-Люксембург"
@@ -23,6 +28,4 @@
   BFO_karas: "Владимир Витцлебен"
   BFO_coshalot: "Владислав Мольтке"
 
-  BFO_david: "Евгения фон Гогенлоэ"
   BFO_sovec: "Алёния Розенкрантц"
-  BFO_agarkoff: "Алина Агаркофф"

@@ -324,7 +324,7 @@ ideas = {
 			removal_cost = -1
 		}
 
-		BFO_start_the_game = {
+		BFO_idea_revolt = {
 			allowed = { always = no }
 			removal_cost = -1
 		}

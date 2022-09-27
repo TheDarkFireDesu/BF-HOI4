@@ -31,6 +31,8 @@ AUS_to_BFO_category = {
 				
 				set_cosmetic_tag = VTE
 
+				add_ideas = BFO_idea_revolt
+
 				transfer_state = 153
 				add_state_core = 153
 				change_tag_from = AUS

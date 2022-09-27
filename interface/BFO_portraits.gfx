@@ -18,7 +18,81 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = GFX_ruslan_fieldmarshal
+		texturefile = gfx/leaders/BFO/GFX_ruslan.dds
+	}
+
+	spriteType = {
+		name = GFX_sanya_k_fieldmarshal
+		texturefile = gfx/leaders/BFO/GFX_sanya_k.dds
+	}
+
+	spriteType = {
+		name = GFX_artem_n_fieldmarshal
+		texturefile = gfx/leaders/BFO/GFX_artem_n.dds
+	}
+
+	spriteType = {
 		name = GFX_artem_fieldmarshal
 		texturefile = gfx/leaders/BFO/GFX_artem.dds
+	}
+
+	# GENERAL
+	spriteType = {
+		name = GFX_sanya_b_general
+		texturefile = gfx/leaders/BFO/GFX_sanya_b.dds
+	}
+
+	spriteType = {
+		name = GFX_misha_general
+		texturefile = gfx/leaders/BFO/GFX_misha.dds
+	}
+
+	spriteType = {
+		name = GFX_nekit_general
+		texturefile = gfx/leaders/BFO/GFX_nekit.dds 
+	}
+
+	# NIKITA
+
+	spriteType = {
+		name = GFX_timur_general
+		texturefile = gfx/leaders/BFO/GFX_timur.dds 
+	}
+
+	spriteType = {
+		name = GFX_vladik_general
+		texturefile = gfx/leaders/BFO/GFX_vladik.dds
+	}
+
+	# ADMIRAL
+	spriteType = {
+		name = GFX_donel_admiral
+		texturefile = gfx/leaders/BFO/GFX_donel.dds
+	}
+
+	spriteType = {
+		name = GFX_ksuha_admiral
+		texturefile = gfx/leaders/BFO/GFX_ksuha.dds
+	}
+
+	# KARAS
+
+	# COSHALOT
+
+	# ADVISOR
+	spriteType = {
+		name = GFX_jenya_advisor
+		texturefile = gfx/leaders/BFO/GFX_jenya.dds
+	}
+
+	spriteType = {
+		name = GFX_alena_advisor
+		texturefile = gfx/leaders/BFO/GFX_alena.dds
+	}
+
+	spriteType = {
+		name = GFX_alina_advisor
+		texturefile = gfx/leaders/BFO/GFX_alina.dds
 	}
 }

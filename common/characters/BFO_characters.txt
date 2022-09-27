@@ -47,6 +47,54 @@ characters = {
 		}
 	}
 
+		# ALINA
+	BFO_agarkoff = {
+		name = BFO_agarkoff
+		gender = female
+		portraits = {
+			civilian = {
+				large = GFX_alina_advisor
+				small = GFX_idea_agarkoff # WIP
+			}
+		}
+
+		country_leader = {
+			ideology = liberalism
+			traits = {great_architect dislikes_germany} 
+			desc = BFO_alina_desc
+		}
+		advisor = {
+			available = { has_completed_focus = BFO_administrative_reform }
+			slot = political_advisor
+			idea_token = agarkoff # WIP
+			traits = {fortification_engineer}
+		}
+	}
+
+		# JENUA
+	BFO_david = {
+		name = BFO_david
+		gender = female
+		portraits = {
+			civilian = {
+				large = GFX_jenya_advisor
+				small = GFX_idea_david # WIP
+			}
+		}
+		
+		country_leader = {
+			ideology = despotism
+			traits = {great_architect dislikes_germany} 
+			desc = BFO_david_desc
+		}
+		advisor = {
+			available = { has_completed_focus = BFO_administrative_reform }
+			slot = political_advisor
+			idea_token = david # WIP
+			traits = {first_lady industry_reformer captain_of_industry}
+		}
+	}
+
 	# NIKITKA SIL
 	BFO_nikitus = {
 		name = BFO_nikitus
@@ -61,7 +109,7 @@ characters = {
 		}
 
 		country_leader = {
-			ideology = centrism
+			ideology = anarchist_communism
 			traits = {} 
 			desc = BFO_nikitus_desc
 		}
@@ -71,6 +119,25 @@ characters = {
 	# FIELDMARSHAL
 	# FIELDMARSHAL
 
+	BFO_kusya = {
+		name = BFO_kusya
+		portraits = {
+			army = {
+				large = GFX_kusya_fieldmarshal
+			}
+		}
+		field_marshal = {
+			#visible = { has_completed_focus = BFO_create_headquarters }
+
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			traits = {trait_cautious armor_officer war_hero trickster panzer_expert skirmisher commando}
+		}
+	}
+
 	# KERIL FON TANKDROCHER - 50%
 	BFO_kirill = {
 		name = BFO_kirill
@@ -79,7 +146,7 @@ characters = {
 				small = GFX_idea_kirill # WIP
 			}
 			army = {
-				large = GFX_kusya_fieldmarshal # WIP
+				large = GFX_keril_fieldmarshal
 				small = GFX_idea_kirill # WIP
 			}
 		}
@@ -89,7 +156,7 @@ characters = {
 			skill = 5
 			attack_skill = 5
 			defense_skill = 4
-			planning_skill = 5
+			planning_skill = 4
 			logistics_skill = 5
 			traits = {trait_cautious armor_officer war_hero trickster panzer_expert skirmisher commando}
 		}
@@ -111,7 +178,7 @@ characters = {
 				small = GFX_idea_ruslan # WIP
 			}
 			army = {
-				large = GFX_portrait_BFO_ruslan # WIP
+				large = GFX_ruslan_fieldmarshal
 				small = GFX_idea_ruslan # WIP
 			}
 		}
@@ -144,7 +211,7 @@ characters = {
 				small = GFX_idea_sanya_k # WIP
 			}
 			army = {
-				large = GFX_portrait_BFO_sanya_k # WIP
+				large = GFX_sanya_k_fieldmarshal
 				small = GFX_idea_sanya_k
 			}
 		}
@@ -177,7 +244,7 @@ characters = {
 				small = GFX_idea_artem_n # WIP
 			}
 			army = {
-				large = GFX_portrait_BFO_artem_n # WIP
+				large = GFX_artem_n_fieldmarshal
 				small = GFX_idea_artem_n # WIP
 			}
 		}
@@ -246,7 +313,7 @@ characters = {
 				small = GFX_idea_sanya_b # WIP
 			}
 			army = {
-				large = GFX_portrait_BFO_sanya_b # WIP
+				large = GFX_sanya_b_general
 				small = GFX_idea_sanya_b # WIP
 			}
 		}
@@ -277,7 +344,7 @@ characters = {
 				small = GFX_idea_misha # WIP
 			}
 			army = {
-				large = GFX_portrait_BFO_misha # WIP
+				large = GFX_misha_general
 				small = GFX_idea_misha # WIP
 			}
 		}
@@ -308,7 +375,7 @@ characters = {
 				small = GFX_idea_nekit # WIP
 			}
 			army = {
-				large = GFX_portrait_BFO_nekit # WIP
+				large = GFX_nekit_general
 				small = GFX_idea_nekit # WIP
 			}
 		}
@@ -370,7 +437,7 @@ characters = {
 				small = GFX_idea_timur # WIP
 			}
 			army = {
-				large = GFX_portrait_BFO_timur # WIP
+				large = GFX_timur_general
 				small = GFX_idea_timur # WIP
 			}
 		}
@@ -424,7 +491,7 @@ characters = {
 				small = GFX_idea_donel # WIP
 			}
 			army = {
-				large = GFX_portrait_BFO_donel # WIP
+				large = GFX_donel_admiral
 				small = GFX_idea_donel # WIP
 			}
 		}
@@ -456,7 +523,7 @@ characters = {
 				small = GFX_idea_ksuha # WIP
 			}
 			army = {
-				large = GFX_portrait_BFO_ksuha # WIP
+				large = GFX_ksuha_admiral
 				small = GFX_idea_ksuha # WIP
 			}
 		}
@@ -548,24 +615,6 @@ characters = {
 	# POLITICAL
 	# POLITICAL
 
-	# JENUA
-	BFO_david = {
-		name = BFO_david
-		gender = female
-		portraits = {
-			civilian = {
-				small = GFX_idea_david # WIP
-			}
-		}
-
-		advisor = {
-			available = { has_completed_focus = BFO_administrative_reform }
-			slot = political_advisor
-			idea_token = david # WIP
-			traits = {first_lady industry_reformer captain_of_industry nazi_sympathizer}
-		}
-	}
-
 	# ALENA
 	BFO_sovec = {
 		name = BFO_sovec
@@ -581,24 +630,6 @@ characters = {
 			slot = political_advisor
 			idea_token = alena_sovec # WIP
 			traits = {war_industrialist propaganda_expert}
-		}
-	}
-
-	# ALINA
-	BFO_agarkoff = {
-		name = BFO_agarkoff
-		gender = female
-		portraits = {
-			civilian = {
-				small = GFX_idea_agarkoff # WIP
-			}
-		}
-
-		advisor = {
-			available = { has_completed_focus = BFO_administrative_reform }
-			slot = political_advisor
-			idea_token = agarkoff # WIP
-			traits = {fortification_engineer}
 		}
 	}
 }

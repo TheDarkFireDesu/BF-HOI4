@@ -1,6 +1,6 @@
 BFO_INF_01 = 
 {
-	name = "Infantry Divisions"
+	name = BFO_INF_TEMP
 
 	for_countries = { BFO }
 
@@ -18,7 +18,7 @@ BFO_INF_01 =
 
 BFO_LTINF_01 = 
 {
-	name = "Light Infantry Divisions"
+	name = BFO_LINF_TEMP
 
 	for_countries = { BFO }
 
@@ -39,7 +39,7 @@ BFO_LTINF_01 =
 
 BFO_MNT_01 = 
 {
-	name = "Mountain Divisions"
+	name = BFO_MNT_TEMP
 
 	for_countries = { BFO }
 
@@ -57,7 +57,7 @@ BFO_MNT_01 =
 
 BFO_MAR_01 = 
 {
-	name = "Marine Divisions"
+	name = BFO_MAR_TEMP
 
 	for_countries = { BFO }
 
@@ -75,7 +75,7 @@ BFO_MAR_01 =
 
 BFO_PAR_01 = 
 {
-	name = "Paratrooper Divisions"
+	name = BFO_VDV_TEMP
 
 	for_countries = { BFO }
 
@@ -93,7 +93,7 @@ BFO_PAR_01 =
 
 BFO_ARM_01 = 
 {
-	name = "Tank Divisions"
+	name = BFO_ARM_TEMP
 
 	for_countries = { BFO }
 
@@ -111,7 +111,7 @@ BFO_ARM_01 =
 
 BFO_LTARM_01 = 
 {
-	name = "Light Divisions"
+	name = BFO_LARM_TEMP
 
 	for_countries = { BFO }
 
@@ -131,7 +131,7 @@ BFO_LTARM_01 =
 
 BFO_CAV_01 = 
 {
-	name = "Kazatskaie Divisions"
+	name = BFO_CAV_TEMP
 
 	for_countries = { BFO }
 
