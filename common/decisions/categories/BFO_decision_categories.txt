@@ -1,0 +1,23 @@
+BFO_revolt_category = {
+
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_european_union
+
+	allowed = {
+		tag = BFO
+	}
+
+	priority = 10
+}
+
+AUS_to_BFO_category = {
+
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_european_union
+
+	allowed = {
+		tag = AUS
+	}
+
+	priority = 10
+}

@@ -1,0 +1,148 @@
+BFO_INF_01 = 
+{
+	name = "Infantry Divisions"
+
+	for_countries = { BFO }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d-ая пехотная дивизия"
+
+	ordered = 
+	{ 
+		1 = { "%d-ая пехотная дивизия" }
+	}
+}
+
+BFO_LTINF_01 = 
+{
+	name = "Light Infantry Divisions"
+
+	for_countries = { BFO }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d-ая легкая дивизия"
+
+	link_numbering_with = { BFO_INF_01 }
+
+	ordered =
+	{
+		1 = { "%d-ая пехотная дивизия" }
+	}
+}
+
+
+BFO_MNT_01 = 
+{
+	name = "Mountain Divisions"
+
+	for_countries = { BFO }
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers"  }
+
+	fallback_name = "%d-ая горно-стрелковая дивизия"
+
+	ordered =
+	{
+		1 = { "%d-ая горно-стрелковая дивизия" }
+	}
+}
+
+BFO_MAR_01 = 
+{
+	name = "Marine Divisions"
+
+	for_countries = { BFO }
+
+	can_use = { always = yes }
+
+	division_types = { "marine"  }
+
+	fallback_name = "%d-ая дивизия морской пехоты"
+
+	ordered =
+	{
+		1 = { "%d-ая дивизия морской пехоты" }
+	}
+}
+
+BFO_PAR_01 = 
+{
+	name = "Paratrooper Divisions"
+
+	for_countries = { BFO }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper"  }
+
+	fallback_name = "%d-ая дивизия ВДВ"
+
+	ordered =
+	{
+		1 = { "%d-ая дивизия ВДВ" }
+	}
+}
+
+BFO_ARM_01 = 
+{
+	name = "Tank Divisions"
+
+	for_countries = { BFO }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	fallback_name = "%d-ая танковая дивизия"
+
+	ordered =
+	{
+		1 = { "%d-ая танковая дивизия" }
+	}
+}
+
+BFO_LTARM_01 = 
+{
+	name = "Light Divisions"
+
+	for_countries = { BFO }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" }
+
+	fallback_name = "%d-ая легкая танковая дивизия"
+	
+	link_numbering_with = { BFO_Arm_01 }
+
+	ordered =
+	{
+		1 = { "%d-ая легкая танковая дивизия" }
+	}
+}
+
+BFO_CAV_01 = 
+{
+	name = "Kazatskaie Divisions"
+
+	for_countries = { BFO }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	fallback_name = "%d-ая казацкая дивизия"
+
+	ordered =
+	{
+		1 = { "%d-ая казацкая дивизия" }
+	}
+}

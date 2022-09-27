@@ -1,0 +1,35 @@
+add_namespace = bfo_revolt
+
+country_event = {
+	id = bfo_revolt.1
+	title = bfo_revolt.1.t
+	desc = bfo_revolt.1.d
+
+	picture = GFX_bezbab 
+	is_triggered_only = yes
+
+	option = {
+		name = bfo_revolt.1.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = bfo_revolt.2
+	title = bfo_revolt.2.t
+	desc = bfo.revolt.2.t
+
+	picture = GFX_bezbab
+	is_triggered_only = yes
+
+	option = {
+		name = bfo.revolt.2.a
+		add_ideas = rebels_not_killed
+	}
+
+	option = {
+		name = bfo.revolt.2.b
+		add_ideas = rebels_killed 
+	}
+
+}

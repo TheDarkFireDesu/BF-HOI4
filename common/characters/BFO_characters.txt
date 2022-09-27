@@ -1,0 +1,604 @@
+characters = {
+
+	# COUNTRY_LEADER - 1/1; EGOR (V)
+	# FIELDMARHSAL - 5/5; KIRILL (V), RUSLAN (V), ARTEM (V), SANYA (V), NOSIREV (V)
+	# GENERAL - 7/6; BEVZ (V), NEKIT (V), MISHA (V), NIKITA (V), TIMUR (V), VLADIK (V)
+	# ADMIRAL - 4/4; DON (V), KSUHA (V), KARASIK (V), COSHALOT (V)
+
+	# ADVISOR (CIVILIAN) - 4/4; KSUHA, JENUA, ALINA, ALENA
+	# ADVISOR (HIGH COMMAND) - 4/4; KIRILL (ARMORED), RUSLAN (CAVALRY), SANYA (DRILL), NOSIREV (MANEUVER) 
+	# ADVISOR (ARMY) - 2/2; MISHA (OFFENSIVE), BEVZ (DEFENCIVE)
+	# ADVISOR (NAVY) - 3/3; DON, NEKIT, KARASIK
+	# ADVISOR (AIR) - 2/2; ARTEM (AIR SUPPORT), COSHALOT
+
+	# EL PREZIDENTO - 50%
+	BFO_egor = {
+		name = BFO_egor
+		portraits = {
+			civilian = {
+				large = GFX_egor_leader
+			}
+			army = {
+				large = GFX_egor_leader
+				small = GFX_idea_egor # WIP
+			}
+		}
+
+		country_leader = {
+			ideology = egorism_centrism
+			traits = {dictator great_architect dislikes_germany great_war_hero} 
+			desc = BFO_egor_desc
+		}
+		corps_commander = {
+			visible = { has_completed_focus = BFO_hire_a_generals }
+
+			skill = 5
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 5
+			traits = {skilled_staffer cavalry_leader cavalry_expert desert_fox hill_fighter adaptable}
+		}
+		advisor = {
+			available = { has_completed_focus = BFO_create_headquarters }
+			slot = theorist
+			idea_token = egor # WIP
+			traits = {council_of_theorists} # FIX
+		}
+	}
+
+	# NIKITKA SIL
+	BFO_nikitus = {
+		name = BFO_nikitus
+		portraits = {
+			civilian = {
+				large = GFX_portrait_BFO_nikitus # WIP
+			}
+			army = {
+				large = GFX_portrait_BFO_nikitus # WIP
+				small = GFX_idea_nikitus # WIP
+			}
+		}
+
+		country_leader = {
+			ideology = centrism
+			traits = {} 
+			desc = BFO_nikitus_desc
+		}
+	}
+
+	# FIELDMARSHAL
+	# FIELDMARSHAL
+	# FIELDMARSHAL
+
+	# KERIL FON TANKDROCHER - 50%
+	BFO_kirill = {
+		name = BFO_kirill
+		portraits = {
+			civilian = {
+				small = GFX_idea_kirill # WIP
+			}
+			army = {
+				large = GFX_kusya_fieldmarshal # WIP
+				small = GFX_idea_kirill # WIP
+			}
+		}
+		field_marshal = {
+			#visible = { has_completed_focus = BFO_create_headquarters }
+
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 5
+			traits = {trait_cautious armor_officer war_hero trickster panzer_expert skirmisher commando}
+		}
+		advisor = {
+			available = { has_completed_focus = BFO_create_headquarters }
+			slot = high_command
+			ledger = army
+			idea_token = kirill # WIP
+			traits = {army_armored_3}
+			cost = 200
+		}
+	}
+
+	# RUSLAN FON PEDIK - %50
+	BFO_ruslan = {
+		name = BFO_ruslan
+		portraits = {
+			civilian = {
+				small = GFX_idea_ruslan # WIP
+			}
+			army = {
+				large = GFX_portrait_BFO_ruslan # WIP
+				small = GFX_idea_ruslan # WIP
+			}
+		}
+
+		field_marshal = {
+			visible = { has_completed_focus = BFO_create_headquarters }
+
+			skill = 5
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 5
+			traits = {trait_cautious naval_invader war_hero urban_assault_specialist naval_liason}
+		}
+		advisor = {
+			available = { has_completed_focus = BFO_create_headquarters }
+			slot = high_command
+			ledger = army
+			idea_token = ruslan # WIP
+			traits = {army_cavalry_3}
+			cost = 200
+		}
+	}
+
+	# SANYA
+	BFO_sanya_k = {
+		name = BFO_sanya_k
+		portraits = {
+			civilian = {
+				small = GFX_idea_sanya_k # WIP
+			}
+			army = {
+				large = GFX_portrait_BFO_sanya_k # WIP
+				small = GFX_idea_sanya_k
+			}
+		}
+
+		field_marshal = {
+			visible = { has_completed_focus = BFO_create_headquarters }
+
+			skill = 5
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 5
+			logistics_skill = 4
+			traits = {cavalry_officer commando cavalry_leader cavalry_expert skilled_staffer expert_delegator}
+		}
+		advisor = {
+			available = { has_completed_focus = BFO_create_headquarters }
+			slot = high_command
+			ledger = army
+			idea_token = sanya_k # WIP
+			traits = {army_chief_drill_3}
+			cost = 200
+		}
+	}
+
+	# ARTEM LOH
+	BFO_artem_n = {
+		name = BFO_artem_n
+		portraits = {
+			civilian = {
+				small = GFX_idea_artem_n # WIP
+			}
+			army = {
+				large = GFX_portrait_BFO_artem_n # WIP
+				small = GFX_idea_artem_n # WIP
+			}
+		}
+	
+		field_marshal = {
+			#visible = { has_completed_focus = BFO_create_headquarters }
+			
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+			traits = {infantry_officer infantry_leader infantry_expert trickster expert_improviser}
+		}
+		advisor = {
+			available = { has_completed_focus = BFO_create_headquarters }
+			slot = high_command
+			ledger = army
+			idea_token = artem_n # WIP
+			traits = {army_chief_maneuver_3}
+			cost = 200
+		}
+	}
+
+	# ARTEM
+	BFO_artem_k = {
+		name = BFO_artem_k
+		portraits = {
+			civilian = {
+				small = GFX_idea_artem_k # WIP
+			}
+			army = {
+				large = GFX_artem_fieldmarshal
+				small = GFX_idea_artem_k # WIP
+			}
+		}
+	
+		field_marshal = {
+			visible = { has_completed_focus = BFO_create_headquarters }
+
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+			traits = {commando war_hero adaptable fast_planner trait_engineer scavenger paratrooper}
+		}
+		advisor = {
+			available = { has_completed_focus = BFO_create_headquarters }
+			slot = air_chief
+			idea_token = artem_k # WIP
+			traits = {air_chief_ground_support_3}
+			cost = 200
+		}
+	}
+
+	# GENERALS
+	# GENERALS
+	# GENERALS
+
+	# SANYA
+	BFO_sanya_b = {
+		name = BFO_sanya_b
+		portraits = {
+			civilian = {
+				small = GFX_idea_sanya_b # WIP
+			}
+			army = {
+				large = GFX_portrait_BFO_sanya_b # WIP
+				small = GFX_idea_sanya_b # WIP
+			}
+		}
+
+		corps_commander = {
+			visible = { has_completed_focus = BFO_hire_a_generals }
+
+			skill = 5
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 4
+			traits = {war_hero brilliant_strategist engineer_officer trait_engineer fortress_buster} 
+		}
+		advisor = {
+			available = { has_completed_focus = BFO_create_headquarters }
+			slot = army_chief
+			idea_token = sanya_b # WIP
+			traits = {army_chief_defensive_3}
+		}
+	}
+
+	# MISHA
+	BFO_misha = {
+		name = BFO_misha
+		portraits = {
+			civilian = {
+				small = GFX_idea_misha # WIP
+			}
+			army = {
+				large = GFX_portrait_BFO_misha # WIP
+				small = GFX_idea_misha # WIP
+			}
+		}
+
+		corps_commander = {
+			visible = { has_completed_focus = BFO_hire_a_generals }
+
+			skill = 5
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
+			traits = {organizer offensive_doctrine aggressive_assaulter desert_fox skirmisher commando}
+		}
+		advisor = {
+			available = { has_completed_focus = BFO_create_headquarters }
+			slot = army_chief
+			idea_token = misha # WIP
+			traits = {army_chief_offensive_3}
+		}
+	}
+
+	# NEKIT
+	BFO_nekit = {
+		name = BFO_nekit
+		portraits = {
+			civilian = {
+				small = GFX_idea_nekit # WIP
+			}
+			army = {
+				large = GFX_portrait_BFO_nekit # WIP
+				small = GFX_idea_nekit # WIP
+			}
+		}
+
+		corps_commander = {
+			visible = { has_completed_focus = BFO_hire_a_generals }
+
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 5
+			logistics_skill = 4
+			traits = {war_hero inflexible_strategist naval_invader naval_liason guerilla_fighter}
+		}
+		advisor = {
+			available = { has_completed_focus = BFO_create_headquarters }
+			slot = navy_chief
+			idea_token = nekit # WIP
+			traits = {navy_chief_decisive_battle_3}
+		}
+	}
+
+	# NIKITA
+	BFO_nikita = {
+		name = BFO_nikita
+		portraits = {
+			civilian = {
+				small = GFX_idea_nikita # WIP
+			}
+			army = {
+				large = GFX_portrait_BFO_nikita # WIP
+				small = GFX_idea_nikita # WIP
+			}
+		}
+
+		corps_commander = {
+			visible = { has_completed_focus = BFO_hire_a_generals }
+
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 5
+			logistics_skill = 4
+			traits = {} # FIX
+		}
+		advisor = {
+			available = { has_completed_focus = BFO_create_headquarters }
+			slot = theorist
+			idea_token = nikita # WIP
+			traits = {mobile_warfare_expert} # FIX
+		}
+	}
+
+	# TIMUR
+	BFO_timur = {
+		name = BFO_timur
+		portraits = {
+			civilian = {
+				small = GFX_idea_timur # WIP
+			}
+			army = {
+				large = GFX_portrait_BFO_timur # WIP
+				small = GFX_idea_timur # WIP
+			}
+		}
+
+		corps_commander = {
+			visible = { has_completed_focus = BFO_hire_a_generals }
+
+			skill = 5
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 3
+			traits = {career_officer trait_reckless media_personality} # FIX
+		}
+	}
+
+	# VLADIK
+	BFO_vladik = {
+		name = BFO_vladik
+		portraits = {
+			civilian = {
+				small = GFX_idea_vladik # WIP
+			}
+			army = {
+				large = GFX_portrait_BFO_vladik # WIP
+				small = GFX_idea_vladik # WIP
+			}
+		}
+
+		corps_commander = {
+			visible = { has_completed_focus = BFO_hire_a_generals }
+
+			skill = 5
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 3
+			traits = {} # FIX
+		}
+	}
+
+	# ADMIRAL
+	# ADMIRAL
+	# ADMIRAL
+
+	# DONEL
+	BFO_donel = {
+		name = BFO_donel
+		portraits = {
+			civilian = {
+				small = GFX_idea_donel # WIP
+			}
+			army = {
+				large = GFX_portrait_BFO_donel # WIP
+				small = GFX_idea_donel # WIP
+			}
+		}
+
+		navy_leader = {
+			visible = { has_completed_focus = BFO_military_revolt }
+
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			maneuvering_skill = 5
+			coordination_skill = 5
+			traits = {seawolf chief_engineer bold gunnery_expert aviation_enthusiast air_controller blockade_runner}
+		}
+
+		advisor = {
+			available = { has_completed_focus = BFO_create_headquarters }
+			slot = navy_chief
+			idea_token = donel # WIP
+			traits = {navy_chief_maneuver_3}
+		}
+	}
+	
+	# KSUHA
+	BFO_ksuha = {
+		name = BFO_ksuha
+		portraits = {
+			civilian = {
+				small = GFX_idea_ksuha # WIP
+			}
+			army = {
+				large = GFX_portrait_BFO_ksuha # WIP
+				small = GFX_idea_ksuha # WIP
+			}
+		}
+
+		navy_leader = {
+			visible = { has_completed_focus = BFO_military_revolt }
+
+			skill = 4
+			attack_skill = 3
+			defense_skill = 5
+			maneuvering_skill = 4
+			coordination_skill = 3
+			traits = {craven bold cuts_corners fleet_protector inshore_fighter}
+		}
+
+		advisor = {
+			available = { has_completed_focus = BFO_administrative_reform }
+			slot = political_advisor
+			idea_token = ksuha # WIP
+			traits = {liberal_democratic_paragon } # FIX
+		}
+	}
+
+	# KARASIK
+	BFO_karas = {
+		name = BFO_karas
+		portraits = {
+			civilian = {
+				small = GFX_idea_karas # WIP
+			}
+			army = {
+				large = GFX_portrait_BFO_karas # WIP
+				small = GFX_idea_karas # WIP
+			}
+		}
+
+		navy_leader = {
+			visible = { has_completed_focus = BFO_military_revolt }
+
+			skill = 3
+			attack_skill = 3
+			defense_skill = 5
+			maneuvering_skill = 4
+			coordination_skill = 3
+			traits = {superior_tactician ironside spotter }
+		}
+
+		advisor = {
+			available = { has_completed_focus = BFO_create_headquarters }
+			slot = navy_chief
+			idea_token = vladimir_karas # WIP
+			traits = {navy_anti_submarine_3}
+		}
+	}
+
+	# COSHALOT
+	BFO_coshalot = {
+		name = BFO_coshalot
+		portraits = {
+			civilian = {
+				small = GFX_idea_coshalot # WIP
+			}
+			army = {
+				large = GFX_portrait_BFO_coshalot # WIP
+				small = GFX_idea_coshalot # WIP
+			}
+		}
+
+		navy_leader = {
+			visible = { has_completed_focus = BFO_military_revolt }
+
+			skill = 3
+			attack_skill = 4
+			defense_skill = 4
+			maneuvering_skill = 4
+			coordination_skill = 2
+			traits = {seawolf silent_hunter torpedo_expert lone_wolf superior_tactician}
+		}
+
+		advisor = {
+			available = { has_completed_focus = BFO_create_headquarters }
+			slot = air_chief
+			idea_token = vlad_coshalot # WIP
+			traits = {air_air_combat_training_3}
+		}
+	}
+
+	# POLITICAL
+	# POLITICAL
+	# POLITICAL
+
+	# JENUA
+	BFO_david = {
+		name = BFO_david
+		gender = female
+		portraits = {
+			civilian = {
+				small = GFX_idea_david # WIP
+			}
+		}
+
+		advisor = {
+			available = { has_completed_focus = BFO_administrative_reform }
+			slot = political_advisor
+			idea_token = david # WIP
+			traits = {first_lady industry_reformer captain_of_industry nazi_sympathizer}
+		}
+	}
+
+	# ALENA
+	BFO_sovec = {
+		name = BFO_sovec
+		gender = female
+		portraits = {
+			civilian = {
+				small = GFX_idea_sovec # WIP
+			}
+		}
+
+		advisor = {
+			available = { has_completed_focus = BFO_administrative_reform }
+			slot = political_advisor
+			idea_token = alena_sovec # WIP
+			traits = {war_industrialist propaganda_expert}
+		}
+	}
+
+	# ALINA
+	BFO_agarkoff = {
+		name = BFO_agarkoff
+		gender = female
+		portraits = {
+			civilian = {
+				small = GFX_idea_agarkoff # WIP
+			}
+		}
+
+		advisor = {
+			available = { has_completed_focus = BFO_administrative_reform }
+			slot = political_advisor
+			idea_token = agarkoff # WIP
+			traits = {fortification_engineer}
+		}
+	}
+}

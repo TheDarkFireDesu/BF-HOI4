@@ -1,0 +1,129 @@
+﻿division_template = {
+	name = "Пехотная дивизия"
+	division_names_group = BFO_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+        engineer = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Танковая дивизия"
+	division_names_group = BFO_ARM_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+        light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+        motorized = { x = 2 y = 1 }
+	}
+
+	support = {
+        mot_recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Горно-стрелковая дивизия"
+	division_names_group = BFO_MNT_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+	    mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Казацкая дивизия"
+	division_names_group = BFO_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	support = {
+	    recon = { x = 0 y = 0 }
+	    artillery = { x = 0 y = 1 }
+	}
+}
+
+#units = {
+
+	#division= {	
+	#	name = "1-ая танковая дивизия Орбита"
+	#	location = 6521
+	#	division_template = "Tank Divisions"
+	#	start_experience_factor = 0.3
+	#	force_equipment_variants = { light_tank_chassis_1 = { owner = BFO" version_name = "Panzer I Ausf. A" } }
+	#}
+
+	#division= {	
+	#	name = "1-ая конная дивизия Круглый" 
+	#	location = 281
+	#	division_template = "Kazatskaie Divisions"
+	#	start_experience_factor = 0.3
+	#}
+
+	#division= {	
+	#	name = "1-ая пехотная дивизия Сыны Егора"
+	#	location = 6257
+	#	division_template = "Infantry Divisions"
+	#	start_experience_factor = 0.3
+	#}
+#}
+
+air_wings = {
+
+	64 = { 
+		
+		# FIGHTER N1 START
+		fighter_equipment_0 = {
+			owner = "BFO" 
+			amount = 80
+		}
+		name = "1-ое штурмовое крыло им. Кхорна"
+
+		ace = { 
+			modifier = "fighter_genius"
+			name = "Юрий"
+			surname = "Сироткин"
+			callsign = "Нацистомет"
+			portrait = 1 
+		}
+		# FIGHTER N2 END
+
+		tac_bomber_equipment_0 = {
+			owner = "BFO" 
+			amount = 80
+		}
+		tac_bomber_equipment_0 = {
+			owner = "GER" 
+			amount = 40
+		}
+
+		name = "1-ое бомбардировочное крыло им. Руслана"
+	}
+}

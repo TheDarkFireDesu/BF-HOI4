@@ -1,0 +1,936 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = bezbab_focus
+
+	country = { 
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BFO
+		} 
+	}
+
+	initial_show_position = { focus = BFO_the_rise_of_bezbab }
+
+	default = no
+
+	focus = {
+		id = BFO_the_rise_of_bezbab
+		icon = GFX_goal_support_fascism
+
+		cost = 0
+
+		x = 6
+		y = 0
+
+		#available = { has_idea = BFO_start_the_game }
+		search_filters = { FOCUS_FILTER_POLITICAL}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {}
+	}
+
+	focus = {
+		id = BFO_military_revolt
+		icon = GFX_goal_generic_build_navy
+
+		cost = 2
+
+		prerequisite = { focus = BFO_the_rise_of_bezbab }
+		relative_position_id = BFO_the_rise_of_bezbab
+
+		x = 0
+		y = 1.1
+
+		completion_reward = {
+
+			#event fix
+
+			BFO = {
+				transfer_state = 736
+				add_state_core = 736
+			}
+
+			add_manpower = 1000
+			
+			create_ship = {
+				type = ship_hull_submarine_1
+				equipment_variant = "Sirena Class"
+
+				creator = ITA
+				name = BFO_military_revolt_ship_1
+			}
+
+			create_ship = {
+				type = ship_hull_submarine_1
+				equipment_variant = "Sirena Class"
+
+				creator = ITA
+				name = BFO_military_revolt_ship_2
+			}
+
+			create_ship = {
+				type = ship_hull_submarine_1
+				equipment_variant = "Sirena Class"
+
+				creator = ITA
+				name = BFO_military_revolt_ship_3
+			}
+
+		}
+	}
+
+	focus = {
+		id = BFO_return_a_seaport
+		icon = GFX_goal_generic_build_navy
+
+		cost = 1
+
+		available = { 736 = { is_owned_and_controlled_by = BFO } }
+		prerequisite = { focus = BFO_military_revolt}
+		relative_position_id = BFO_military_revolt
+
+		x = 3
+		y = 1.1
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BFO_create_headquarters
+		icon = GFX_goal_generic_axis_build_infantry
+
+		cost = 2.5
+
+		prerequisite = { focus = BFO_military_revolt}
+		relative_position_id = BFO_military_revolt
+
+		x = 0
+		y = 1.1
+
+		completion_reward = {
+
+			army_experience = 10
+			
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = BFO_hire_a_generals
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 2.5
+
+		prerequisite = { focus = BFO_create_headquarters}
+		relative_position_id = BFO_create_headquarters
+
+		x = 3
+		y = 1.1
+
+		completion_reward = {
+			
+			# events fix
+		}
+	}
+
+	focus = {
+		id = BFO_airborn
+		icon = GFX_goal_generic_build_airforce
+
+		cost = 2.5
+
+		prerequisite = { focus = BFO_create_headquarters}
+		relative_position_id = BFO_create_headquarters
+
+		x = 0
+		y = 1.1
+
+		completion_reward = {
+			# create airdivision
+			# events fix
+		}
+	}
+
+	focus = {
+		id = BFO_return_a_airport
+		icon = GFX_goal_generic_build_airforce
+
+		cost = 1
+
+		prerequisite = { focus = BFO_airborn}
+		relative_position_id = BFO_airborn
+
+		x = 3
+		y = 1.1
+
+		completion_reward = {
+			
+			air_experience = 25
+
+			add_doctrine_cost_reduction = {
+				name = air_sup_bonus
+				cost_reduction = 0.25
+				uses = 2
+				category = battlefield_support_tree
+			}
+
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							air_base > 3
+							air_base < 9
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 5
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 6
+						instant_build = yes
+					}
+				}				
+			}
+
+			random_owned_controlled_state = {
+				limit = {
+					air_base > 3
+					air_base < 9
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					air_base > 3
+					air_base < 9
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					air_base > 2
+					air_base < 9
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BFO_mobilisation
+		icon = GFX_goal_generic_intelligence_exchange
+
+		cost = 2.5
+
+		prerequisite = { focus = BFO_airborn}
+		relative_position_id = BFO_airborn
+
+		x = 0
+		y = 1
+
+		completion_reward = {
+			
+			add_manpower = 500000
+			# events fix
+		}
+	}
+
+	focus = {
+		id = BFO_nation_army
+		icon = GFX_goal_molotov_ribbentrop_pact
+
+		cost = 2.5
+
+		prerequisite = { focus = BFO_mobilisation}
+		relative_position_id = BFO_mobilisation
+
+		x = 0
+		y = 1
+
+		completion_reward = {
+			
+			# create division
+			# events fix
+		}
+	}
+
+	focus = {
+		id = BFO_administrative_reform
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 2
+
+		available = { has_completed_focus = BFO_military_revolt }
+		prerequisite = { focus = BFO_the_rise_of_bezbab }
+		relative_position_id = BFO_the_rise_of_bezbab
+
+		x = 5.5
+		y = 1.1
+
+		completion_reward = { add_political_power = 50 }
+	}
+
+	focus = {
+		id = BFO_administrative_reform_next
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 5
+
+		prerequisite = { focus = BFO_administrative_reform }
+		relative_position_id = BFO_administrative_reform
+
+		x = 0
+		y = 1.1
+
+		completion_reward = { add_political_power = 50 }
+	}
+
+	focus = {
+		id = BFO_economic_reform 
+		icon = GFX_goal_generic_construct_civ_factory
+
+		cost = 2
+
+		prerequisite = { focus = BFO_the_rise_of_bezbab }
+		relative_position_id = BFO_the_rise_of_bezbab
+
+		x = -4.5
+		y = 1.1
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			factor = 12
+		}
+
+		completion_reward = {
+
+			swap_ideas = {
+				remove_idea = weak_economy
+				add_idea = weak_economy_2
+			}
+
+			add_tech_bonus = {
+				name = egor_plan
+				bonus = 1.0
+				uses = 3
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = BFO_economic_reform_next
+		icon = GFX_goal_generic_construct_civ_factory
+
+		cost = 2.5
+
+		available = { has_completed_focus = BFO_administrative_reform }
+		prerequisite = { focus = BFO_economic_reform }
+		relative_position_id = BFO_economic_reform 
+
+		x = 0
+		y = 1.1
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+
+			swap_ideas = {
+				remove_idea = weak_economy_2
+				add_idea = weak_economy_3
+			}
+
+			add_ideas = GER_grosraumwirtschaft # FIX
+		}
+
+	}
+
+	focus = {
+		id = BFO_don_werke
+		icon = GFX_goal_generic_construct_infrastructure
+
+		dynamic = yes
+
+		prerequisite = { focus = BFO_economic_reform_next }
+		relative_position_id = BFO_economic_reform_next 
+
+		x = -1
+		y = 1.1
+
+		cost = 2.5
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = GER_industrial_effort_2IC } # FIX
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2IC # FIX
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2IC # FIX
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2IC # FIX
+			}
+		}
+	}
+
+	focus = {
+		id = BFO_automobilista
+		icon = GFX_goal_generic_construct_civilian
+		dynamic = yes
+
+		prerequisite = { focus = BFO_economic_reform_next }
+		relative_position_id = BFO_economic_reform_next
+
+		x = 1
+		y = 1.1
+
+		cost = 2.5
+
+		ai_will_do = {
+			factor = 9
+		}
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = GER_industrial_effort_2_2IC } # FIX
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC # FIX
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC # FIX
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2_2IC # FIX
+			}
+		}
+	}
+
+	focus = {
+		id = BFO_war_economic
+		icon = GFX_goal_generic_construct_mil_factory
+
+		
+		prerequisite = { 
+			focus = BFO_automobilista
+			focus = BFO_don_werke 
+		}
+		relative_position_id = BFO_economic_reform_next
+
+		x = 0
+		y = 2.1
+
+		cost = 2.5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			
+			if = {
+				limit = {
+					NOT = { has_idea = war_economy }
+					NOT = { has_idea = tot_economic_mobilisation }
+				}
+				add_ideas = war_economy
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BFO_economic_reform_oil
+		icon = GFX_focus_generic_rubber
+
+		cost = 3
+
+		available = { has_completed_focus = BFO_the_start_of_new_nation }
+		prerequisite = { focus = BFO_economic_reform }
+		relative_position_id = BFO_economic_reform 
+
+		x = -2
+		y = 1.1
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = BFO_coal_liquidization
+				bonus = 3.0
+				uses = 1
+				category = synth_resources
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 65
+				}
+				65 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BFO_economic_reform_oil_next
+		icon = GFX_focus_generic_rubber
+
+		cost = 3
+
+		prerequisite = { focus = BFO_economic_reform_oil}
+		relative_position_id = BFO_economic_reform_oil
+
+		x = 0
+		y = 2.1
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+	
+        	modify_building_resources = {
+        	   building = synthetic_refinery
+        	   resource = rubber
+        	   amount = 4
+        	}
+		}
+	}
+
+	focus = {
+		id = BFO_economic_reform_industry
+		icon = GFX_goal_generic_construct_infrastructure
+
+		cost = 5
+
+		prerequisite = { focus = BFO_economic_reform }
+		relative_position_id = BFO_economic_reform 
+
+		x = 2
+		y = 1.1
+		
+		ai_will_do = {
+			factor = 8
+		}
+
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = BFO_autarky
+				bonus = 1.0
+				uses = 2
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+			}
+			add_ideas = GER_autarky_idea # FIX
+		}
+	}
+
+	focus = {
+		id = BFO_economic_reform_roadwork
+		icon = GFX_goal_generic_construct_infrastructure
+
+		cost = 3
+
+		available = { has_completed_focus = BFO_the_start_of_new_nation }
+		prerequisite = { focus = BFO_economic_reform_industry }
+		relative_position_id = BFO_economic_reform_industry
+
+		x = 0
+		y = 2.1
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			hidden_effect = {
+				64 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				59 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				60 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				54 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+			}		
+		}
+	}
+
+	focus = {
+		id = BFO_extra_tech_slot
+		icon = GFX_focus_research
+		text = extra_tech_slot
+
+		prerequisite = {
+			focus = BFO_economic_reform_oil_next
+			focus = BFO_economic_reform_roadwork
+	}
+		relative_position_id = BFO_economic_reform_next
+
+		x = 0
+		y = 3.1
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = BFO_the_start_of_new_nation
+		icon = GFX_goal_support_fascism
+
+		cost = 10
+
+		prerequisite = { 
+			focus = BFO_nation_army
+			focus = BFO_extra_tech_slot
+		}
+
+		x = 6
+		y = 6.5
+
+		completion_reward = {
+			#custom_effect_tooltip = GER_reichskommissariats_tt
+			#unlock_decision_tooltip = GER_reichskommissariat_norwegen
+			#unlock_decision_tooltip = GER_reichskommissariat_niederlande
+			#unlock_decision_tooltip = GER_reichskommissariat_belgien_nordfrankreich
+			#unlock_decision_tooltip = GER_reichskommissariat_ostland
+			#unlock_decision_tooltip = GER_reichskommissariat_ukraine
+		}
+	}
+
+	focus = {
+		id = BFO_revanche
+		icon = GFX_goal_support_fascism
+
+		available = { has_completed_focus = BFO_the_start_of_new_nation }
+
+		cost = 10
+	
+		x = 20
+		y = 0
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+
+		completion_reward = { 
+
+			add_state_core = 42 # MOZEL
+			add_state_core = 50 # VURTEMBERG
+			add_state_core = 51 # REIN
+			add_state_core = 52 # H. BAVARIA
+			add_state_core = 53 # L. BAVARIA
+			add_state_core = 54 # FRANKONIA
+			add_state_core = 55 # GESSEN
+			add_state_core = 56 # VEZER-EMS
+			add_state_core = 57 # WESTFALLEN
+			add_state_core = 58 # SHLEZVIG-GOLSHTEIN
+			add_state_core = 59 # GANNOVER
+			add_state_core = 60 # TURINGIA
+			add_state_core = 61 # MEKLEBURG
+			add_state_core = 65 # SACKSONIA
+			add_state_core = 66 # L. SILEZIA
+			add_state_core = 67 # H. SILEZIA
+			add_state_core = 68 # E. MARKA
+
+			BFO = { drop_cosmetic_tag = yes }
+
+			#annex_country = {target = GER}
+		}
+	}
+
+	focus = {
+		id = BFO_the_great_war
+		icon = GFX_goal_support_fascism
+		cost = 5
+
+		prerequisite = {
+			focus = BFO_revanche
+		}
+		relative_position_id = BFO_revanche
+
+		x = 0
+		y = 1.1
+		completion_reward = { }
+	}
+
+}

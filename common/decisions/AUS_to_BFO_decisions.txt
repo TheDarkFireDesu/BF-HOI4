@@ -1,0 +1,40 @@
+AUS_to_BFO_category = {
+
+	BFO_terrorism = {
+
+		allowed = { tag = AUS }
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = -0.2
+			country_event = bfo_revolt.1
+		}
+	}
+	
+	
+	BFO_rise_up = {
+
+		allowed = { tag = AUS }
+		available = { has_stability < 0.4 }
+
+		icon = generic_form_nation
+		fire_only_once = yes
+
+		complete_effect = {
+
+			BFO = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 4000
+					producer = AUS
+				}
+				
+				set_cosmetic_tag = VTE
+
+				transfer_state = 153
+				add_state_core = 153
+				change_tag_from = AUS
+			}
+		}
+	}
+}

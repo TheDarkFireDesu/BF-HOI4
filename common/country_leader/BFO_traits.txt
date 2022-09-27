@@ -1,0 +1,9 @@
+egorism_booster = {
+	random = no
+	sprite = 13
+	egorism_drift = 0.1
+
+	ai_will_do = {
+		0
+	}
+}

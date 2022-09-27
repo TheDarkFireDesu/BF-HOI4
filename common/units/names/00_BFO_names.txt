@@ -1,0 +1,197 @@
+BFO = {
+	fleet_names_template = FLEET_NAME_GER
+	submarine = {
+		prefix = ""
+		generic = { "U-Boot" }
+		unique = {
+			"U-1" "U-2"	
+		}
+	}
+	destroyer = {
+		prefix = ""
+		generic = { "Zerstörer" }
+		unique = {
+			"Z1"
+		}
+	}
+	light_cruiser = {
+		prefix = ""
+		generic = { "Leichter Kreuzer" }
+		unique = {
+			"Эмбер" "Кёнигсберг" "Усть-Донецкий" "Реконструктор" "Липецк" "Апаринка"
+		}
+	}
+	heavy_cruiser = {
+		prefix = ""
+		generic = { "Schwerer Kreuzer" "Panzerschiff" }
+		unique = {
+			"Admiral Graf Spee" "Admiral Hipper" "Blücher" "Prinz Eugen" "Seydlitz" "Lützow" "Roon"
+		}
+	}
+	battle_cruiser = {
+		prefix = ""
+		generic = { "Schlachtkreuzer" }
+		unique = {
+			 "Von der Tann" "Moltke" "Goeben" "Derfflinger" "Holtzendorff" "York" "Von Mackensen" "Von Lettow-Vorbeck" "Friedrich Barbarossa" "Karl der Große" 
+		}
+	}
+    battleship = {
+        prefix = ""
+        generic = { "Schlachtschiff" }
+        unique = {
+            "Scharnhorst" "Gneisenau" "Bismarck" "Tirpitz"
+        }
+    }
+	carrier = {
+		prefix = ""
+		generic = { "Flugzeugträger" }
+		unique = {
+			"Graf Zeppelin" "Peter Strasser" "Seydlitz" "Europa" "Potsdam" "Otto Lilienthal" "Aurora" "Jade" "Elbe" "Manfred von Richthofen" "Max Immelman"
+		}
+	}
+
+	air_wing_names_template = AIR_WING_NAME_GER_FALLBACK
+
+	fighter_equipment = {
+		prefix = ""
+		generic = { "Jagdgeschwader" }
+		generic_pattern = AIR_WING_NAME_GER_GENERIC
+		unique = {
+		 "JG 1 Oesau" "JG 2 Richthofen" "JG 3 Udet" "JG 5 Eismeer" "JG 6 Horst Wessel" "JG 7 Nowotny" "JG 26 Schlageter" "JG 27 Afrika" "JG 51 Mölders" "JG 53 Pik As" "JG 54 Grünherz" "JG 77 Herz As"
+		}	
+	}
+
+	scout_plane_equipment = {
+		prefix = ""
+		generic = { "Aufklärungsgeschwader" }
+		generic_pattern = AIR_WING_NAME_GER_GENERIC
+		unique = {
+		}	
+	}
+
+	jet_fighter_equipment = {
+		prefix = ""
+		generic = { "Sonder-Jagdverband" "Jagdverband" "Erprobungskommando" "Lehrgeschwader" "Erprobungsgruppe" }
+		generic_pattern = AIR_WING_NAME_GER_GENERIC
+		unique = {
+		}	
+	}
+
+	heavy_fighter_equipment = {
+		prefix = ""
+		generic = { "Zerstörergeschwader" "Nachtjagdgeschwader"}
+		generic_pattern = AIR_WING_NAME_GER_GENERIC
+		unique = {
+		}	
+	}
+
+	CAS_equipment = {
+		prefix = ""
+		generic = { "Schlachtgeschwader" "Stukageschwader" "Schnellkampfgeschwader" }
+		generic_pattern = AIR_WING_NAME_GER_GENERIC
+		unique = {
+		}	
+	}
+
+	cv_fighter_equipment = {
+		prefix = ""
+		generic = { "Träger-Jagdgruppe" }
+		generic_pattern = AIR_WING_NAME_GER_GENERIC
+		unique = {
+		}	
+	}
+
+	cv_CAS_equipment = {
+		prefix = ""
+		generic = { "Träger-Stukagruppe" }
+		generic_pattern = AIR_WING_NAME_GER_GENERIC
+		unique = {
+		}	
+	}
+	cv_nav_bomber_equipment = {
+		prefix = ""
+		generic = { "Torpedobombergruppe" }
+		generic_pattern = AIR_WING_NAME_GER_GENERIC
+		unique = {
+		}	
+	}
+
+	tac_bomber_equipment = {
+		prefix = ""
+		generic = { "Kampfgeschwader" "Kampfschulgeschwader" }
+		generic_pattern = AIR_WING_NAME_GER_GENERIC
+		unique = {
+		}	
+	}
+
+	jet_tac_bomber_equipment = {
+		prefix = ""
+		generic = { "Sonder-Kampfverband" "Erprobungskommando" "Lehrkampfgeschwader" "Schnellbombergeschwader" "Erprobungsgruppe" }
+		generic_pattern = AIR_WING_NAME_GER_GENERIC
+		unique = {
+		}	
+	}
+
+	nav_bomber_equipment = {
+		prefix = ""
+		generic = { "Küstenfliegergruppe" }
+		generic_pattern = AIR_WING_NAME_GER_GENERIC
+		unique = {
+		}	
+	}
+
+	strat_bomber_equipment = {
+		prefix = ""
+		generic = { "Fernkampfgeschwader" }
+		generic_pattern = AIR_WING_NAME_GER_GENERIC
+		unique = {
+		}	
+	}
+
+	jet_strat_bomber_equipment = {
+		prefix = ""
+		generic = { "Fernkampfgeschwader zbV." "Schnellbombergeschwader" "Erprobungskommando" "Erprobungsgruppe" }
+		generic_pattern = AIR_WING_NAME_GER_GENERIC
+		unique = {
+		}	
+	}
+
+	transport_plane_equipment = {
+		prefix = ""
+		generic = { "Transportgeschwader" "Kampfgeschwader zbV."}
+		generic_pattern = AIR_WING_NAME_GER_GENERIC
+		unique = {
+		}	
+	}
+
+
+	infantry = {
+		prefix = ""
+		generic = { "Infantry Divisions" }
+		generic_pattern = "UNIT_GENERIC_NAME_GER"
+	}
+	mountaineers = {
+		prefix = ""
+		generic = { "Mountain Divisions" }
+		generic_pattern = "UNIT_GENERIC_NAME_GER"
+		unique = {}
+	}
+	cavalry = {
+		prefix = ""
+		generic = { "Kazatskie Divisions" }
+		generic_pattern = "UNIT_GENERIC_NAME_GER"
+		unique = {}
+	}
+	light_armor = {
+		prefix = ""
+		generic = { "Tank Division" }
+		generic_pattern = "UNIT_GENERIC_NAME_GER"
+		unique = {}
+	}
+	medium_armor = {
+		prefix = ""
+		generic = { "Tank Division" }
+		generic_pattern = "UNIT_GENERIC_NAME_GER"
+		unique = {}
+	}
+}

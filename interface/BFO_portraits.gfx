@@ -1,0 +1,24 @@
+spriteTypes = {
+	# LEADER
+	spriteType = {
+
+		name = GFX_egor_leader
+		texturefile = gfx/leaders/BFO/GFX_egor.dds
+	}
+
+	# FIELDMARSHAL
+	spriteType = {
+		name = GFX_kusya_fieldmarshal
+		texturefile = gfx/leaders/BFO/GFX_kusya.dds
+	}
+
+	spriteType = {
+		name = GFX_keril_fieldmarshal
+		texturefile = gfx/leaders/BFO/GFX_keril.dds
+	}
+
+	spriteType = {
+		name = GFX_artem_fieldmarshal
+		texturefile = gfx/leaders/BFO/GFX_artem.dds
+	}
+}
