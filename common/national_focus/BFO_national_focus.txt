@@ -17,28 +17,9 @@ focus_tree = {
 		} 
 	}
 
-	initial_show_position = { focus = BFO_the_rise_of_bezbab }
+	initial_show_position = { focus = BFO_austrian_rebellion}
 
 	default = no
-
-	focus = {
-		id = BFO_the_rise_of_bezbab
-		icon = GFX_goal_support_fascism
-
-		cost = 0
-
-		x = 6
-		y = 0
-
-		#available = { has_idea = BFO_start_the_game }
-		search_filters = { FOCUS_FILTER_POLITICAL}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		completion_reward = {}
-	}
 
 	focus = {
 		id = BFO_austrian_rebellion
@@ -156,7 +137,14 @@ focus_tree = {
 					remove_idea = civilian_economy
 					add_idea = low_economic_mobilisation
 				}
-	
+
+
+				add_offsite_building = {
+					type = arms_factory
+					level = 2
+				}
+				
+				add_war_support = 0.50
 				add_manpower = 5000
 	
 				random_list = {
@@ -200,12 +188,13 @@ focus_tree = {
 
 		cost = 0
 
+		prerequisite = { focus = BFO_for_victory }
+		relative_position_id = BFO_for_victory
 		available = { always = no }
 
-		x = 15
-		y = 10
+		x = 0
+		y = 1
 
-		available = { has_war = no }
 		search_filters = { FOCUS_FILTER_POLITICAL}
 
 		ai_will_do = {
@@ -218,11 +207,32 @@ focus_tree = {
 
 			hidden_effect = {
 
+				BFO = { set_capital = 4 }
+
 				delete_unit_template_and_units = {
 					division_template = "Sturm-otryadi im. Egora"
 				}
 			}
 		}
+	}
+
+	focus = {
+		id = BFO_the_rise_of_bezbab
+		icon = GFX_goal_support_fascism
+
+		cost = 0
+
+		x = 6
+		y = 0
+
+		available = { always = no }
+		search_filters = { FOCUS_FILTER_POLITICAL}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {}
 	}
 
 
@@ -287,8 +297,8 @@ focus_tree = {
 		prerequisite = { focus = BFO_military_revolt}
 		relative_position_id = BFO_military_revolt
 
-		x = 3
-		y = 1.1
+		x = 0
+		y = 1
 
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -335,7 +345,7 @@ focus_tree = {
 		prerequisite = { focus = BFO_mobilization }
 		relative_position_id = BFO_mobilization
 
-		x = -1
+		x = -2
 		y = 1
 
 		completion_reward = {
@@ -359,17 +369,24 @@ focus_tree = {
 	focus = {
 		id = BFO_hire_a_generals
 		icon = GFX_goal_generic_axis_build_infantry
-		cost = 2.5
+
+		cost = 1
 
 		prerequisite = { focus = BFO_mobilization }
 		relative_position_id = BFO_mobilization
 
-		x = 1
+		x = 2
 		y = 1
 
 		completion_reward = {
 			
 			custom_effect_tooltip = BFO_cet_hire_a_generals
+
+			hidden_effect = {
+
+				army_experience = 10
+
+			}
 		}
 	}
 
@@ -377,121 +394,75 @@ focus_tree = {
 		id = BFO_airborn
 		icon = GFX_goal_generic_build_airforce
 
-		cost = 2.5
-
-		prerequisite = { focus = BFO_military_revolt}
-		relative_position_id = BFO_military_revolt
-
-		x = 0
-		y = 1.1
-
-		completion_reward = {
-			# create airdivision
-			# events fix
-		}
-	}
-
-	focus = {
-		id = BFO_return_a_airport
-		icon = GFX_goal_generic_build_airforce
-
 		cost = 1
 
-		prerequisite = { focus = BFO_airborn}
-		relative_position_id = BFO_airborn
+		prerequisite = { focus = BFO_mobilization }
+		relative_position_id = BFO_mobilization
 
-		x = 3
-		y = 1.1
+		x = 0
+		y = 1
 
 		completion_reward = {
-			
-			air_experience = 25
 
-			add_doctrine_cost_reduction = {
-				name = air_sup_bonus
-				cost_reduction = 0.25
-				uses = 2
-				category = battlefield_support_tree
-			}
+			custom_effect_tooltip = BFO_cet_airborn
 
-			if = {
-				limit = {
-					NOT = {
-						any_owned_state = {
-							air_base > 3
-							air_base < 9
+			hidden_effect = {
+
+				random_list = {
+					10 = {
+						add_equipment_to_stockpile = {
+							type = infantry_equipment
+							amount = 30
+							producer = AUS
 						}
 					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = air_base
-							size > 5
+					20 = {
+						add_equipment_to_stockpile = {
+							type = infantry_equipment
+							amount = 50
+							producer = AUS
 						}
 					}
-					add_building_construction = {
-						type = air_base
-						level = 6
-						instant_build = yes
+					30 = {
+						add_equipment_to_stockpile = {
+							type = infantry_equipment
+							amount = 60
+							producer = AUS
+						}
 					}
-				}				
-			}
-
-			random_owned_controlled_state = {
-				limit = {
-					air_base > 3
-					air_base < 9
-				}
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					air_base > 3
-					air_base < 9
-				}
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					air_base > 2
-					air_base < 9
-				}
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
+					40 = {
+						add_equipment_to_stockpile = {
+							type = infantry_equipment
+							amount = 100
+							producer = AUS
+						}
+					}
 				}
 			}
 		}
 	}
 
 	focus = {
-		id = BFO_nation_army
-		icon = GFX_goal_molotov_ribbentrop_pact
+		id = BFO_for_victory
+		icon = GFX_goal
 
 		cost = 2.5
 
-		prerequisite = { focus = BFO_airborn}
+		prerequisite = { 
+			focus = BFO_airborn 
+			focus = BFO_create_headquarters
+			focus = BFO_hire_a_generals
+		}
 		relative_position_id = BFO_airborn
 
 		x = 0
 		y = 1
 
 		completion_reward = {
-			
-			# create division
-			# events fix
+
 		}
 	}
+
 
 	focus = {
 		id = BFO_administrative_reform
@@ -503,8 +474,8 @@ focus_tree = {
 		prerequisite = { focus = BFO_the_rise_of_bezbab }
 		relative_position_id = BFO_the_rise_of_bezbab
 
-		x = 5.5
-		y = 1.1
+		x = 2
+		y = 1
 
 		completion_reward = { add_political_power = 50 }
 	}
@@ -536,7 +507,7 @@ focus_tree = {
 		x = -4.5
 		y = 1.1
 
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		ai_will_do = {
 			factor = 12
@@ -550,7 +521,6 @@ focus_tree = {
 			}
 
 			add_tech_bonus = {
-				name = egor_plan
 				bonus = 1.0
 				uses = 3
 				category = industry
