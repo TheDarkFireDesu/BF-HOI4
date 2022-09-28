@@ -1,0 +1,54 @@
+
+	focus = {
+		id = BFO_revanche
+		icon = GFX_goal_support_fascism
+
+		available = { has_completed_focus = BFO_the_start_of_new_nation }
+
+		cost = 10
+	
+		x = 20
+		y = 0
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+
+		completion_reward = { 
+
+			add_state_core = 42 # MOZEL
+			add_state_core = 50 # VURTEMBERG
+			add_state_core = 51 # REIN
+			add_state_core = 52 # H. BAVARIA
+			add_state_core = 53 # L. BAVARIA
+			add_state_core = 54 # FRANKONIA
+			add_state_core = 55 # GESSEN
+			add_state_core = 56 # VEZER-EMS
+			add_state_core = 57 # WESTFALLEN
+			add_state_core = 58 # SHLEZVIG-GOLSHTEIN
+			add_state_core = 59 # GANNOVER
+			add_state_core = 60 # TURINGIA
+			add_state_core = 61 # MEKLEBURG
+			add_state_core = 65 # SACKSONIA
+			add_state_core = 66 # L. SILEZIA
+			add_state_core = 67 # H. SILEZIA
+			add_state_core = 68 # E. MARKA
+
+			BFO = { drop_cosmetic_tag = yes }
+
+			#annex_country = {target = GER}
+		}
+	}
+
+	focus = {
+		id = BFO_the_great_war
+		icon = GFX_goal_support_fascism
+		cost = 5
+
+		prerequisite = {
+			focus = BFO_revanche
+		}
+		relative_position_id = BFO_revanche
+
+		x = 0
+		y = 1.1
+		completion_reward = { }
+	}

@@ -1,0 +1,12 @@
+BFO_RG_HISTORICAL = {
+	for_countries = { BFO }
+
+	type = railway_gun
+	
+	fallback_name = "%d-ая Артиллерийско-железнодорожная батарея"
+
+	ordered = {
+
+		6 = { "%d-ая Артиллерийско-железнодорожная батарея" }
+	}
+}

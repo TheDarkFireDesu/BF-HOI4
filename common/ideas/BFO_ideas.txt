@@ -11,7 +11,6 @@ ideas = {
 			picture = GFX_generic # FIX
 			
 			modifier = {
-				production_speed_building_factor = -0.15
 
 				industrial_capacity_dockyard = -0.15
 				industrial_capacity_factory = -0.15
@@ -30,7 +29,6 @@ ideas = {
 			picture = GFX_generic # FIX
 			
 			modifier = {
-				production_speed_building_factor = -0.10
 
 				industrial_capacity_dockyard = -0.10
 				industrial_capacity_factory = -0.10
@@ -49,7 +47,6 @@ ideas = {
 			picture = GFX_generic # FIX
 			
 			modifier = {
-				production_speed_building_factor = -0.05
 
 				industrial_capacity_dockyard = -0.05
 				industrial_capacity_factory = -0.05
@@ -57,15 +54,6 @@ ideas = {
 				conversion_cost_civ_to_mil_factor = 0.1
 				conversion_cost_mil_to_civ_factor = 0.1
 			}
-		}
-
-		to_victory = {
-			
-			allowed = { always = no }
-
-			removal_cost = -1
-
-			picture = GFX_generic
 		}
 	}
 
@@ -302,7 +290,7 @@ ideas = {
 			}
 		}
 		
-		kawasaki = {
+		ktm = {
 			
 			allowed = { tag = BFO }
 			#vailable = { has_completed_focus = BFO }			
@@ -320,11 +308,6 @@ ideas = {
 		}
 
 		BFO_rebels_killed = {
-			allowed = { always = no }
-			removal_cost = -1
-		}
-
-		BFO_idea_revolt = {
 			allowed = { always = no }
 			removal_cost = -1
 		}

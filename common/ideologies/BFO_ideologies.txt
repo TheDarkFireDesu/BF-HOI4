@@ -24,7 +24,7 @@ ideologies = {
 			can_send_volunteers = yes
 			can_puppet = yes
 			can_lower_tension = yes
-			can_create_factions = yes 
+			can_create_factions = no
 		}
 		
 		war_impact_on_world_tension = 0.25

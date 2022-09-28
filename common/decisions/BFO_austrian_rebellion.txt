@@ -1,0 +1,52 @@
+austrian_rebellion_category = {
+
+	BFO_terrorism = {
+
+		allowed = { tag = AUS }
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = -0.2
+			country_event = BFO_aus_rebellion.1
+		}
+	}
+	
+	
+	BFO_austrian_rebellion = {
+
+		allowed = { tag = AUS }
+		available = { has_stability < 0.4 }
+
+		icon = generic_form_nation
+		fire_only_once = yes
+
+		complete_effect = {
+
+			BFO = {
+
+				custom_effect_tooltip = BFO_cet_austrian_rebellion_decision
+
+				hidden_effect = {
+
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 4000
+						producer = AUS
+					}
+
+					complete_national_focus = BFO_austrian_rebellion
+
+					set_cosmetic_tag = VTE
+
+					transfer_state = 848
+					add_state_core = 848
+
+					transfer_state = 153
+					add_state_core = 153
+
+					change_tag_from = AUS
+				}
+			}
+		}
+	}
+}

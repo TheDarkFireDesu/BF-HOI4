@@ -1,9 +1,32 @@
-egorism_booster = {
-	random = no
-	sprite = 13
-	egorism_drift = 0.1
+leader_traits = {
 
-	ai_will_do = {
-		0
+	married_with_keril = {
+		random = no
+		sprite = 13
+		
+		ai_will_do = {
+			base = 1
+		}
 	}
+
+	married_with_artem = {
+		random = no
+		sprite = 13
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	egorism_booster = {
+		random = no
+		sprite = 13
+		egorism_drift = 0.1
+	
+		ai_will_do = {
+			base = 1
+		}
+	}
+
 }
+

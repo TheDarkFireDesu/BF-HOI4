@@ -1,4 +1,4 @@
-version="1.1.1"
+version="1.1.3"
 tags={
 	"Alternative History"
 	"Events"
@@ -7,4 +7,4 @@ tags={
 	"National Focuses"
 }
 name="The Tale of Bezbabnya Federation"
-supported_version="1.11.*"
+supported_version="1.12.*"

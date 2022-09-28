@@ -41,15 +41,15 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_revolt
+		id = BFO_austrian_rebellion
 		icon = GFX_goal_support_fascism
 
 		cost = 0
 
-		x = 8
+		x = 15
 		y = 0
-
-		#available = { has_idea = BFO_idea_revolt }
+		
+		available = { always = no }
 		search_filters = { FOCUS_FILTER_POLITICAL}
 
 		ai_will_do = {
@@ -58,33 +58,154 @@ focus_tree = {
 
 		completion_reward = {
 
-			load_oob = "BFO_rebels_army"
+			custom_effect_tooltip = BFO_cet_austrian_rebellion
 
-			set_division_template_lock = {
-				division_template = BFO_REB_TEMP
-				is_locked = yes
-			}
+			hidden_effect = {
 
-			declare_war_on = {
-				target = AUS
-				type = annex_everything
+				load_oob = "BFO_1936_nsb"
+				load_oob = "BFO_rebels_army"
+				
+				inherit_technology = AUS
+				
+				BFO = {
+					declare_war_on = {
+						target = AUS
+						type = annex_everything
+					}
+				}
 			}
 		}
 	}
 
 	focus = {
-		id = BFO_is_winner
-		icon = GFX_goal_support_fascism
+		id = BFO_barricades
+		icon = GFX_goal_generic_construct_military
 
-		cost = 0
+		cost = 2
 
-		prerequisite = { focus = BFO_revolt}
-		relative_position_id = BFO_revolt
+		prerequisite = { focus = BFO_austrian_rebellion }
+		relative_position_id = BFO_austrian_rebellion
+
+		search_filters = { FOCUS_FILTER_POLITICAL}
 
 		x = 0
 		y = 1
 
-		#available = { has_idea = BFO_idea_revolt }
+		completion_reward = { 
+
+			custom_effect_tooltip = BFO_cet_barricades
+
+			hidden_effect = {
+
+				153 = {
+
+					if = {
+
+						limit = { is_controlled_by = BFO }
+
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 3675
+							instant_build = yes
+						}
+
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 668
+							instant_build = yes
+						}
+
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 6673
+							instant_build = yes
+						}
+					} 
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BFO_mobilization
+		icon = GFX_goal_generic_intelligence_exchange
+
+		cost = 1
+
+		prerequisite = { focus = BFO_barricades }
+		relative_position_id = BFO_barricades
+
+		x = 0
+		y = 1
+
+		completion_reward = {
+			
+			custom_effect_tooltip = BFO_cet_mobilization
+			
+			hidden_effect = {
+
+				swap_ideas = {
+					remove_idea = disarmed_nation
+					add_idea = limited_conscription
+				}
+
+				swap_ideas = {
+					remove_idea = civilian_economy
+					add_idea = low_economic_mobilisation
+				}
+	
+				add_manpower = 5000
+	
+				random_list = {
+					10 = {
+						add_equipment_to_stockpile = {
+							type = infantry_equipment
+							amount = 3000
+							producer = SWI
+						}
+					}
+					20 = {
+						add_equipment_to_stockpile = {
+							type = infantry_equipment
+							amount = 2000
+							producer = SWI
+						}
+					}
+					30 = {
+						add_equipment_to_stockpile = {
+							type = infantry_equipment
+							amount = 1500
+							producer = SWI
+						}
+					}
+					40 = {
+						add_equipment_to_stockpile = {
+							type = infantry_equipment
+							amount = 1000
+							producer = SWI
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	focus = {
+		id = BFO_we_are_winner
+		icon = GFX_goal_support_fascism
+
+		cost = 0
+
+		available = { always = no }
+
+		x = 15
+		y = 10
+
+		available = { has_war = no }
 		search_filters = { FOCUS_FILTER_POLITICAL}
 
 		ai_will_do = {
@@ -93,16 +214,13 @@ focus_tree = {
 
 		completion_reward = {
 
-			load_oob = "BFO_rebels_army"
-			
-			set_division_template_lock = {
-				division_template = BFO_REB_TEMP
-				is_locked = yes
-			}
+			custom_effect_tooltip = BFO_cet_we_are_winner
 
-			declare_war_on = {
-				target = AUS
-				type = annex_everything
+			hidden_effect = {
+
+				delete_unit_template_and_units = {
+					division_template = "Sturm-otryadi im. Egora"
+				}
 			}
 		}
 	}
@@ -137,7 +255,7 @@ focus_tree = {
 				equipment_variant = "Sirena Class"
 
 				creator = ITA
-				name = BFO_military_revolt_ship_1
+				name = "Непотопляемый"
 			}
 
 			create_ship = {
@@ -145,7 +263,7 @@ focus_tree = {
 				equipment_variant = "Sirena Class"
 
 				creator = ITA
-				name = BFO_military_revolt_ship_2
+				name = "Неубиваемый"
 			}
 
 			create_ship = {
@@ -153,7 +271,7 @@ focus_tree = {
 				equipment_variant = "Sirena Class"
 
 				creator = ITA
-				name = BFO_military_revolt_ship_3
+				name = "Неуничтожаемый"
 			}
 
 		}
@@ -212,23 +330,28 @@ focus_tree = {
 		id = BFO_create_headquarters
 		icon = GFX_goal_generic_axis_build_infantry
 
-		cost = 2.5
+		cost = 1
 
-		prerequisite = { focus = BFO_military_revolt}
-		relative_position_id = BFO_military_revolt
+		prerequisite = { focus = BFO_mobilization }
+		relative_position_id = BFO_mobilization
 
-		x = 0
-		y = 1.1
+		x = -1
+		y = 1
 
 		completion_reward = {
 
-			army_experience = 10
-			
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
+			custom_effect_tooltip = BFO_cet_headquarters
+
+			hidden_effect = {
+
+				army_experience = 10
+				
+				add_doctrine_cost_reduction = {
+					name = land_doc_bonus
+					cost_reduction = 0.5
+					uses = 2
+					category = land_doctrine
+				}		
 			}
 		}
 	}
@@ -238,15 +361,15 @@ focus_tree = {
 		icon = GFX_goal_generic_axis_build_infantry
 		cost = 2.5
 
-		prerequisite = { focus = BFO_create_headquarters}
-		relative_position_id = BFO_create_headquarters
+		prerequisite = { focus = BFO_mobilization }
+		relative_position_id = BFO_mobilization
 
-		x = 3
-		y = 1.1
+		x = 1
+		y = 1
 
 		completion_reward = {
 			
-			# events fix
+			custom_effect_tooltip = BFO_cet_hire_a_generals
 		}
 	}
 
@@ -256,8 +379,8 @@ focus_tree = {
 
 		cost = 2.5
 
-		prerequisite = { focus = BFO_create_headquarters}
-		relative_position_id = BFO_create_headquarters
+		prerequisite = { focus = BFO_military_revolt}
+		relative_position_id = BFO_military_revolt
 
 		x = 0
 		y = 1.1
@@ -352,32 +475,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_mobilisation
-		icon = GFX_goal_generic_intelligence_exchange
-
-		cost = 2.5
-
-		prerequisite = { focus = BFO_airborn}
-		relative_position_id = BFO_airborn
-
-		x = 0
-		y = 1
-
-		completion_reward = {
-			
-			add_manpower = 500000
-			# events fix
-		}
-	}
-
-	focus = {
 		id = BFO_nation_army
 		icon = GFX_goal_molotov_ribbentrop_pact
 
 		cost = 2.5
 
-		prerequisite = { focus = BFO_mobilisation}
-		relative_position_id = BFO_mobilisation
+		prerequisite = { focus = BFO_airborn}
+		relative_position_id = BFO_airborn
 
 		x = 0
 		y = 1
@@ -947,59 +1051,4 @@ focus_tree = {
 			#unlock_decision_tooltip = GER_reichskommissariat_ukraine
 		}
 	}
-
-	focus = {
-		id = BFO_revanche
-		icon = GFX_goal_support_fascism
-
-		available = { has_completed_focus = BFO_the_start_of_new_nation }
-
-		cost = 10
-	
-		x = 20
-		y = 0
-
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
-
-		completion_reward = { 
-
-			add_state_core = 42 # MOZEL
-			add_state_core = 50 # VURTEMBERG
-			add_state_core = 51 # REIN
-			add_state_core = 52 # H. BAVARIA
-			add_state_core = 53 # L. BAVARIA
-			add_state_core = 54 # FRANKONIA
-			add_state_core = 55 # GESSEN
-			add_state_core = 56 # VEZER-EMS
-			add_state_core = 57 # WESTFALLEN
-			add_state_core = 58 # SHLEZVIG-GOLSHTEIN
-			add_state_core = 59 # GANNOVER
-			add_state_core = 60 # TURINGIA
-			add_state_core = 61 # MEKLEBURG
-			add_state_core = 65 # SACKSONIA
-			add_state_core = 66 # L. SILEZIA
-			add_state_core = 67 # H. SILEZIA
-			add_state_core = 68 # E. MARKA
-
-			BFO = { drop_cosmetic_tag = yes }
-
-			#annex_country = {target = GER}
-		}
-	}
-
-	focus = {
-		id = BFO_the_great_war
-		icon = GFX_goal_support_fascism
-		cost = 5
-
-		prerequisite = {
-			focus = BFO_revanche
-		}
-		relative_position_id = BFO_revanche
-
-		x = 0
-		y = 1.1
-		completion_reward = { }
-	}
-
 }

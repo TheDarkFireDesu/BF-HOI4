@@ -1,16 +1,24 @@
 division_template = {
-	name = BFO_REB_TEMP
+	name = "Sturm-otryadi im. Egora"
 	division_names_group = BFO_LTINF_01
+
+	is_locked = yes
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
-        infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
         infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
 	}
 	support = {
 	    recon = { x = 0 y = 0 }
 	    artillery = { x = 0 y = 1 }
+		engineer = { x = 0 y = 2 }
 	}
 }
 
@@ -18,29 +26,36 @@ units = {
 
     division= {	
 		name = "За Мариуполь!"
-		location = 9633
-		division_template = BFO_REB_TEMP
+		location = 668
+		division_template = "Sturm-otryadi im. Egora"
 		start_experience_factor = 0.5
 	}
 
 	division= {	
 		name = "За Бучу!" 
-		location = 3675
-		division_template = BFO_REB_TEMP
+		location = 6673
+		division_template = "Sturm-otryadi im. Egora"
 		start_experience_factor = 0.5
 	}
 
 	division= {	
+		name = "За Лисичанск!" 
+		location = 6673
+		division_template = "Sturm-otryadi im. Egora"
+		start_experience_factor = 1
+	}
+
+	division= {	
 		name = "За Ирпень!"
-		location = 11618
-		division_template = BFO_REB_TEMP
+		location = 3675
+		division_template = "Sturm-otryadi im. Egora"
 		start_experience_factor = 0.5
 	}
 
 	division= {	
 		name = "За Изюм!"
-		location = 668
-		division_template = BFO_REB_TEMP
+		location = 3675
+		division_template = "Sturm-otryadi im. Egora"
 		start_experience_factor = 0.5
 	}
 }

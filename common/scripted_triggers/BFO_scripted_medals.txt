@@ -1,0 +1,3 @@
+should_have_bfo_medals_trigger = {
+	original_tag = BFO
+}

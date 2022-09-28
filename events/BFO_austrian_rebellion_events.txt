@@ -1,0 +1,39 @@
+add_namespace = bfo_aus_rebellion
+
+country_event = {
+	id = bfo_aus_rebellion.1
+	title = bfo_aus_rebellion.1.t
+	desc = bfo_aus_rebellion.1.d
+
+	picture = GFX_bezbab 
+	is_triggered_only = yes
+
+	option = {
+		name = bfo_aus_rebellion.1.a
+		add_political_power = 25
+	}
+}
+
+state_event = {
+	id = bfo_aus_rebellion.2
+	title = bfo_aus_rebellion.2.t
+	desc = bfo_aus_rebellion.2.d
+
+	picture = GFX_bezbab
+	is_triggered_only = yes
+
+	trigger = {
+		4 = {
+			is_owned_and_controlled_by = BFO 
+		}
+	}
+
+	option = {
+		name = bfo_aus_rebellion.2.a
+		custom_effect_tooltip = BFO_cet_aus_rebellion_win
+		
+		hidden_effect = {
+			BFO = { complete_national_focus = BFO_we_are_winner }	
+		}
+	}
+}

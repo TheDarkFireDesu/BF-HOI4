@@ -43,36 +43,7 @@ BFO_buy_equipment = {
 	fire_only_once = yes
 	
 	complete_effect = {
-		random_list = {
-			10 = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 3000
-					producer = SWI
-				}
-			}
-			20 = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 2000
-					producer = SWI
-				}
-			}
-			30 = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 1500
-					producer = SWI
-				}
-			}
-			40 = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 1000
-					producer = SWI
-				}
-			}
-		}
+		
 	}
 }
 

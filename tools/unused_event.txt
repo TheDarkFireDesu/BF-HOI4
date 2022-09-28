@@ -1,0 +1,28 @@
+country_event = {
+	id = bfo_aus_rebellion.2
+	title = bfo_aus_rebellion.2.t
+	desc = bfo.revolt.2.t
+
+	picture = GFX_bezbab
+	is_triggered_only = yes
+
+	option = {
+		name = bfo.revolt.2.a
+
+		custom_effect_tooltip = BFO_cet_rnk
+
+		hidden_effect = {
+			add_ideas = BFO_rebels_not_killed
+		}
+	}
+
+	option = {
+		name = bfo.revolt.2.b
+
+		custom_effect_tooltip = BFO_cet_rk
+
+		hidden_effect = {
+			add_ideas = BFO_rebels_killed 
+		}
+	}
+}

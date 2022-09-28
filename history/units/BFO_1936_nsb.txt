@@ -1,5 +1,5 @@
 ﻿division_template = {
-	name = BFO_INF_TEMP
+	name = "Pehotnaya Divisiya"
 	division_names_group = BFO_INF_01
 
 	regiments = {
@@ -21,7 +21,7 @@
 }
 
 division_template = {
-	name = BFO_ARM_TEMP
+	name = "Tankovaya Divisiya"
 	division_names_group = BFO_ARM_01
 
 	regiments = {
@@ -41,7 +41,7 @@ division_template = {
 }
 
 division_template = {
-	name = BFO_MNT_TEMP
+	name = "Gorno-strelkovaya Divisiya"
 	division_names_group = BFO_MNT_01
 
 	regiments = {
@@ -55,7 +55,7 @@ division_template = {
 }
 
 division_template = {
-	name = BFO_CAV_TEMP
+	name = "Kazatskaya Divisiya"
 	division_names_group = BFO_CAV_01
 
 	regiments = {
