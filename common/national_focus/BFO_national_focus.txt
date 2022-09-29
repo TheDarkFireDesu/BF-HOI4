@@ -7,7 +7,7 @@
 ### search_filters = {FOCUS_FILTER_ANNEXATION}
 
 focus_tree = {
-	id = bezbab_focus
+	id = BFO_FOCUS
 
 	country = { 
 		factor = 0
@@ -17,17 +17,17 @@ focus_tree = {
 		} 
 	}
 
-	initial_show_position = { focus = BFO_austrian_rebellion}
+	initial_show_position = { focus = BFO_focus_austrian_rebellion}
 
 	default = no
 
 	focus = {
-		id = BFO_austrian_rebellion
+		id = BFO_focus_austrian_rebellion
 		icon = GFX_goal_support_fascism
 
 		cost = 0
 
-		x = 15
+		x = 17
 		y = 0
 		
 		available = { always = no }
@@ -39,33 +39,20 @@ focus_tree = {
 
 		completion_reward = {
 
-			custom_effect_tooltip = BFO_cet_austrian_rebellion
-
 			hidden_effect = {
-
-				load_oob = "BFO_1936_nsb"
-				load_oob = "BFO_rebels_army"
-				
 				inherit_technology = AUS
-				
-				BFO = {
-					declare_war_on = {
-						target = AUS
-						type = annex_everything
-					}
-				}
 			}
 		}
 	}
 
 	focus = {
-		id = BFO_barricades
+		id = BFO_focus_barricades
 		icon = GFX_goal_generic_construct_military
 
 		cost = 2
 
-		prerequisite = { focus = BFO_austrian_rebellion }
-		relative_position_id = BFO_austrian_rebellion
+		prerequisite = { focus = BFO_focus_austrian_rebellion }
+		relative_position_id = BFO_focus_austrian_rebellion
 
 		search_filters = { FOCUS_FILTER_POLITICAL}
 
@@ -111,13 +98,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_mobilization
+		id = BFO_focus_mobilization
 		icon = GFX_goal_generic_intelligence_exchange
 
 		cost = 1
 
-		prerequisite = { focus = BFO_barricades }
-		relative_position_id = BFO_barricades
+		prerequisite = { focus = BFO_focus_barricades }
+		relative_position_id = BFO_focus_barricades
 
 		x = 0
 		y = 1
@@ -128,6 +115,9 @@ focus_tree = {
 			
 			hidden_effect = {
 
+				load_oob = "BFO_1936_nsb"
+				load_oob = "BFO_rebels_army"
+
 				swap_ideas = {
 					remove_idea = disarmed_nation
 					add_idea = limited_conscription
@@ -136,12 +126,6 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = civilian_economy
 					add_idea = low_economic_mobilisation
-				}
-
-
-				add_offsite_building = {
-					type = arms_factory
-					level = 2
 				}
 				
 				add_war_support = 0.50
@@ -181,41 +165,6 @@ focus_tree = {
 		}
 	}
 
-
-	focus = {
-		id = BFO_we_are_winner
-		icon = GFX_goal_support_fascism
-
-		cost = 0
-
-		prerequisite = { focus = BFO_for_victory }
-		relative_position_id = BFO_for_victory
-		available = { always = no }
-
-		x = 0
-		y = 1
-
-		search_filters = { FOCUS_FILTER_POLITICAL}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		completion_reward = {
-
-			custom_effect_tooltip = BFO_cet_we_are_winner
-
-			hidden_effect = {
-
-				BFO = { set_capital = 4 }
-
-				delete_unit_template_and_units = {
-					division_template = "Sturm-otryadi im. Egora"
-				}
-			}
-		}
-	}
-
 	focus = {
 		id = BFO_the_rise_of_bezbab
 		icon = GFX_goal_support_fascism
@@ -226,7 +175,7 @@ focus_tree = {
 		y = 0
 
 		available = { always = no }
-		search_filters = { FOCUS_FILTER_POLITICAL}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		ai_will_do = {
 			factor = 10
@@ -237,7 +186,7 @@ focus_tree = {
 
 
 	focus = {
-		id = BFO_military_revolt
+		id = BFO_focus_military_revolt
 		icon = GFX_goal_generic_build_navy
 
 		cost = 0
@@ -247,55 +196,70 @@ focus_tree = {
 		relative_position_id = BFO_the_rise_of_bezbab
 
 		x = 0
-		y = 1.1
+		y = 1
+
+		complete_tooltip = { news_event = bfo_news_events.1 }
 
 		completion_reward = {
 
-			#event fix
+			news_event = bfo_news_events.1
 
-			BFO = {
-				transfer_state = 736
-				add_state_core = 736
+			hidden_effect = {
+
+				
+				BFO = {
+
+					transfer_state = 852
+					add_state_core = 852
+
+					transfer_state = 116
+					add_state_core = 116
+
+					transfer_state = 736
+					add_state_core = 736
+
+					transfer_state = 177
+					add_state_core = 177
+				}
+
+				add_manpower = 1000
+				
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Sirena Class"
+
+					creator = ITA
+					name = "Непотопляемый"
+				}
+
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Sirena Class"
+
+					creator = ITA
+					name = "Неубиваемый"
+				}
+
+				create_ship = {
+					type = ship_hull_submarine_1
+					equipment_variant = "Sirena Class"
+
+					creator = ITA
+					name = "Неуничтожаемый"
+				}
 			}
-
-			add_manpower = 1000
-			
-			create_ship = {
-				type = ship_hull_submarine_1
-				equipment_variant = "Sirena Class"
-
-				creator = ITA
-				name = "Непотопляемый"
-			}
-
-			create_ship = {
-				type = ship_hull_submarine_1
-				equipment_variant = "Sirena Class"
-
-				creator = ITA
-				name = "Неубиваемый"
-			}
-
-			create_ship = {
-				type = ship_hull_submarine_1
-				equipment_variant = "Sirena Class"
-
-				creator = ITA
-				name = "Неуничтожаемый"
-			}
-
 		}
 	}
 
 	focus = {
-		id = BFO_return_a_seaport
+		id = BFO_focus_return_a_seaport
 		icon = GFX_goal_generic_build_navy
 
 		cost = 1
 
 		available = { 736 = { is_owned_and_controlled_by = BFO } }
-		prerequisite = { focus = BFO_military_revolt}
-		relative_position_id = BFO_military_revolt
+		prerequisite = { focus = BFO_focus_military_revolt}
+		relative_position_id = BFO_focus_military_revolt
 
 		x = 0
 		y = 1
@@ -337,13 +301,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_create_headquarters
+		id = BFO_focus_create_headquarters
 		icon = GFX_goal_generic_axis_build_infantry
 
 		cost = 1
 
-		prerequisite = { focus = BFO_mobilization }
-		relative_position_id = BFO_mobilization
+		prerequisite = { focus = BFO_focus_mobilization }
+		relative_position_id = BFO_focus_mobilization
 
 		x = -2
 		y = 1
@@ -367,13 +331,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_hire_a_generals
+		id = BFO_focus_hire_a_generals
 		icon = GFX_goal_generic_axis_build_infantry
 
 		cost = 1
 
-		prerequisite = { focus = BFO_mobilization }
-		relative_position_id = BFO_mobilization
+		prerequisite = { focus = BFO_focus_mobilization }
+		relative_position_id = BFO_focus_mobilization
 
 		x = 2
 		y = 1
@@ -391,13 +355,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_airborn
+		id = BFO_focus_airborn
 		icon = GFX_goal_generic_build_airforce
 
 		cost = 1
 
-		prerequisite = { focus = BFO_mobilization }
-		relative_position_id = BFO_mobilization
+		prerequisite = { focus = BFO_focus_mobilization }
+		relative_position_id = BFO_focus_mobilization
 
 		x = 0
 		y = 1
@@ -443,29 +407,74 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_for_victory
+		id = BFO_focus_for_victory
 		icon = GFX_goal
 
 		cost = 2.5
 
 		prerequisite = { 
-			focus = BFO_airborn 
-			focus = BFO_create_headquarters
-			focus = BFO_hire_a_generals
+			focus = BFO_focus_airborn 
+			focus = BFO_focus_create_headquarters
+			focus = BFO_focus_hire_a_generals
 		}
-		relative_position_id = BFO_airborn
+		relative_position_id = BFO_focus_airborn
 
 		x = 0
 		y = 1
 
 		completion_reward = {
 
+			
+			hidden_effect = {
+
+				BFO = {
+					declare_war_on = {
+						target = AUS
+						type = annex_everything
+					}
+				}
+			}
 		}
 	}
 
+	focus = {
+		id = BFO_focus_we_are_winner
+		icon = GFX_goal_support_fascism
+
+		cost = 0
+
+		available = { always = no }
+		prerequisite = { focus = BFO_focus_for_victory }
+		relative_position_id = BFO_focus_for_victory
+
+		x = 0
+		y = 1
+
+		search_filters = { FOCUS_FILTER_POLITICAL}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+
+			custom_effect_tooltip = BFO_cet_we_are_winner
+
+			hidden_effect = {
+
+				unlock_national_focus = BFO_focus_we_are_winner
+
+				BFO = { set_capital = {state = 4 } }
+
+				delete_unit_template_and_units = {
+					division_template = "Sturm-otryadi im. Egora"
+				}
+			}
+		}
+	}
 
 	focus = {
-		id = BFO_administrative_reform
+		id = BFO_focus_administrative_reform
 		icon = GFX_goal_generic_improve_relations
 
 		cost = 2
@@ -474,10 +483,14 @@ focus_tree = {
 		prerequisite = { focus = BFO_the_rise_of_bezbab }
 		relative_position_id = BFO_the_rise_of_bezbab
 
-		x = 2
+		x = 4
 		y = 1
 
-		completion_reward = { add_political_power = 50 }
+		completion_reward = { 
+
+			add_political_power = 300
+			custom_effect_tooltip = BFO_cet_administative_reform
+		}
 	}
 
 	focus = {
@@ -486,13 +499,144 @@ focus_tree = {
 
 		cost = 5
 
-		prerequisite = { focus = BFO_administrative_reform }
-		relative_position_id = BFO_administrative_reform
+		prerequisite = { focus = BFO_focus_administrative_reform }
+		relative_position_id = BFO_focus_administrative_reform
 
-		x = 0
-		y = 1.1
+		x = 2
+		y = 1
 
 		completion_reward = { add_political_power = 50 }
+	}
+
+	focus = {
+		id = BFO_focus_dummy_2
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 5
+
+		prerequisite = { focus = BFO_administrative_reform_next }
+		relative_position_id = BFO_administrative_reform_next
+
+		x = 0
+		y = 2
+
+		completion_reward = { add_political_power = 50 }
+	}
+
+	focus = {
+		id = BFO_administrative_reform_next_next
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 5
+
+		prerequisite = { focus = BFO_focus_administrative_reform }
+		relative_position_id = BFO_focus_administrative_reform
+
+		x = -2
+		y = 1
+
+		completion_reward = { add_political_power = 50 }
+	}
+
+	focus = {
+		id = BFO_focus_dummy
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 5
+
+		prerequisite = { focus = BFO_administrative_reform_next_next }
+		relative_position_id = BFO_administrative_reform_next_next
+
+		x = 0
+		y = 2
+
+		completion_reward = { add_political_power = 50 }
+	}
+
+	focus = {
+		id = BFO_blank_example
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 5
+
+		prerequisite = { focus = BFO_focus_administrative_reform }
+		relative_position_id = BFO_focus_administrative_reform
+
+		x = 0
+		y = 1
+
+		completion_reward = { add_political_power = 50 }
+	}
+
+	focus = {
+		id = BFO_example_1
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 5
+
+		prerequisite = { focus = BFO_blank_example }
+		relative_position_id = BFO_blank_example
+
+		x = -1
+		y = 1
+
+		completion_reward = { add_political_power = 50 }
+	}
+
+	focus = {
+		id = BFO_example_2
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 5
+
+		prerequisite = { focus = BFO_blank_example }
+		relative_position_id = BFO_blank_example
+
+		x = 1
+		y = 1
+
+		completion_reward = { add_political_power = 50 }
+	}
+
+	focus = {
+		id = BFO_example_3
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 5
+
+		prerequisite = { 
+			focus = BFO_example_1
+			focus = BFO_example_2 
+		}
+		relative_position_id = BFO_blank_example
+
+		x = 0
+		y = 2
+
+		completion_reward = { add_political_power = 50 }
+	}
+
+	focus = {
+		id = BFO_focus_new_union
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 5
+
+		prerequisite = { 
+			focus = BFO_focus_dummy
+			focus = BFO_focus_dummy_2
+		}
+		relative_position_id = BFO_blank_example
+
+		x = 0
+		y = 3
+
+		completion_reward = { 
+
+			create_faction = BFO_FACTION_NAME
+			set_rule = { can_create_factions = yes } 
+
+		}
 	}
 
 	focus = {
@@ -504,8 +648,8 @@ focus_tree = {
 		prerequisite = { focus = BFO_the_rise_of_bezbab }
 		relative_position_id = BFO_the_rise_of_bezbab
 
-		x = -4.5
-		y = 1.1
+		x = -4
+		y = 1
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -534,12 +678,12 @@ focus_tree = {
 
 		cost = 2.5
 
-		available = { has_completed_focus = BFO_administrative_reform }
+		available = { has_completed_focus = BFO_focus_administrative_reform }
 		prerequisite = { focus = BFO_economic_reform }
 		relative_position_id = BFO_economic_reform 
 
 		x = 0
-		y = 1.1
+		y = 1
 
 		ai_will_do = {
 			factor = 8
@@ -569,7 +713,7 @@ focus_tree = {
 		relative_position_id = BFO_economic_reform_next 
 
 		x = -1
-		y = 1.1
+		y = 1
 
 		cost = 2.5
 
@@ -653,7 +797,7 @@ focus_tree = {
 		relative_position_id = BFO_economic_reform_next
 
 		x = 1
-		y = 1.1
+		y = 1
 
 		cost = 2.5
 
@@ -736,7 +880,7 @@ focus_tree = {
 		relative_position_id = BFO_economic_reform_next
 
 		x = 0
-		y = 2.1
+		y = 2
 
 		cost = 2.5
 
@@ -814,7 +958,7 @@ focus_tree = {
 		relative_position_id = BFO_economic_reform 
 
 		x = -2
-		y = 1.1
+		y = 1
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -855,7 +999,7 @@ focus_tree = {
 		relative_position_id = BFO_economic_reform_oil
 
 		x = 0
-		y = 2.1
+		y = 2
 
 		ai_will_do = {
 			factor = 5
@@ -882,7 +1026,7 @@ focus_tree = {
 		relative_position_id = BFO_economic_reform 
 
 		x = 2
-		y = 1.1
+		y = 1
 		
 		ai_will_do = {
 			factor = 8
@@ -917,7 +1061,7 @@ focus_tree = {
 		relative_position_id = BFO_economic_reform_industry
 
 		x = 0
-		y = 2.1
+		y = 2
 
 		ai_will_do = {
 			factor = 5
@@ -984,7 +1128,7 @@ focus_tree = {
 		relative_position_id = BFO_economic_reform_next
 
 		x = 0
-		y = 3.1
+		y = 3
 		cost = 1
 
 		ai_will_do = {
@@ -1005,12 +1149,12 @@ focus_tree = {
 		cost = 10
 
 		prerequisite = { 
-			focus = BFO_nation_army
+			focus = BFO_focus_new_union
 			focus = BFO_extra_tech_slot
 		}
 
 		x = 6
-		y = 6.5
+		y = 6
 
 		completion_reward = {
 			#custom_effect_tooltip = GER_reichskommissariats_tt

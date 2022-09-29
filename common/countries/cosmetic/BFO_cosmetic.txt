@@ -1,5 +1,4 @@
 VTE = { 
-
-	color = rgb { 10 10 10}
-	color_ui = rgb { 255 255 255}
+	color = rgb { 122 255 255}
+	color_ui = rgb { 122 255 255}
 }

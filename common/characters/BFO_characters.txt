@@ -30,7 +30,7 @@ characters = {
 			desc = BFO_egor_desc
 		}
 		corps_commander = {
-			visible = { has_completed_focus = BFO_hire_a_generals }
+			visible = { has_completed_focus = BFO_focus_hire_a_generals }
 
 			skill = 5
 			attack_skill = 5
@@ -40,7 +40,7 @@ characters = {
 			traits = {skilled_staffer cavalry_leader cavalry_expert desert_fox hill_fighter adaptable}
 		}
 		advisor = {
-			available = { has_completed_focus = BFO_create_headquarters }
+			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = theorist
 			idea_token = egor # WIP
 			traits = {council_of_theorists} # FIX
@@ -64,7 +64,7 @@ characters = {
 			desc = BFO_alina_desc
 		}
 		advisor = {
-			available = { has_completed_focus = BFO_administrative_reform }
+			available = { has_completed_focus = BFO_focus_administrative_reform }
 			slot = political_advisor
 			idea_token = agarkoff # WIP
 			traits = {fortification_engineer}
@@ -88,7 +88,7 @@ characters = {
 			desc = BFO_david_desc
 		}
 		advisor = {
-			available = { has_completed_focus = BFO_administrative_reform }
+			available = { has_completed_focus = BFO_focus_administrative_reform }
 			slot = political_advisor
 			idea_token = david # WIP
 			traits = {first_lady industry_reformer captain_of_industry}
@@ -127,7 +127,7 @@ characters = {
 			}
 		}
 		field_marshal = {
-			#visible = { has_completed_focus = BFO_create_headquarters }
+			visible = { has_completed_focus = BFO_focus_create_headquarters }
 
 			skill = 5
 			attack_skill = 5
@@ -151,7 +151,7 @@ characters = {
 			}
 		}
 		field_marshal = {
-			#visible = { has_completed_focus = BFO_create_headquarters }
+			visible = { has_completed_focus = BFO_focus_create_headquarters }
 
 			skill = 5
 			attack_skill = 5
@@ -161,7 +161,7 @@ characters = {
 			traits = {trait_cautious armor_officer war_hero trickster panzer_expert skirmisher commando}
 		}
 		advisor = {
-			available = { has_completed_focus = BFO_create_headquarters }
+			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = high_command
 			ledger = army
 			idea_token = kirill # WIP
@@ -184,7 +184,7 @@ characters = {
 		}
 
 		field_marshal = {
-			visible = { has_completed_focus = BFO_create_headquarters }
+			visible = { has_completed_focus = BFO_focus_create_headquarters }
 
 			skill = 5
 			attack_skill = 4
@@ -193,8 +193,13 @@ characters = {
 			logistics_skill = 5
 			traits = {trait_cautious naval_invader war_hero urban_assault_specialist naval_liason}
 		}
+		country_leader = {
+			ideology = nazism
+			traits = {dictator dislikes_germany} 
+			desc = BFO_ruslan_desc
+		}
 		advisor = {
-			available = { has_completed_focus = BFO_create_headquarters }
+			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = high_command
 			ledger = army
 			idea_token = ruslan # WIP
@@ -217,7 +222,7 @@ characters = {
 		}
 
 		field_marshal = {
-			visible = { has_completed_focus = BFO_create_headquarters }
+			visible = { has_completed_focus = BFO_focus_create_headquarters }
 
 			skill = 5
 			attack_skill = 2
@@ -227,7 +232,7 @@ characters = {
 			traits = {cavalry_officer commando cavalry_leader cavalry_expert skilled_staffer expert_delegator}
 		}
 		advisor = {
-			available = { has_completed_focus = BFO_create_headquarters }
+			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = high_command
 			ledger = army
 			idea_token = sanya_k # WIP
@@ -250,8 +255,8 @@ characters = {
 		}
 	
 		field_marshal = {
-			#visible = { has_completed_focus = BFO_create_headquarters }
-			
+			visible = { has_completed_focus = BFO_focus_create_headquarters }
+		
 			skill = 4
 			attack_skill = 3
 			defense_skill = 3
@@ -260,7 +265,7 @@ characters = {
 			traits = {infantry_officer infantry_leader infantry_expert trickster expert_improviser}
 		}
 		advisor = {
-			available = { has_completed_focus = BFO_create_headquarters }
+			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = high_command
 			ledger = army
 			idea_token = artem_n # WIP
@@ -283,7 +288,7 @@ characters = {
 		}
 	
 		field_marshal = {
-			visible = { has_completed_focus = BFO_create_headquarters }
+			visible = { has_completed_focus = BFO_focus_create_headquarters }
 
 			skill = 4
 			attack_skill = 3
@@ -293,7 +298,7 @@ characters = {
 			traits = {commando war_hero adaptable fast_planner trait_engineer scavenger paratrooper}
 		}
 		advisor = {
-			available = { has_completed_focus = BFO_create_headquarters }
+			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = air_chief
 			idea_token = artem_k # WIP
 			traits = {air_chief_ground_support_3}
@@ -319,7 +324,7 @@ characters = {
 		}
 
 		corps_commander = {
-			visible = { has_completed_focus = BFO_hire_a_generals }
+			visible = { has_completed_focus = BFO_focus_hire_a_generals }
 
 			skill = 5
 			attack_skill = 3
@@ -329,7 +334,7 @@ characters = {
 			traits = {war_hero brilliant_strategist engineer_officer trait_engineer fortress_buster} 
 		}
 		advisor = {
-			available = { has_completed_focus = BFO_create_headquarters }
+			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = army_chief
 			idea_token = sanya_b # WIP
 			traits = {army_chief_defensive_3}
@@ -350,7 +355,7 @@ characters = {
 		}
 
 		corps_commander = {
-			visible = { has_completed_focus = BFO_hire_a_generals }
+			visible = { has_completed_focus = BFO_focus_hire_a_generals }
 
 			skill = 5
 			attack_skill = 5
@@ -360,7 +365,7 @@ characters = {
 			traits = {organizer offensive_doctrine aggressive_assaulter desert_fox skirmisher commando}
 		}
 		advisor = {
-			available = { has_completed_focus = BFO_create_headquarters }
+			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = army_chief
 			idea_token = misha # WIP
 			traits = {army_chief_offensive_3}
@@ -381,7 +386,7 @@ characters = {
 		}
 
 		corps_commander = {
-			visible = { has_completed_focus = BFO_hire_a_generals }
+			visible = { has_completed_focus = BFO_focus_hire_a_generals }
 
 			skill = 4
 			attack_skill = 3
@@ -391,7 +396,7 @@ characters = {
 			traits = {war_hero inflexible_strategist naval_invader naval_liason guerilla_fighter}
 		}
 		advisor = {
-			available = { has_completed_focus = BFO_create_headquarters }
+			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = navy_chief
 			idea_token = nekit # WIP
 			traits = {navy_chief_decisive_battle_3}
@@ -412,7 +417,7 @@ characters = {
 		}
 
 		corps_commander = {
-			visible = { has_completed_focus = BFO_hire_a_generals }
+			visible = { has_completed_focus = BFO_focus_hire_a_generals }
 
 			skill = 4
 			attack_skill = 3
@@ -422,7 +427,7 @@ characters = {
 			traits = {} # FIX
 		}
 		advisor = {
-			available = { has_completed_focus = BFO_create_headquarters }
+			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = theorist
 			idea_token = nikita # WIP
 			traits = {mobile_warfare_expert} # FIX
@@ -443,7 +448,7 @@ characters = {
 		}
 
 		corps_commander = {
-			visible = { has_completed_focus = BFO_hire_a_generals }
+			visible = { has_completed_focus = BFO_focus_hire_a_generals }
 
 			skill = 5
 			attack_skill = 4
@@ -468,7 +473,7 @@ characters = {
 		}
 
 		corps_commander = {
-			visible = { has_completed_focus = BFO_hire_a_generals }
+			visible = { has_completed_focus = BFO_focus_hire_a_generals }
 
 			skill = 5
 			attack_skill = 4
@@ -497,7 +502,7 @@ characters = {
 		}
 
 		navy_leader = {
-			visible = { has_completed_focus = BFO_military_revolt }
+			visible = { has_completed_focus = BFO_focus_military_revolt }
 
 			skill = 5
 			attack_skill = 5
@@ -508,7 +513,7 @@ characters = {
 		}
 
 		advisor = {
-			available = { has_completed_focus = BFO_create_headquarters }
+			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = navy_chief
 			idea_token = donel # WIP
 			traits = {navy_chief_maneuver_3}
@@ -529,7 +534,7 @@ characters = {
 		}
 
 		navy_leader = {
-			visible = { has_completed_focus = BFO_military_revolt }
+			visible = { has_completed_focus = BFO_focus_military_revolt }
 
 			skill = 4
 			attack_skill = 3
@@ -540,7 +545,7 @@ characters = {
 		}
 
 		advisor = {
-			available = { has_completed_focus = BFO_administrative_reform }
+			available = { has_completed_focus = BFO_focus_administrative_reform }
 			slot = political_advisor
 			idea_token = ksuha # WIP
 			traits = {liberal_democratic_paragon } # FIX
@@ -561,7 +566,7 @@ characters = {
 		}
 
 		navy_leader = {
-			visible = { has_completed_focus = BFO_military_revolt }
+			visible = { has_completed_focus = BFO_focus_military_revolt }
 
 			skill = 3
 			attack_skill = 3
@@ -572,7 +577,7 @@ characters = {
 		}
 
 		advisor = {
-			available = { has_completed_focus = BFO_create_headquarters }
+			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = navy_chief
 			idea_token = vladimir_karas # WIP
 			traits = {navy_anti_submarine_3}
@@ -593,7 +598,7 @@ characters = {
 		}
 
 		navy_leader = {
-			visible = { has_completed_focus = BFO_military_revolt }
+			visible = { has_completed_focus = BFO_focus_military_revolt }
 
 			skill = 3
 			attack_skill = 4
@@ -604,7 +609,7 @@ characters = {
 		}
 
 		advisor = {
-			available = { has_completed_focus = BFO_create_headquarters }
+			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = air_chief
 			idea_token = vlad_coshalot # WIP
 			traits = {air_air_combat_training_3}
@@ -626,7 +631,7 @@ characters = {
 		}
 
 		advisor = {
-			available = { has_completed_focus = BFO_administrative_reform }
+			available = { has_completed_focus = BFO_focus_administrative_reform }
 			slot = political_advisor
 			idea_token = alena_sovec # WIP
 			traits = {war_industrialist propaganda_expert}

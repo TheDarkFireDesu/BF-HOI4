@@ -34,7 +34,7 @@ austrian_rebellion_category = {
 						producer = AUS
 					}
 
-					complete_national_focus = BFO_austrian_rebellion
+					complete_national_focus = BFO_focus_austrian_rebellion
 
 					set_cosmetic_tag = VTE
 

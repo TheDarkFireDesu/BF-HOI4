@@ -1,16 +1,17 @@
 ﻿l_russian:
   
-  bezbab_focus: "ФОКУСЫ БЕЗБАБНЫЕ"
-  BFO_the_rise_of_ukranian_sun: "Рассвет украинского солнца!"
-  BFO_the_rise_of_bezbab: "Начало положено!"
-  BFO_the_start_of_new_nation: "Начало новой нации!"
+  BFO_FOCUS: "ФОКУСЫ БЕЗБАБНЫЕ"
+  BFO_FACTION_NAME: "Содружество Европейских Наций"
 
-  BFO_military_revolt: "Бунт итальянских моряков"
-  BFO_military_revolt_desc: "Наши спящие ячейки в Италии устроят бунт и часть "
-  BFO_create_headquarters: "Генеральный штаб ВС БФ"
-  BFO_airborn: "Первые ВВС"
-  BFO_mobilisation: "Мобилизация"
-  BFO_nation_army: "Первые шаги наших дивизий"
+  BFO_focus_austrian_rebellion: "Австрийское восстание"
+  BFO_focus_barricades: "Альпийская стена"
+  BFO_focus_mobilization: "Мобилизация"
+  BFO_focus_create_headquarters: "Генеральный штаб ВС БФ"
+  BFO_focus_airborn: "Первые ВВС"
+  BFO_focus_mobilisation: "Мобилизация"
+  BFO_focus_hire_a_general: "Генералитет"
+  BFO_focus_for_victory: "Победа будет за нами!"
+  BFO_focus_we_are_winner: "Победа!"
 
   BFO_administrative_reform: "Административная реформа"
   BFO_administrative_reform_desc: "Для нормального функционирования нашего государства нам нужно создать администрацию. В нее войдут подконтрольные нам люди."

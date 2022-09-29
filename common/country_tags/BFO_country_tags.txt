@@ -1,1 +1,1 @@
-BFO = "countries/Bezbabnya.txt"
+BFO = "countries/SquadBB.txt"
