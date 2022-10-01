@@ -1,0 +1,10 @@
+music_station = ICHKERIA_RADIO
+
+music = {
+	song = welcome_to_the_hell
+	chance = {
+		modifier = {
+			factor = 1
+		}
+	}
+}

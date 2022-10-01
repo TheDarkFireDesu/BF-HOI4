@@ -1,0 +1,105 @@
+add_namespace = bfo_switzerland
+
+country_event = {
+	id = bfo_switzerland.1
+	title = bfo_switzerland.1.t
+	desc = bfo_switzerland.1.d
+
+	picture = GFX_bezbab 
+	is_triggered_only = yes
+
+	option = {
+		name = bfo_switzerland.1.a
+
+		BFO = {
+			add_state_claim = 3
+			add_state_claim = 151
+			add_state_claim = 845
+			add_state_claim = 846
+			add_state_claim = 847
+		}
+
+		hidden_effect = {
+			random_list = {
+				45 = { 
+					country_event = { 
+						id = bfo_switzerland.2
+						days = 7 
+					} 
+				}
+				45 = { 
+					country_event = {
+						id = bfo_switzerland.3
+						days = 7 
+					}
+				}
+				10 = {
+					country_event = {
+						id = bfo_switzerland.4
+						days = 7
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = bfo_switzerland.2
+	title = bfo_switzerland.2.t
+	desc = bfo_switzerland.2.d
+
+	picture = GFX_bezbab 
+	is_triggered_only = yes
+
+	option = {
+		name = bfo_switzerland.2.a
+		hidden_effect = {
+			complete_national_focus = BFO_focus_annex_switz
+		}
+	}
+}
+
+country_event = {
+	id = bfo_switzerland.3
+	title = bfo_switzerland.3.t
+	desc = bfo_switzerland.3.d
+
+	picture = GFX_bezbab 
+	is_triggered_only = yes
+
+	option = {
+		name = bfo_switzerland.3.a
+		hidden_effect = {
+			complete_national_focus = BFO_focus_escalation_with_switz
+		}
+	}
+}
+
+country_event = {
+	id = bfo_switzerland.4
+	title = bfo_switzerland.4.t
+	desc = bfo_switzerland.4.d
+
+	picture = GFX_bezbab 
+	is_triggered_only = yes
+
+	option = {
+		name = bfo_switzerland.4.a
+		hidden_effect = {
+			complete_national_focus = BFO_focus_switz_puppet
+	}
+}
+
+news_event = {
+	id = bfo_switzerland_news.1
+	title = bfo_switzerland_news.t
+	desc = bfo_switzerland_news.d
+
+	picture = GFX_bezbab 
+	is_triggered_only = yes
+
+	option = {
+		name = bfo_switzerland_news.a
+	}
+}

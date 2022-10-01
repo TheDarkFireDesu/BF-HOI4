@@ -30,13 +30,13 @@ characters = {
 			desc = BFO_egor_desc
 		}
 		corps_commander = {
-			visible = { has_completed_focus = BFO_focus_hire_a_generals }
+			visible = { has_completed_focus = BFO_focus_create_headquarters }
 
-			skill = 5
-			attack_skill = 5
+			skill = 3
+			attack_skill = 4
 			defense_skill = 3
 			planning_skill = 4
-			logistics_skill = 5
+			logistics_skill = 3
 			traits = {skilled_staffer cavalry_leader cavalry_expert desert_fox hill_fighter adaptable}
 		}
 		advisor = {
@@ -324,7 +324,7 @@ characters = {
 		}
 
 		corps_commander = {
-			visible = { has_completed_focus = BFO_focus_hire_a_generals }
+			visible = { has_completed_focus = BFO_focus_create_headquarters }
 
 			skill = 5
 			attack_skill = 3
@@ -355,7 +355,7 @@ characters = {
 		}
 
 		corps_commander = {
-			visible = { has_completed_focus = BFO_focus_hire_a_generals }
+			visible = { has_completed_focus = BFO_focus_create_headquarters }
 
 			skill = 5
 			attack_skill = 5
@@ -386,7 +386,7 @@ characters = {
 		}
 
 		corps_commander = {
-			visible = { has_completed_focus = BFO_focus_hire_a_generals }
+			visible = { has_completed_focus = BFO_focus_create_headquarters }
 
 			skill = 4
 			attack_skill = 3
@@ -417,7 +417,7 @@ characters = {
 		}
 
 		corps_commander = {
-			visible = { has_completed_focus = BFO_focus_hire_a_generals }
+			visible = { has_completed_focus = BFO_focus_create_headquarters }
 
 			skill = 4
 			attack_skill = 3
@@ -448,7 +448,7 @@ characters = {
 		}
 
 		corps_commander = {
-			visible = { has_completed_focus = BFO_focus_hire_a_generals }
+			visible = { has_completed_focus = BFO_focus_create_headquarters }
 
 			skill = 5
 			attack_skill = 4
@@ -473,7 +473,7 @@ characters = {
 		}
 
 		corps_commander = {
-			visible = { has_completed_focus = BFO_focus_hire_a_generals }
+			visible = { has_completed_focus = BFO_focus_create_headquarters }
 
 			skill = 5
 			attack_skill = 4

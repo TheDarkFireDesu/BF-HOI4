@@ -1,4 +1,4 @@
-### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_POLITICAL }
 ### search_filters = {FOCUS_FILTER_RESEARCH}
 ### search_filters = {FOCUS_FILTER_INDUSTRY}
 ### search_filters = {FOCUS_FILTER_STABILITY}
@@ -17,7 +17,7 @@ focus_tree = {
 		} 
 	}
 
-	initial_show_position = { focus = BFO_focus_austrian_rebellion}
+	initial_show_position = { focus = BFO_focus_austrian_rebellion }
 
 	default = no
 
@@ -30,8 +30,7 @@ focus_tree = {
 		x = 17
 		y = 0
 		
-		available = { always = no }
-		search_filters = { FOCUS_FILTER_POLITICAL}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		ai_will_do = {
 			factor = 10
@@ -54,45 +53,40 @@ focus_tree = {
 		prerequisite = { focus = BFO_focus_austrian_rebellion }
 		relative_position_id = BFO_focus_austrian_rebellion
 
-		search_filters = { FOCUS_FILTER_POLITICAL}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		x = 0
 		y = 1
 
 		completion_reward = { 
 
-			custom_effect_tooltip = BFO_cet_barricades
+			153 = {
 
-			hidden_effect = {
+				if = {
 
-				153 = {
+					limit = { is_controlled_by = BFO }
 
-					if = {
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 3675
+						instant_build = yes
+					}
 
-						limit = { is_controlled_by = BFO }
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 668
+						instant_build = yes
+					}
 
-						add_building_construction = {
-							type = bunker
-							level = 5
-							province = 3675
-							instant_build = yes
-						}
-
-						add_building_construction = {
-							type = bunker
-							level = 5
-							province = 668
-							instant_build = yes
-						}
-
-						add_building_construction = {
-							type = bunker
-							level = 5
-							province = 6673
-							instant_build = yes
-						}
-					} 
-				}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 6673
+						instant_build = yes
+					}
+				} 
 			}
 		}
 	}
@@ -176,7 +170,7 @@ focus_tree = {
 		prerequisite = { focus = BFO_focus_mobilization }
 		relative_position_id = BFO_focus_mobilization
 
-		x = -2
+		x = -1
 		y = 1
 
 		completion_reward = {
@@ -198,30 +192,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_focus_hire_a_generals
-		icon = GFX_goal_generic_axis_build_infantry
-
-		cost = 1
-
-		prerequisite = { focus = BFO_focus_mobilization }
-		relative_position_id = BFO_focus_mobilization
-
-		x = 2
-		y = 1
-
-		completion_reward = {
-			
-			custom_effect_tooltip = BFO_cet_hire_a_generals
-
-			hidden_effect = {
-
-				army_experience = 10
-
-			}
-		}
-	}
-
-	focus = {
 		id = BFO_focus_airborn
 		icon = GFX_goal_generic_build_airforce
 
@@ -230,7 +200,7 @@ focus_tree = {
 		prerequisite = { focus = BFO_focus_mobilization }
 		relative_position_id = BFO_focus_mobilization
 
-		x = 0
+		x = 1
 		y = 1
 
 		completion_reward = {
@@ -274,7 +244,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_the_rise_of_bezbab
+		id = BFO_focus_the_rise_of_bezbab
 		icon = GFX_goal_support_fascism
 
 		cost = 0
@@ -282,7 +252,10 @@ focus_tree = {
 		x = 6
 		y = 0
 
-		available = { always = no }
+		available = { 
+			4 = { is_owned_and_controlled_by = BFO }
+			152 = { is_owned_and_controlled_by = BFO }
+		 }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -290,7 +263,19 @@ focus_tree = {
 			factor = 10
 		}
 
-		completion_reward = {}
+		completion_reward = {
+
+			hidden_effect = {
+
+				drop_cosmetic_tag = yes
+
+				BFO = { set_capital = {state = 4 } }
+
+				delete_unit_template_and_units = {
+					division_template = "Sturm-otryadi im. Egora"
+				}
+			}
+		}
 	}
 
 
@@ -301,8 +286,8 @@ focus_tree = {
 		cost = 0
 
 		available = { has_war = no }
-		prerequisite = { focus = BFO_the_rise_of_bezbab }
-		relative_position_id = BFO_the_rise_of_bezbab
+		prerequisite = { focus = BFO_focus_the_rise_of_bezbab }
+		relative_position_id = BFO_focus_the_rise_of_bezbab
 
 		x = 0
 		y = 1
@@ -447,60 +432,19 @@ focus_tree = {
 
 		prerequisite = { focus = BFO_focus_airborn }
 		prerequisite = { focus = BFO_focus_create_headquarters }
-		prerequisite = { focus = BFO_focus_hire_a_generals }
-		relative_position_id = BFO_focus_airborn
+		relative_position_id = BFO_focus_mobilization
 
 		x = 0
-		y = 1
+		y = 2
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION } 
 
 		completion_reward = {
 
-			
-			hidden_effect = {
-
-				BFO = {
-					declare_war_on = {
-						target = AUS
-						type = annex_everything
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = BFO_focus_we_are_winner
-		icon = GFX_goal_support_fascism
-
-		cost = 0
-
-		available = { always = no }
-		prerequisite = { focus = BFO_focus_for_victory }
-		relative_position_id = BFO_focus_for_victory
-
-		x = 0
-		y = 1
-
-		search_filters = { FOCUS_FILTER_POLITICAL}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		completion_reward = {
-
-			custom_effect_tooltip = BFO_cet_we_are_winner
-
-			hidden_effect = {
-
-				unlock_national_focus = BFO_focus_we_are_winner
-
-				BFO = { set_capital = {state = 4 } }
-
-				delete_unit_template_and_units = {
-					division_template = "Sturm-otryadi im. Egora"
+			BFO = {
+				declare_war_on = {
+					target = AUS
+					type = annex_everything
 				}
 			}
 		}
@@ -513,8 +457,8 @@ focus_tree = {
 		cost = 2
 
 		available = { has_completed_focus = BFO_focus_military_revolt }
-		prerequisite = { focus = BFO_the_rise_of_bezbab }
-		relative_position_id = BFO_the_rise_of_bezbab
+		prerequisite = { focus = BFO_focus_the_rise_of_bezbab }
+		relative_position_id = BFO_focus_the_rise_of_bezbab
 
 		x = 4
 		y = 1
@@ -693,13 +637,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_economic_reform 
+		id = BFO_focus_economic_reform 
 		icon = GFX_goal_generic_construct_civ_factory
 
 		cost = 2
 
-		prerequisite = { focus = BFO_the_rise_of_bezbab }
-		relative_position_id = BFO_the_rise_of_bezbab
+		prerequisite = { focus = BFO_focus_the_rise_of_bezbab }
+		relative_position_id = BFO_focus_the_rise_of_bezbab
 
 		x = -4
 		y = 1
@@ -732,8 +676,8 @@ focus_tree = {
 		cost = 2.5
 
 		available = { has_completed_focus = BFO_focus_administrative_reform }
-		prerequisite = { focus = BFO_economic_reform }
-		relative_position_id = BFO_economic_reform 
+		prerequisite = { focus = BFO_focus_economic_reform }
+		relative_position_id = BFO_focus_economic_reform 
 
 		x = 0
 		y = 1
@@ -1008,8 +952,8 @@ focus_tree = {
 
 		cost = 3
 
-		prerequisite = { focus = BFO_economic_reform }
-		relative_position_id = BFO_economic_reform 
+		prerequisite = { focus = BFO_focus_economic_reform }
+		relative_position_id = BFO_focus_economic_reform 
 
 		x = -2
 		y = 1
@@ -1077,8 +1021,8 @@ focus_tree = {
 
 		cost = 5
 
-		prerequisite = { focus = BFO_economic_reform }
-		relative_position_id = BFO_economic_reform 
+		prerequisite = { focus = BFO_focus_economic_reform }
+		relative_position_id = BFO_focus_economic_reform 
 
 		x = 2
 		y = 1
@@ -1165,7 +1109,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_the_start_of_new_nation
+		id = BFO_focus_the_start_of_new_nation
 		icon = GFX_goal_support_fascism
 
 		cost = 1
@@ -1180,7 +1124,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 
 		completion_reward = {
-
+			remove_ideas = d
 		}
 	}
 
@@ -1195,7 +1139,7 @@ focus_tree = {
 		x = 17
 		y = 6
 
-		search_filters = { FOCUS_FILTER_POLITICAL}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		ai_will_do = {
 			factor = 10
@@ -1206,18 +1150,139 @@ focus_tree = {
 	}
 
 	focus = {
+		id = BFO_focus_hungarian_way
+		icon = GFX_goal_support_fascism
+
+		cost = 0
+
+		available = { always = no }
+
+		x = -7
+		y = 1
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = BFO_focus_prepare_to_war_with_ger }
+		relative_position_id = BFO_focus_prepare_to_war_with_ger
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = { }
+
+	}
+
+	focus = {
+		id = BFO_focus_escalation_with_hungary
+		icon = GFX_goal_support_fascism
+
+		cost = 0
+
+		available = { always = no }
+
+		mutually_exclusive = { focus = BFO_focus_hungary_puppet }
+		mutually_exclusive = { focus = BFO_focus_annex_hungary }
+
+		prerequisite = { focus = BFO_focus_hungarian_way }
+		relative_position_id = BFO_focus_hungarian_way
+
+		x = 2
+		y = 1
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = { 
+			BFO = {
+				declare_war_on = {
+					target = SWI
+					type = annex_everything
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BFO_focus_annex_hungary
+		icon = GFX_goal_support_fascism
+
+		cost = 0
+
+		available = { always = no }
+		
+		mutually_exclusive = { focus = BFO_focus_hungary_puppet }
+		mutually_exclusive = { focus = BFO_focus_escalation_with_hungary }
+
+		prerequisite = { focus = BFO_focus_hungarian_way }
+		relative_position_id = BFO_focus_hungarian_way
+
+		x = -2
+		y = 1
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			BFO = { annex_country = { target = HUN } }
+		 }
+	}
+
+	focus = {
+		id = BFO_focus_hungary_puppet
+		icon = GFX_goal_support_fascism
+
+		cost = 0
+
+		available = { always = no }
+
+		mutually_exclusive = { focus = BFO_focus_escalation_with_hungary}
+		mutually_exclusive = { focus = BFO_focus_annex_hungary }
+
+		prerequisite = { focus = BFO_focus_hungarian_way }
+		relative_position_id = BFO_focus_hungarian_way
+
+		x = 0
+		y = 1
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = { 
+			diplomatic_relation = {
+				country = HUN
+				relation = puppet
+				active = yes
+			}
+		}
+	}
+
+	focus = {
 		id = BFO_focus_italian_way
 		icon = GFX_goal_support_fascism
 
 		cost = 0
 
+		available = {
+			has_completed_focus = BFO_focus_switzerland_way
+			has_completed_focus = BFO_focus_hungarian_way
+		}
 		prerequisite = { focus = BFO_focus_prepare_to_war_with_ger }
 		relative_position_id = BFO_focus_prepare_to_war_with_ger
 
-		x = -7
+		x = 0
 		y = 1
 
-		search_filters = { FOCUS_FILTER_POLITICAL}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		ai_will_do = {
 			factor = 10
@@ -1239,14 +1304,106 @@ focus_tree = {
 		x = 7
 		y = 1
 
-		search_filters = { FOCUS_FILTER_POLITICAL}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		ai_will_do = {
 			factor = 10
 		}
 
-		completion_reward = { }
+		completion_reward = { country_event = bfo_switzerland.1 }
+	}
 
+	focus = {
+		id = BFO_focus_escalation_with_switz
+		icon = GFX_goal_support_fascism
+
+		cost = 0
+
+		available = { always = no }
+
+		mutually_exclusive = { focus = BFO_focus_switz_puppet }
+		mutually_exclusive = { focus = BFO_focus_annex_switz }
+
+		prerequisite = { focus = BFO_focus_switzerland_way }
+		relative_position_id = BFO_focus_switzerland_way
+
+		x = 2
+		y = 1
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = { 
+			BFO = {
+				declare_war_on = {
+					target = SWI
+					type = annex_everything
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BFO_focus_annex_switz
+		icon = GFX_goal_support_fascism
+
+		cost = 0
+
+		available = { always = no }
+		
+		mutually_exclusive = { focus = BFO_focus_switz_puppet }
+		mutually_exclusive = { focus = BFO_focus_escalation_with_switz }
+
+		prerequisite = { focus = BFO_focus_switzerland_way }
+		relative_position_id = BFO_focus_switzerland_way
+
+		x = -2
+		y = 1
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			BFO = { annex_country = { target = SWI } }
+		 }
+	}
+
+	focus = {
+		id = BFO_focus_switz_puppet
+		icon = GFX_goal_support_fascism
+
+		cost = 0
+
+		available = { always = no }
+
+		mutually_exclusive = { focus = BFO_focus_escalation_with_switz }
+		mutually_exclusive = { focus = BFO_focus_annex_switz }
+
+		prerequisite = { focus = BFO_focus_switzerland_way }
+		relative_position_id = BFO_focus_switzerland_way
+
+		x = 0
+		y = 1
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = { 
+			diplomatic_relation = {
+				country = SWI
+				relation = puppet
+				active = yes
+			}
+		}
 	}
 
 	focus = {

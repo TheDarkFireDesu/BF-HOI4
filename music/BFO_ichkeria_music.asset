@@ -1,0 +1,6 @@
+music = {
+	name = welcome_to_the_hell
+	file = "welcome_to_the_hell.ogg"
+	volume = 0.65
+
+}

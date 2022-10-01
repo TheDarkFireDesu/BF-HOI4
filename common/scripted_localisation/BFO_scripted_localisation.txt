@@ -1,9 +1,0 @@
-defined_text = {
-	name = BFO_new_railway_gun
-	text = {
-		random_list = {
-			20 = { localisation_key = BFO_railway_gun_sc_loc_1 }
-			30 = { localistaion_key = BFO_railway_gun_sc_loc_2 }
-		}
-	}
-}
