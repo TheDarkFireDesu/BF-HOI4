@@ -253,8 +253,7 @@ focus_tree = {
 		y = 0
 
 		available = { 
-			4 = { is_owned_and_controlled_by = BFO }
-			152 = { is_owned_and_controlled_by = BFO }
+			has_country_flag = BFO_election_is_end_flag
 		 }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -283,7 +282,7 @@ focus_tree = {
 		id = BFO_focus_military_revolt
 		icon = GFX_goal_generic_build_navy
 
-		cost = 0
+		cost = 2
 
 		available = { has_war = no }
 		prerequisite = { focus = BFO_focus_the_rise_of_bezbab }
@@ -411,14 +410,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			
-			set_technology = {
-				railway_gun = 1
-			}
 
 			create_railway_gun = {
 				equipment = railway_gun_equipment_1
 				name = BFO_new_railway_gun
+			}
+
+			hidden_effect = {
+							
+				set_technology = {
+					railway_gun = 1
+				}					
 			}
 		}
 	}
@@ -426,7 +428,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_for_victory
-		icon = GFX_goal
+		icon = GFX_goal_generic_position_armies
 
 		cost = 2.5
 
@@ -445,6 +447,216 @@ focus_tree = {
 				declare_war_on = {
 					target = AUS
 					type = annex_everything
+				}
+			}
+
+			set_country_flag = BFO_AUS_was_annexed_flag
+		}
+	}
+
+	focus = {
+		id = BFO_focus_elections
+		icon = GFX_focus_generic_court
+		
+		cost = 1
+
+		x = 14
+		y = 6
+
+		available = { 
+			AND = {
+				has_country_flag = BFO_AUS_was_annexed_flag 
+				has_war = no
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			
+			hidden_effect = {
+				country_event = bfo_election.1
+			}
+		}
+	}
+
+	focus = {
+		id = BFO_focus_win_ruslan
+		icon = GFX_goal_support_communism
+
+		cost = 0
+
+		x = -5
+		y = 1
+
+		prerequisite = { focus = BFO_focus_elections }
+		relative_position_id = BFO_focus_elections
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+
+
+		}
+	}
+
+	focus = {
+		id = BFO_focus_win_alina
+		icon = GFX_goal_support_democracy
+
+		cost = 0
+
+		x = -3
+		y = 1
+
+		prerequisite = { focus = BFO_focus_elections }
+		relative_position_id = BFO_focus_elections
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+		}
+	}
+
+	focus = {
+		id = BFO_focus_win_jenya
+		icon = GFX_focus_generic_home_defense
+
+		cost = 1
+
+		x = 0
+		y = 1
+
+		prerequisite = { focus = BFO_focus_elections }
+		relative_position_id = BFO_focus_elections
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = neutrality
+			}
+		}
+	}
+
+	focus = {
+		id = BFO_focus_win_nikita
+		icon = GFX_goal_support_fascism
+
+		cost = 0
+
+		x = 3
+		y = 1
+
+		prerequisite = { focus = BFO_focus_elections }
+		relative_position_id = BFO_focus_elections
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+			}
+		}
+	}
+
+	focus = {
+		id = BFO_focus_win_egor
+		icon = GFX_goal
+
+		cost = 0
+
+		x = 5
+		y = 1
+
+		prerequisite = { focus = BFO_focus_elections }
+		relative_position_id = BFO_focus_elections
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = BFO_focus_after_election
+		icon = GFX_goal
+
+		cost = 0
+
+		x = 0
+		y = 2
+		
+		prerequisite = {
+			focus = BFO_focus_win_ruslan
+			focus = BFO_focus_win_alina
+			focus = BFO_focus_win_jenya
+			focus = BFO_focus_win_nikita
+			focus = BFO_focus_win_egor 
+		}
+		relative_position_id = BFO_focus_elections
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+
+			hidden_effect = {
+					BFO = { set_country_flag = BFO_election_is_end_flag }
+
+				IF = {
+					limit = { has_completed_focus = BFO_focus_win_ruslan }
+
+					set_popularities = {
+						democratic = 10
+						neutrality = 10
+						fascism = 10
+						egorism = 10
+						communism = 60
+					}
+				}
+				ELSE_IF = {
+					limit = { has_completed_focus = BFO_focus_win_alina }
+					
+					set_popularities = {
+						democratic = 60
+						neutrality = 10
+						fascism = 10
+						egorism = 10
+						communism = 10
+					}
+				}
+				ELSE_IF = {
+					limit = { has_completed_focus = BFO_focus_win_jenya }
+					
+					set_popularities = {
+						democratic = 10
+						neutrality = 60
+						fascism = 10
+						egorism = 10
+						communism = 10
+					}
+				}
+				ELSE_IF = {
+					limit = { has_completed_focus = BFO_focus_win_nikita }
+					
+					set_popularities = {
+						democratic = 10
+						neutrality = 10
+						fascism = 60
+						egorism = 10
+						communism = 10
+					}
+				}
+				ELSE = {
+					set_popularities = {
+						democratic = 10
+						neutrality = 10
+						fascism = 10
+						egorism = 60
+						communism = 10
+					}
 				}
 			}
 		}
@@ -474,7 +686,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_administrative_reform_next
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_renounce_the_treaty_of_trianon
 
 		cost = 5
 
@@ -491,7 +703,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_dummy_2
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_neutrality_focus
 
 		cost = 5
 
@@ -508,7 +720,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_administrative_reform_next_next
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_major_alliance 
 
 		cost = 5
 
@@ -525,7 +737,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_dummy
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_national_unity
 
 		cost = 5
 
@@ -537,12 +749,16 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 
-		completion_reward = { add_political_power = 50 }
+		completion_reward = { 
+			add_political_power = 50 
+			create_faction = BFO_FACTION_NAME
+			set_rule = { can_create_factions = yes } 
+		}
 	}
 
 	focus = {
 		id = BFO_blank_example
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_scientific_exchange
 
 		cost = 5
 
@@ -554,7 +770,12 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 
-		completion_reward = { add_political_power = 50 }
+		
+		completion_reward = {
+			custom_effect_tooltip = bfo_cte_concern_allowed
+			
+			 add_political_power = 50 
+		}
 	}
 
 	focus = {
@@ -595,7 +816,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_example_3
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_intelligence_exchange
 
 		cost = 5
 
@@ -615,7 +836,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_new_union
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_rom_parties_end
 
 		cost = 5
 
@@ -628,11 +849,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		completion_reward = { 
-
-			create_faction = BFO_FACTION_NAME
-			set_rule = { can_create_factions = yes } 
-
+		completion_reward = {
 		}
 	}
 
@@ -670,7 +887,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_economic_reform_next
+		id = BFO_focus_economic_reform_next
 		icon = GFX_goal_generic_construction2
 
 		cost = 2.5
@@ -706,8 +923,8 @@ focus_tree = {
 
 		dynamic = yes
 
-		prerequisite = { focus = BFO_economic_reform_next }
-		relative_position_id = BFO_economic_reform_next 
+		prerequisite = { focus = BFO_focus_economic_reform_next }
+		relative_position_id = BFO_focus_economic_reform_next 
 
 		x = -1
 		y = 1
@@ -791,8 +1008,8 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civilian
 		dynamic = yes
 
-		prerequisite = { focus = BFO_economic_reform_next }
-		relative_position_id = BFO_economic_reform_next
+		prerequisite = { focus = BFO_focus_economic_reform_next }
+		relative_position_id = BFO_focus_economic_reform_next
 
 		x = 1
 		y = 1
@@ -876,7 +1093,7 @@ focus_tree = {
 		
 		prerequisite = { focus = BFO_automobilista }
 		prerequisite = { focus = BFO_don_werke }
-		relative_position_id = BFO_economic_reform_next
+		relative_position_id = BFO_focus_economic_reform_next
 
 		x = 0
 		y = 2
@@ -1016,7 +1233,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_economic_reform_industry
+		id = BFO_focus_economic_reform_industry
 		icon = GFX_goal_generic_construct_infrastructure
 
 		cost = 5
@@ -1050,13 +1267,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_economic_reform_roadwork
+		id = BFO_focus_economic_reform_roadwork
 		icon = GFX_focus_generic_railroad
 
 		cost = 3
 
-		prerequisite = { focus = BFO_economic_reform_industry }
-		relative_position_id = BFO_economic_reform_industry
+		prerequisite = { focus = BFO_focus_economic_reform_industry }
+		relative_position_id = BFO_focus_economic_reform_industry
 
 		x = 0
 		y = 2
@@ -1090,8 +1307,8 @@ focus_tree = {
 		text = extra_tech_slot
 
 		prerequisite = { focus = BFO_economic_reform_oil_next }
-		prerequisite = { focus = BFO_economic_reform_roadwork }
-		relative_position_id = BFO_economic_reform_next
+		prerequisite = { focus = BFO_focus_economic_reform_roadwork }
+		relative_position_id = BFO_focus_economic_reform_next
 
 		x = 0
 		y = 3
@@ -1110,7 +1327,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_the_start_of_new_nation
-		icon = GFX_goal_support_fascism
+		icon = GFX_focus_SWI_dissolve_the_federal_council
 
 		cost = 1
 
@@ -1124,22 +1341,22 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 
 		completion_reward = {
-			remove_ideas = d
+			#remove_ideas = d
 		}
 	}
 
 	focus = {
 		id = BFO_focus_prepare_to_war_with_ger
-		icon = GFX_goal_support_fascism
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 
 		cost = 0
 
 		available = { always = no }
 
-		x = 17
+		x = 30
 		y = 6
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION } 
 
 		ai_will_do = {
 			factor = 10
@@ -1151,16 +1368,14 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_hungarian_way
-		icon = GFX_goal_support_fascism
+		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
 
-		cost = 0
+		cost = 2
 
-		available = { always = no }
-
-		x = -7
+		x = -6
 		y = 1
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION } 
 
 		prerequisite = { focus = BFO_focus_prepare_to_war_with_ger }
 		relative_position_id = BFO_focus_prepare_to_war_with_ger
@@ -1169,7 +1384,12 @@ focus_tree = {
 			factor = 10
 		}
 
-		completion_reward = { }
+		completion_reward = { 
+
+			hidden_effect = {
+				country_event = bfo_hungary.1
+			}
+		}
 
 	}
 
@@ -1190,7 +1410,7 @@ focus_tree = {
 		x = 2
 		y = 1
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION } 
 
 		ai_will_do = {
 			factor = 10
@@ -1223,7 +1443,7 @@ focus_tree = {
 		x = -2
 		y = 1
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION } 
 
 		ai_will_do = {
 			factor = 10
@@ -1251,7 +1471,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION } 
 
 		ai_will_do = {
 			factor = 10
@@ -1268,9 +1488,9 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_italian_way
-		icon = GFX_goal_support_fascism
+		icon = GFX_focus_attack_italy
 
-		cost = 0
+		cost = 2
 
 		available = {
 			has_completed_focus = BFO_focus_switzerland_way
@@ -1282,7 +1502,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION } 
 
 		ai_will_do = {
 			factor = 10
@@ -1294,23 +1514,28 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_switzerland_way
-		icon = GFX_goal_support_fascism
+		icon = GFX_focus_SWI_aktion_nationaler_widerstand
 
-		cost = 0
+		cost = 2
 
 		prerequisite = { focus = BFO_focus_prepare_to_war_with_ger }
 		relative_position_id = BFO_focus_prepare_to_war_with_ger
 
-		x = 7
+		x = 6
 		y = 1
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION } 
 
 		ai_will_do = {
 			factor = 10
 		}
 
-		completion_reward = { country_event = bfo_switzerland.1 }
+		completion_reward = { 
+
+			hidden_effect = {
+				country_event = bfo_switzerland.1 
+			}
+		}
 	}
 
 	focus = {
@@ -1330,7 +1555,7 @@ focus_tree = {
 		x = 2
 		y = 1
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION } 
 
 		ai_will_do = {
 			factor = 10
@@ -1363,7 +1588,7 @@ focus_tree = {
 		x = -2
 		y = 1
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION } 
 
 		ai_will_do = {
 			factor = 10
@@ -1391,7 +1616,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION } 
 
 		ai_will_do = {
 			factor = 10
@@ -1408,7 +1633,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_revanche
-		icon = GFX_goal_support_fascism
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 
 		cost = 1
 

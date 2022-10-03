@@ -26,11 +26,14 @@ characters = {
 
 		country_leader = {
 			ideology = egorism_centrism
-			traits = {dictator great_architect dislikes_germany great_war_hero} 
+			traits = { great_war_hero } 
 			desc = BFO_egor_desc
 		}
 		corps_commander = {
-			visible = { has_completed_focus = BFO_focus_create_headquarters }
+			visible = { 
+				has_completed_focus = BFO_focus_create_headquarters 
+				NOT = { has_completed_focus = BFO_focus_win_egor }
+			}
 
 			skill = 3
 			attack_skill = 4
@@ -42,8 +45,8 @@ characters = {
 		advisor = {
 			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = theorist
-			idea_token = egor # WIP
-			traits = {council_of_theorists} # FIX
+			idea_token = egor
+			traits = { council_of_theorists }
 		}
 	}
 
@@ -60,14 +63,17 @@ characters = {
 
 		country_leader = {
 			ideology = liberalism
-			traits = {great_architect dislikes_germany} 
+			traits = { great_architect } 
 			desc = BFO_alina_desc
 		}
 		advisor = {
-			available = { has_completed_focus = BFO_focus_administrative_reform }
+			available = { 
+				has_completed_focus = BFO_focus_administrative_reform 
+				NOT = { has_completed_focus = BFO_focus_win_alina }
+			}
 			slot = political_advisor
 			idea_token = agarkoff # WIP
-			traits = {fortification_engineer}
+			traits = { fortification_engineer } 
 		}
 	}
 
@@ -84,14 +90,17 @@ characters = {
 		
 		country_leader = {
 			ideology = despotism
-			traits = {great_architect dislikes_germany} 
+			traits = { first_lady } 
 			desc = BFO_david_desc
 		}
 		advisor = {
-			available = { has_completed_focus = BFO_focus_administrative_reform }
+			available = { 
+				has_completed_focus = BFO_focus_administrative_reform 
+				NOT = { has_completed_focus = BFO_focus_win_jenya }
+			}
 			slot = political_advisor
 			idea_token = david # WIP
-			traits = {first_lady industry_reformer captain_of_industry}
+			traits = { industry_reformer captain_of_industry }
 		}
 	}
 
@@ -109,7 +118,7 @@ characters = {
 		}
 
 		country_leader = {
-			ideology = anarchist_communism
+			ideology = nazism
 			traits = {} 
 			desc = BFO_nikitus_desc
 		}
@@ -184,7 +193,10 @@ characters = {
 		}
 
 		field_marshal = {
-			visible = { has_completed_focus = BFO_focus_create_headquarters }
+			visible = { 
+				has_completed_focus = BFO_focus_create_headquarters
+				NOT = { has_completed_focus = BFO_focus_win_ruslan }
+			}
 
 			skill = 5
 			attack_skill = 4
@@ -194,7 +206,7 @@ characters = {
 			traits = {trait_cautious naval_invader war_hero urban_assault_specialist naval_liason}
 		}
 		country_leader = {
-			ideology = nazism
+			ideology = anarchist_communism
 			traits = {dictator dislikes_germany} 
 			desc = BFO_ruslan_desc
 		}

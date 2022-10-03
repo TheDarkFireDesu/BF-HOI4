@@ -11,30 +11,26 @@ country_event = {
 	option = {
 		name = bfo_hungary.1.a
 
-		HUN = {
-			all_owned_state = {
-			}
-			
-		}
-
 		hidden_effect = {
-			random_list = {
-				45 = { 
-					country_event = { 
-						id = bfo_hungary.2
-						days = 7 
-					} 
-				}
-				45 = { 
-					country_event = {
-						id = bfo_hungary.3
-						days = 7 
+			BFO = {
+				random_list = {
+					45 = { 
+						country_event = { 
+							id = bfo_hungary.2
+							days = 7 
+						} 
 					}
-				}
-				10 = {
-					country_event = {
-						id = bfo_hungary.4
-						days = 7
+					45 = { 
+						country_event = {
+							id = bfo_hungary.3
+							days = 7 
+						}
+					}
+					10 = {
+						country_event = {
+							id = bfo_hungary.4
+							days = 7
+						}
 					}
 				}
 			}
@@ -86,6 +82,7 @@ country_event = {
 		name = bfo_hungary.4.a
 		hidden_effect = {
 			complete_national_focus = BFO_focus_hungary_puppet
+		}
 	}
 }
 

@@ -1,4 +1,5 @@
 add_namespace = bfo_news_events
+add_namespace = bfo_election
 
 news_event = {
 	id = bfo_news_events.1
@@ -14,5 +15,44 @@ news_event = {
 	}
 	option = {
 		name = bfo_news_events.1.b
+	}
+}
+
+country_event = {
+	id = bfo_election.1
+	title = bfo_election.1.t
+	desc = bfo_election.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = bfo_news_events.1.a
+		hidden_effect = {
+			complete_national_focus = BFO_focus_win_ruslan
+		}
+	}
+	option = {
+		name = bfo_news_events.1.b
+		hidden_effect = {
+			complete_national_focus = BFO_focus_win_alina
+		}
+	}
+	option = {
+		name = bfo_news_events.1.c
+		hidden_effect = {
+			complete_national_focus = BFO_focus_win_jenya
+		}
+	}
+	option = {
+		name = bfo_news_events.1.e
+		hidden_effect = {
+			complete_national_focus = BFO_focus_win_nikita
+		}
+	}
+	option = {
+		name = bfo_news_events.1.f
+		hidden_effect = {
+			complete_national_focus = BFO_focus_win_egor
+		}
 	}
 }

@@ -20,23 +20,25 @@ country_event = {
 		}
 
 		hidden_effect = {
-			random_list = {
-				45 = { 
-					country_event = { 
-						id = bfo_switzerland.2
-						days = 7 
-					} 
-				}
-				45 = { 
-					country_event = {
-						id = bfo_switzerland.3
-						days = 7 
+			BFO = {
+				random_list = {
+					45 = { 
+						country_event = { 
+							id = bfo_switzerland.2
+							days = 7 
+						} 
 					}
-				}
-				10 = {
-					country_event = {
-						id = bfo_switzerland.4
-						days = 7
+					45 = { 
+						country_event = {
+							id = bfo_switzerland.3
+							days = 7 
+						}
+					}
+					10 = {
+						country_event = {
+							id = bfo_switzerland.4
+							days = 7
+						}
 					}
 				}
 			}
@@ -88,6 +90,7 @@ country_event = {
 		name = bfo_switzerland.4.a
 		hidden_effect = {
 			complete_national_focus = BFO_focus_switz_puppet
+		}	
 	}
 }
 
