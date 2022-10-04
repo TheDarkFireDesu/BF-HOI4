@@ -29,6 +29,7 @@ add_ideas = {
 }
 
 # COUNTRY LEADER
+recruit_character = BFO_interim_council
 recruit_character = BFO_egor
 recruit_character = BFO_nikitus
 recruit_character = BFO_agarkoff
@@ -58,4 +59,5 @@ recruit_character = BFO_coshalot
 
 # ADVISOR
 recruit_character = BFO_sovec
-
+recruit_character = BFO_pehlik
+recruit_character = BFO_masanya

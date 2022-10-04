@@ -577,7 +577,17 @@ focus_tree = {
 		relative_position_id = BFO_focus_elections
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 
+		complete_tooltip = {
+			set_politics = {
+				ruling_party = egorism
+			}
+		}
+
 		completion_reward = {
+
+			hidden_effect = {
+				kill_country_leader = yes
+			}
 		}
 	}
 
@@ -601,6 +611,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 
 		completion_reward = {
+
+			unlock_national_focus = BFO_focus_prepare_to_war_with_ger
 
 			hidden_effect = {
 					BFO = { set_country_flag = BFO_election_is_end_flag }
@@ -736,7 +748,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_focus_dummy
+		id = BFO_focus_new_union
 		icon = GFX_goal_generic_national_unity
 
 		cost = 5
@@ -835,12 +847,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_focus_new_union
+		id = BFO_focus_political_power
 		icon = GFX_focus_rom_parties_end
 
 		cost = 5
 
-		prerequisite = { focus = BFO_focus_dummy }
+		prerequisite = { focus = BFO_focus_new_union }
 		prerequisite = { focus = BFO_focus_dummy_2 }
 		relative_position_id = BFO_blank_example
 
@@ -1332,7 +1344,7 @@ focus_tree = {
 		cost = 1
 
 		prerequisite = { focus = BFO_focus_dora_milkis }
-		prerequisite = { focus = BFO_focus_new_union }
+		prerequisite = { focus = BFO_focus_political_power }
 		prerequisite = { focus = BFO_extra_tech_slot }
 
 		x = 6
@@ -1487,6 +1499,32 @@ focus_tree = {
 	}
 
 	focus = {
+		id = BFO_focus_hungary_puppet_annexed
+		icon = GFX_goal_support_fascism
+
+		cost = 0
+
+		prerequisite = { focus = BFO_focus_hungary_puppet }
+		relative_position_id = BFO_focus_hungary_puppet
+		x = 0
+		y = 1
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION } 
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = { 
+			diplomatic_relation = {
+				country = HUN
+				relation = puppet
+				active = yes
+			}
+		}
+	}
+
+	focus = {
 		id = BFO_focus_italian_way
 		icon = GFX_focus_attack_italy
 
@@ -1511,6 +1549,51 @@ focus_tree = {
 		completion_reward = { }
 
 	}
+
+	focus = {
+		id = BFO_focus_war_with_italy
+		icon = GFX_focus_attack_italy
+
+		cost = 2
+
+		prerequisite = { focus = BFO_focus_italian_way }
+		relative_position_id = BFO_focus_italian_way
+
+		x = 1
+		y = 1
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION } 
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = { }
+
+	}
+
+	focus = {
+		id = BFO_focus_puppet_italy
+		icon = GFX_focus_attack_italy
+
+		cost = 2
+
+		prerequisite = { focus = BFO_focus_italian_way }
+		relative_position_id = BFO_focus_italian_way
+
+		x = -1
+		y = 1
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION } 
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = { }
+
+	}
+
 
 	focus = {
 		id = BFO_focus_switzerland_way
@@ -1612,6 +1695,33 @@ focus_tree = {
 
 		prerequisite = { focus = BFO_focus_switzerland_way }
 		relative_position_id = BFO_focus_switzerland_way
+
+		x = 0
+		y = 1
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION } 
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = { 
+			diplomatic_relation = {
+				country = SWI
+				relation = puppet
+				active = yes
+			}
+		}
+	}
+
+	focus = {
+		id = BFO_focus_switz_puppet_annexed
+		icon = GFX_goal_support_fascism
+
+		cost = 0
+
+		prerequisite = { focus = BFO_focus_switz_puppet }
+		relative_position_id = BFO_focus_switz_puppet
 
 		x = 0
 		y = 1

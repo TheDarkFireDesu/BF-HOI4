@@ -1,5 +1,7 @@
 ﻿l_russian:
 
+  BFO_interim_council: "Временный совет БФ"
+  BFO_interim_council: ""
   BFO_egor: "Егорн фон Журавлефф"
   BFO_egor_desc: ""
   BFO_david: "Евгения фон Гогенлоэ"
@@ -29,3 +31,5 @@
   BFO_coshalot: "Владислав Мольтке"
 
   BFO_sovec: "Алёния Розенкрантц"
+  BFO_pehlik: "Пехликос Бебраштраун"
+  BFO_masanya: "Масляндер фон Полуштайнер"

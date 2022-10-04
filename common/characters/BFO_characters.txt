@@ -1,17 +1,20 @@
 characters = {
 
-	# COUNTRY_LEADER - 1/1; EGOR (V)
-	# FIELDMARHSAL - 5/5; KIRILL (V), RUSLAN (V), ARTEM (V), SANYA (V), NOSIREV (V)
-	# GENERAL - 7/6; BEVZ (V), NEKIT (V), MISHA (V), NIKITA (V), TIMUR (V), VLADIK (V)
-	# ADMIRAL - 4/4; DON (V), KSUHA (V), KARASIK (V), COSHALOT (V)
+	BFO_interim_council = {
+		name = BFO_interim_council
+		portraits = {
+			civilian = {
+				large = GFX_interim_council # WIP
+			}
+		}
 
-	# ADVISOR (CIVILIAN) - 4/4; KSUHA, JENUA, ALINA, ALENA
-	# ADVISOR (HIGH COMMAND) - 4/4; KIRILL (ARMORED), RUSLAN (CAVALRY), SANYA (DRILL), NOSIREV (MANEUVER) 
-	# ADVISOR (ARMY) - 2/2; MISHA (OFFENSIVE), BEVZ (DEFENCIVE)
-	# ADVISOR (NAVY) - 3/3; DON, NEKIT, KARASIK
-	# ADVISOR (AIR) - 2/2; ARTEM (AIR SUPPORT), COSHALOT
+		country_leader = {
+			ideology = egorism_centrism
+			traits = {}
+			desc = BFO_interim_council # WIP
+		}
+	}
 
-	# EL PREZIDENTO - 50%
 	BFO_egor = {
 		name = BFO_egor
 		portraits = {
@@ -27,7 +30,7 @@ characters = {
 		country_leader = {
 			ideology = egorism_centrism
 			traits = { great_war_hero } 
-			desc = BFO_egor_desc
+			desc = BFO_egor_desc # WIP
 		}
 		corps_commander = {
 			visible = { 
@@ -40,7 +43,7 @@ characters = {
 			defense_skill = 3
 			planning_skill = 4
 			logistics_skill = 3
-			traits = {skilled_staffer cavalry_leader cavalry_expert desert_fox hill_fighter adaptable}
+			traits = { skilled_staffer cavalry_leader cavalry_expert desert_fox hill_fighter adaptable }
 		}
 		advisor = {
 			available = { has_completed_focus = BFO_focus_create_headquarters }
@@ -64,7 +67,7 @@ characters = {
 		country_leader = {
 			ideology = liberalism
 			traits = { great_architect } 
-			desc = BFO_alina_desc
+			desc = BFO_alina_desc # WIP
 		}
 		advisor = {
 			available = { 
@@ -72,7 +75,7 @@ characters = {
 				NOT = { has_completed_focus = BFO_focus_win_alina }
 			}
 			slot = political_advisor
-			idea_token = agarkoff # WIP
+			idea_token = agarkoff
 			traits = { fortification_engineer } 
 		}
 	}
@@ -91,7 +94,7 @@ characters = {
 		country_leader = {
 			ideology = despotism
 			traits = { first_lady } 
-			desc = BFO_david_desc
+			desc = BFO_david_desc # WIP
 		}
 		advisor = {
 			available = { 
@@ -120,7 +123,7 @@ characters = {
 		country_leader = {
 			ideology = nazism
 			traits = {} 
-			desc = BFO_nikitus_desc
+			desc = BFO_nikitus_desc # WIP
 		}
 	}
 
@@ -623,7 +626,7 @@ characters = {
 		advisor = {
 			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = air_chief
-			idea_token = vlad_coshalot # WIP
+			idea_token = vlad_coshalot
 			traits = {air_air_combat_training_3}
 		}
 	}
@@ -645,8 +648,40 @@ characters = {
 		advisor = {
 			available = { has_completed_focus = BFO_focus_administrative_reform }
 			slot = political_advisor
-			idea_token = alena_sovec # WIP
+			idea_token = alena_sovec
 			traits = {war_industrialist propaganda_expert}
+		}
+	}
+
+	# PEHLIK
+	BFO_pehlik = {
+		name = BFO_pehlik
+		portraits = {
+			civilian = {
+				small = GFX_idea_pehlik # WIP
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = pehlik
+			traits = { }
+		}
+	}
+
+	# MASANYA
+	BFO_masanya = {
+		name = BFO_masanya
+		portraits = {
+			civilian = {
+				small = GFX_idea_masanya
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = masanya
+			traits = { }
 		}
 	}
 }
