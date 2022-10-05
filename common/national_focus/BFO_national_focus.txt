@@ -526,7 +526,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_win_jenya
-		icon = GFX_focus_generic_home_defense
+		icon = GFX_focus_generic_monarchy_1
 
 		cost = 1
 
@@ -1759,7 +1759,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_ukrainian_way
-		icon = GFX_goal_support_fascism
+		icon = GFX_focus_POL_ukrainian_army
 
 		cost = 1
 

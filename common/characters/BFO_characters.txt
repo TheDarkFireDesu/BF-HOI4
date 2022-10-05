@@ -1,10 +1,11 @@
 characters = {
 
+	# INTERIM COUNCIL
 	BFO_interim_council = {
 		name = BFO_interim_council
 		portraits = {
 			civilian = {
-				large = GFX_interim_council # WIP
+				large = GFX_interim_council
 			}
 		}
 
@@ -15,6 +16,7 @@ characters = {
 		}
 	}
 
+	# EGOR
 	BFO_egor = {
 		name = BFO_egor
 		portraits = {
@@ -23,7 +25,7 @@ characters = {
 			}
 			army = {
 				large = GFX_egor_leader
-				small = GFX_idea_egor # WIP
+				small = GFX_idea_egor
 			}
 		}
 
@@ -31,19 +33,6 @@ characters = {
 			ideology = egorism_centrism
 			traits = { great_war_hero } 
 			desc = BFO_egor_desc # WIP
-		}
-		corps_commander = {
-			visible = { 
-				has_completed_focus = BFO_focus_create_headquarters 
-				NOT = { has_completed_focus = BFO_focus_win_egor }
-			}
-
-			skill = 3
-			attack_skill = 4
-			defense_skill = 3
-			planning_skill = 4
-			logistics_skill = 3
-			traits = { skilled_staffer cavalry_leader cavalry_expert desert_fox hill_fighter adaptable }
 		}
 		advisor = {
 			available = { has_completed_focus = BFO_focus_create_headquarters }
@@ -53,14 +42,14 @@ characters = {
 		}
 	}
 
-		# ALINA
+	# ALINA
 	BFO_agarkoff = {
 		name = BFO_agarkoff
 		gender = female
 		portraits = {
 			civilian = {
 				large = GFX_alina_advisor
-				small = GFX_idea_agarkoff # WIP
+				small = GFX_idea_agarkoff
 			}
 		}
 
@@ -80,14 +69,14 @@ characters = {
 		}
 	}
 
-		# JENUA
+	# JENUA
 	BFO_david = {
 		name = BFO_david
 		gender = female
 		portraits = {
 			civilian = {
 				large = GFX_jenya_advisor
-				small = GFX_idea_david # WIP
+				small = GFX_idea_jenya
 			}
 		}
 		
@@ -102,7 +91,7 @@ characters = {
 				NOT = { has_completed_focus = BFO_focus_win_jenya }
 			}
 			slot = political_advisor
-			idea_token = david # WIP
+			idea_token = david 
 			traits = { industry_reformer captain_of_industry }
 		}
 	}
@@ -136,6 +125,7 @@ characters = {
 		portraits = {
 			army = {
 				large = GFX_kusya_fieldmarshal
+				small = GFX_idea_kusya
 			}
 		}
 		field_marshal = {
@@ -155,11 +145,11 @@ characters = {
 		name = BFO_kirill
 		portraits = {
 			civilian = {
-				small = GFX_idea_kirill # WIP
+				small = GFX_idea_kirill
 			}
 			army = {
 				large = GFX_keril_fieldmarshal
-				small = GFX_idea_kirill # WIP
+				small = GFX_idea_kirill
 			}
 		}
 		field_marshal = {
@@ -176,7 +166,7 @@ characters = {
 			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = high_command
 			ledger = army
-			idea_token = kirill # WIP
+			idea_token = kirill
 			traits = {army_armored_3}
 			cost = 200
 		}
@@ -187,11 +177,11 @@ characters = {
 		name = BFO_ruslan
 		portraits = {
 			civilian = {
-				small = GFX_idea_ruslan # WIP
+				small = GFX_idea_ruslan
 			}
 			army = {
 				large = GFX_ruslan_fieldmarshal
-				small = GFX_idea_ruslan # WIP
+				small = GFX_idea_ruslan
 			}
 		}
 
@@ -217,7 +207,7 @@ characters = {
 			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = high_command
 			ledger = army
-			idea_token = ruslan # WIP
+			idea_token = ruslan
 			traits = {army_cavalry_3}
 			cost = 200
 		}
@@ -228,7 +218,7 @@ characters = {
 		name = BFO_sanya_k
 		portraits = {
 			civilian = {
-				small = GFX_idea_sanya_k # WIP
+				small = GFX_idea_sanya_k
 			}
 			army = {
 				large = GFX_sanya_k_fieldmarshal
@@ -250,7 +240,7 @@ characters = {
 			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = high_command
 			ledger = army
-			idea_token = sanya_k # WIP
+			idea_token = sanya_k 
 			traits = {army_chief_drill_3}
 			cost = 200
 		}
@@ -261,11 +251,11 @@ characters = {
 		name = BFO_artem_n
 		portraits = {
 			civilian = {
-				small = GFX_idea_artem_n # WIP
+				small = GFX_idea_artem_n 
 			}
 			army = {
 				large = GFX_artem_n_fieldmarshal
-				small = GFX_idea_artem_n # WIP
+				small = GFX_idea_artem_n 
 			}
 		}
 	
@@ -283,7 +273,7 @@ characters = {
 			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = high_command
 			ledger = army
-			idea_token = artem_n # WIP
+			idea_token = artem_n
 			traits = {army_chief_maneuver_3}
 			cost = 200
 		}
@@ -294,11 +284,11 @@ characters = {
 		name = BFO_artem_k
 		portraits = {
 			civilian = {
-				small = GFX_idea_artem_k # WIP
+				small = GFX_idea_artem_k 
 			}
 			army = {
 				large = GFX_artem_fieldmarshal
-				small = GFX_idea_artem_k # WIP
+				small = GFX_idea_artem_k
 			}
 		}
 	
@@ -315,7 +305,7 @@ characters = {
 		advisor = {
 			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = air_chief
-			idea_token = artem_k # WIP
+			idea_token = artem_k 
 			traits = {air_chief_ground_support_3}
 			cost = 200
 		}
@@ -330,11 +320,11 @@ characters = {
 		name = BFO_sanya_b
 		portraits = {
 			civilian = {
-				small = GFX_idea_sanya_b # WIP
+				small = GFX_idea_sanya_b 
 			}
 			army = {
 				large = GFX_sanya_b_general
-				small = GFX_idea_sanya_b # WIP
+				small = GFX_idea_sanya_b
 			}
 		}
 
@@ -351,7 +341,7 @@ characters = {
 		advisor = {
 			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = army_chief
-			idea_token = sanya_b # WIP
+			idea_token = sanya_b 
 			traits = {army_chief_defensive_3}
 		}
 	}
@@ -361,11 +351,11 @@ characters = {
 		name = BFO_misha
 		portraits = {
 			civilian = {
-				small = GFX_idea_misha # WIP
+				small = GFX_idea_misha 
 			}
 			army = {
 				large = GFX_misha_general
-				small = GFX_idea_misha # WIP
+				small = GFX_idea_misha
 			}
 		}
 
@@ -382,7 +372,7 @@ characters = {
 		advisor = {
 			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = army_chief
-			idea_token = misha # WIP
+			idea_token = misha 
 			traits = {army_chief_offensive_3}
 		}
 	}
@@ -392,11 +382,11 @@ characters = {
 		name = BFO_nekit
 		portraits = {
 			civilian = {
-				small = GFX_idea_nekit # WIP
+				small = GFX_idea_nekit 
 			}
 			army = {
 				large = GFX_nekit_general
-				small = GFX_idea_nekit # WIP
+				small = GFX_idea_nekit 
 			}
 		}
 
@@ -413,7 +403,7 @@ characters = {
 		advisor = {
 			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = navy_chief
-			idea_token = nekit # WIP
+			idea_token = nekit 
 			traits = {navy_chief_decisive_battle_3}
 		}
 	}
@@ -454,11 +444,11 @@ characters = {
 		name = BFO_timur
 		portraits = {
 			civilian = {
-				small = GFX_idea_timur # WIP
+				small = GFX_idea_timur
 			}
 			army = {
 				large = GFX_timur_general
-				small = GFX_idea_timur # WIP
+				small = GFX_idea_timur 
 			}
 		}
 
@@ -479,11 +469,10 @@ characters = {
 		name = BFO_vladik
 		portraits = {
 			civilian = {
-				small = GFX_idea_vladik # WIP
+				small = GFX_idea_vladik # 
 			}
 			army = {
-				large = GFX_portrait_BFO_vladik # WIP
-				small = GFX_idea_vladik # WIP
+				large = GFX_portrait_BFO_vladik # 
 			}
 		}
 
@@ -508,11 +497,11 @@ characters = {
 		name = BFO_donel
 		portraits = {
 			civilian = {
-				small = GFX_idea_donel # WIP
+				small = GFX_idea_donel
 			}
 			army = {
 				large = GFX_donel_admiral
-				small = GFX_idea_donel # WIP
+				small = GFX_idea_donel
 			}
 		}
 
@@ -530,7 +519,7 @@ characters = {
 		advisor = {
 			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = navy_chief
-			idea_token = donel # WIP
+			idea_token = donel # 
 			traits = {navy_chief_maneuver_3}
 		}
 	}
@@ -540,11 +529,11 @@ characters = {
 		name = BFO_ksuha
 		portraits = {
 			civilian = {
-				small = GFX_idea_ksuha # WIP
+				small = GFX_idea_ksuha 
 			}
 			army = {
 				large = GFX_ksuha_admiral
-				small = GFX_idea_ksuha # WIP
+				small = GFX_idea_ksuha 
 			}
 		}
 
@@ -562,7 +551,7 @@ characters = {
 		advisor = {
 			available = { has_completed_focus = BFO_focus_administrative_reform }
 			slot = political_advisor
-			idea_token = ksuha # WIP
+			idea_token = ksuha # 
 			traits = {liberal_democratic_paragon } # FIX
 		}
 	}
@@ -594,7 +583,7 @@ characters = {
 		advisor = {
 			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = navy_chief
-			idea_token = vladimir_karas # WIP
+			idea_token = vladimir_karas 
 			traits = {navy_anti_submarine_3}
 		}
 	}
@@ -641,7 +630,7 @@ characters = {
 		gender = female
 		portraits = {
 			civilian = {
-				small = GFX_idea_sovec # WIP
+				small = GFX_idea_sovec 
 			}
 		}
 
@@ -658,7 +647,7 @@ characters = {
 		name = BFO_pehlik
 		portraits = {
 			civilian = {
-				small = GFX_idea_pehlik # WIP
+				small = GFX_idea_pehlik 
 			}
 		}
 

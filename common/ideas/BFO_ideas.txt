@@ -65,9 +65,9 @@ ideas = {
 		
 		designer = yes
 		
-		geekvape = {
+		geakvape = {
 
-			picture = geekvape
+			picture = GFX_idea_geakvape
 
 			allowed = { tag = BFO }
 			#vailable = { has_completed_focus = BFO }
@@ -83,7 +83,7 @@ ideas = {
 		
 		voopoo = {
 
-			picture = voopoo
+			picture = GFX_idea_voopoo
 
 			allowed = { tag = BFO }
 			#vailable = { has_completed_focus = BFO }
@@ -98,7 +98,7 @@ ideas = {
 		
 		smoant = {
 
-			picture = brusco # FIX
+			picture = GFX_idea_brusco
 			
 			allowed = { tag = BFO }
 			#vailable = { has_completed_focus = BFO }

@@ -6,6 +6,11 @@ spriteTypes = {
 		texturefile = gfx/leaders/BFO/GFX_egor.dds
 	}
 
+	spriteType = {
+		name = GFX_interim_council
+		texturefile = gfx/leaders/BFO/GFX_interim_council.dds
+	}
+
 	# FIELDMARSHAL
 	spriteType = {
 		name = GFX_kusya_fieldmarshal
@@ -53,7 +58,10 @@ spriteTypes = {
 		texturefile = gfx/leaders/BFO/GFX_nekit.dds 
 	}
 
-	# NIKITA
+	spriteType = {
+		name = GFX_nikita_gemeral
+		texturefile = gfx/leaders/BFO/GFX_nikita.dds
+	}
 
 	spriteType = {
 		name = GFX_timur_general
@@ -76,9 +84,15 @@ spriteTypes = {
 		texturefile = gfx/leaders/BFO/GFX_ksuha.dds
 	}
 
-	# KARAS
+	spriteType = {
+		name = GFX_karas_admiral
+		texturefile = gfx/leaders/BFO/GFX_karas.dds
+	}
 
-	# COSHALOT
+	spriteType = {
+		name = GFX_coshalot_admiral
+		texturefile = gfx/leaders/BFO/GFX_coshalot.dds
+	}
 
 	# ADVISOR
 	spriteType = {

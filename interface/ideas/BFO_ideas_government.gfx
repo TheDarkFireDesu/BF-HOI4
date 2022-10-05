@@ -1,0 +1,17 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = GFX_idea_geakvape
+		texturefile = gfx/interface/ideas/BFO/concern/GFX_idea_geakvape.dds
+	}
+
+	spriteType = {
+		name = GFX_idea_voopoo
+		texturefile = gfx/interface/ideas/BFO/concern/GFX_idea_voopoo.dds
+	}
+
+	spriteType = {
+		name = GFX_idea_brusco
+		texturefile = gfx/interface/ideas/BFO/concern/GFX_idea_brusco.dds
+	}
+}

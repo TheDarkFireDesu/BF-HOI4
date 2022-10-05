@@ -1,0 +1,106 @@
+spriteTypes = {
+	# LEADER
+	spriteType = {
+		name = GFX_idea_egor
+		texturefile = gfx/interface/ideas/BFO/GFX_idea_egor.dds
+	}
+
+	# FIELDMARSHAL
+	spriteType = {
+		name = GFX_idea_kusya
+		texturefile = gfx/interface/ideas/BFO/GFX_idea_kusya.dds
+	}
+
+	spriteType = {
+		name = GFX_idea_kirill
+		texturefile = gfx/interface/ideas/BFO/GFX_idea_kirill.dds
+	}
+
+	spriteType = {
+		name = GFX_idea_ruslan
+		texturefile = gfx/interface/ideas/BFO/GFX_idea_ruslan.dds
+	}
+
+	spriteType = {
+		name = GFX_idea_sanya_k
+		texturefile = gfx/interface/ideas/BFO/GFX_idea_sanya_k.dds
+	}
+
+	spriteType = {
+		name = GFX_idea_artem_n
+		texturefile = gfx/interface/ideas/BFO/GFX_idea_artem_n.dds
+	}
+
+	spriteType = {
+		name = GFX_idea_artem
+		texturefile = gfx/interface/ideas/BFO/GFX_idea_artem.dds
+	}
+
+	# GENERAL
+	spriteType = {
+		name = GFX_idea_sanya_b
+		texturefile = gfx/interface/ideas/BFO/GFX_idea_sanya_b.dds
+	}
+
+	spriteType = {
+		name = GFX_idea_misha
+		texturefile = gfx/interface/ideas/BFO/GFX_idea_misha.dds
+	}
+
+	spriteType = {
+		name = GFX_idea_nekit
+		texturefile = gfx/interface/ideas/BFO/GFX_idea_nekit.dds 
+	}
+
+	#spriteType = {
+	#	name = GFX_idea_nikita
+	#	texturefile = gfx/interface/ideas/BFO/GFX_idea_nikita.dds
+	#}
+
+	spriteType = {
+		name = GFX_idea_timur
+		texturefile = gfx/interface/ideas/BFO/GFX_idea_timur.dds 
+	}
+
+	#spriteType = {
+	#	name = GFX_idea_vladik
+	#	texturefile = gfx/interface/ideas/BFO/GFX_idea_vladik.dds
+	#}
+
+	# ADMIRAL
+	spriteType = {
+		name = GFX_idea_donel
+		texturefile = gfx/interface/ideas/BFO/GFX_idea_donel.dds
+	}
+
+	spriteType = {
+		name = GFX_idea_ksuha
+		texturefile = gfx/interface/ideas/BFO/GFX_idea_ksuha.dds
+	}
+
+	#spriteType = {
+	#	name = GFX_idea_karas
+	#	texturefile = gfx/interface/ideas/BFO/GFX_idea_karas.dds
+	#}
+
+	#spriteType = {
+	#	name = GFX_idea_coshalot
+	#	texturefile = gfx/interface/ideas/BFO/GFX_idea_coshalot.dds
+	#}
+
+	# ADVISOR
+	spriteType = {
+		name = GFX_idea_jenya
+		texturefile = gfx/interface/ideas/BFO/GFX_idea_jenya.dds
+	}
+
+	spriteType = {
+		name = GFX_idea_sovec
+		texturefile = gfx/interface/ideas/BFO/GFX_idea_sovec.dds
+	}
+
+	spriteType = {
+		name = GFX_idea_agarkoff
+		texturefile = gfx/interface/ideas/BFO/GFX_idea_agarkoff.dds
+	}
+}
