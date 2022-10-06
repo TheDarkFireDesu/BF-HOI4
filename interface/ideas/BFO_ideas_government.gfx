@@ -1,8 +1,8 @@
 spriteTypes = {
 	
 	spriteType = {
-		name = GFX_idea_geakvape
-		texturefile = gfx/interface/ideas/BFO/concern/GFX_idea_geakvape.dds
+		name = GFX_idea_geekvape
+		texturefile = gfx/interface/ideas/BFO/concern/GFX_idea_geekvape.dds
 	}
 
 	spriteType = {
@@ -13,5 +13,20 @@ spriteTypes = {
 	spriteType = {
 		name = GFX_idea_brusco
 		texturefile = gfx/interface/ideas/BFO/concern/GFX_idea_brusco.dds
+	}
+
+	spriteType = {
+		name = GFX_idea_dns
+		texturefile = gfx/interface/ideas/BFO/concern/GFX_idea_dns.dds
+	}
+
+	spriteType = {
+		name = GFX_idea_citilink
+		texturefile = gfx/interface/ideas/BFO/concern/GFX_idea_citilink.dds
+	}
+
+	spriteType = {
+		name = GFX_idea_smoant
+		texturefile = gfx/interface/ideas/BFO/concern/GFX_idea_smoant.dds
 	}
 }

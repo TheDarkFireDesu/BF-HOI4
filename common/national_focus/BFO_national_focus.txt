@@ -769,7 +769,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_blank_example
+		id = BFO_focus_unlock_concern
 		icon = GFX_goal_generic_scientific_exchange
 
 		cost = 5
@@ -791,14 +791,14 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_example_1
+		id = BFO_focus_good_pod
 		icon = GFX_goal_generic_improve_relations
 
 		cost = 5
 
-		mutually_exclusive = { focus = BFO_example_2 }
-		prerequisite = { focus = BFO_blank_example }
-		relative_position_id = BFO_blank_example
+		mutually_exclusive = { focus = BFO_focus_bad_pod }
+		prerequisite = { focus = BFO_focus_unlock_concern }
+		relative_position_id = BFO_focus_unlock_concern
 
 		x = -1
 		y = 1
@@ -809,14 +809,14 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_example_2
+		id = BFO_focus_bad_pod
 		icon = GFX_goal_generic_improve_relations
 
 		cost = 5
 
-		mutually_exclusive = { focus = BFO_example_1 }
-		prerequisite = { focus = BFO_blank_example }
-		relative_position_id = BFO_blank_example
+		mutually_exclusive = { focus = BFO_focus_good_pod }
+		prerequisite = { focus = BFO_focus_unlock_concern }
+		relative_position_id = BFO_focus_unlock_concern
 
 		x = 1
 		y = 1
@@ -827,16 +827,16 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_example_3
+		id = BFO_focus_unlock_concern_all
 		icon = GFX_goal_generic_intelligence_exchange
 
 		cost = 5
 
 		prerequisite = { 
-			focus = BFO_example_1
-			focus = BFO_example_2 
+			focus = BFO_focus_good_pod
+			focus = BFO_focus_bad_pod 
 		}
-		relative_position_id = BFO_blank_example
+		relative_position_id = BFO_focus_unlock_concern
 
 		x = 0
 		y = 2
@@ -854,7 +854,7 @@ focus_tree = {
 
 		prerequisite = { focus = BFO_focus_new_union }
 		prerequisite = { focus = BFO_focus_dummy_2 }
-		relative_position_id = BFO_blank_example
+		relative_position_id = BFO_focus_unlock_concern
 
 		x = 0
 		y = 3

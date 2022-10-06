@@ -65,12 +65,12 @@ ideas = {
 		
 		designer = yes
 		
-		geakvape = {
+		geekvape = {
 
-			picture = GFX_idea_geakvape
+			picture = GFX_idea_geekvape
 
 			allowed = { tag = BFO }
-			#vailable = { has_completed_focus = BFO }
+			available = { has_completed_focus = BFO_focus_good_pod }
 			research_bonus = { armor = 0.15 }
 			
 			traits = { heavy_tank_manufacturer }
@@ -86,7 +86,7 @@ ideas = {
 			picture = GFX_idea_voopoo
 
 			allowed = { tag = BFO }
-			#vailable = { has_completed_focus = BFO }
+			available = { has_completed_focus = BFO_focus_good_pod }
 			research_bonus = { armor = 0.15 }
 			
 			traits = { fast_tank_manufacturer }
@@ -98,13 +98,28 @@ ideas = {
 		
 		smoant = {
 
-			picture = GFX_idea_brusco
+			picture = GFX_idea_smoant
 			
 			allowed = { tag = BFO }
-			#vailable = { has_completed_focus = BFO }
+			available = { has_completed_focus = BFO_focus_bad_pod }
 			research_bonus = { armor = 0.15 }
 			
 			traits = { medium_tank_manufacturer }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		elfbar = {
+
+			picture = GFX_idea_elfbar
+
+			allowed = { tag = BFO }
+			available = { has_completed_focus = BFO_focus_bad_pod }
+			research_bonus = { armor = 0.15 }
+
+			traits = { tank_manufacturer }
 
 			ai_will_do = {
 				factor = 1
@@ -115,11 +130,29 @@ ideas = {
 	naval_manufacturer = { 
 		
 		designer = yes
+
+		husky = {
+
+			picture = GFX_idea_husky
+
+			allowed = { tag = BFO }
+			available = { has_completed_focus = BFO_focus_good_pod }
+			research_bonus = { naval_equipment = 0.15 }
+			equipment_bonus = {}
+			
+			traits = { naval_manufacturer }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
 		
 		brusco = {
 
+			picture = GFX_idea_brusco
+
 			allowed = { tag = BFO }
-			#vailable = { has_completed_focus = BFO }
+			available = { has_completed_focus = BFO_focus_bad_pod }
 			research_bonus = { naval_equipment = 0.15 }
 			equipment_bonus = {}
 			
@@ -132,9 +165,11 @@ ideas = {
 		
 		boshki = {
 
+			picture = GFX_idea_boshki
+
 			
 			allowed = { tag = BFO }
-			#vailable = { has_completed_focus = BFO }
+			available = { has_completed_focus = BFO_focus_bad_pod }
 			research_bonus = { naval_equipment = 0.15 }
 			equipment_bonus = {}
 			
@@ -151,9 +186,11 @@ ideas = {
 		designer = yes
 		
 		donwerke = {
+
+			picture = GFX_idea_donwerke
 			
 			allowed = { tag = BFO }
-			#vailable = { has_completed_focus = BFO }
+			available = { has_completed_focus = BFO_focus_unlock_concern_all }	
 			research_bonus = { air_equipment = 0.15 }
 			equipment_bonus = {}
 
@@ -166,8 +203,10 @@ ideas = {
 		
 		aromatabak = { 
 
+			picture = GFX_idea_aromatabak
+
 			allowed = { tag = BFO }
-			#vailable = { has_completed_focus = BFO }						
+			available = { has_completed_focus = BFO_focus_unlock_concern_all }					
 			research_bonus = { air_equipment = 0.15 }			
 			equipment_bonus = {}
 			
@@ -181,8 +220,10 @@ ideas = {
 
 		dns = { 
 
+			picture = GFX_idea_dns
+
 			allowed = { tag = BFO }
-			#vailable = { has_completed_focus = BFO }						
+			available = { has_completed_focus = BFO_focus_unlock_concern_all }						
 			research_bonus = { air_equipment = 0.15 }
 			
 			traits = { medium_aircraft_manufacturer }
@@ -194,8 +235,10 @@ ideas = {
 		
 		citilink = {
 
+			picture = GFX_idea_dns
+
 			allowed = { tag = BFO }
-			#vailable = { has_completed_focus = BFO }			
+			available = { has_completed_focus = BFO_focus_unlock_concern_all }			
 			research_bonus = { air_equipment = 0.15 }
 			
 			traits = { heavy_aircraft_manufacturer }
@@ -207,8 +250,10 @@ ideas = {
 		
 		svetofor = {
 
+			picture = GFX_idea_svetofor
+
 			allowed = { tag = BFO }
-			#vailable = { has_completed_focus = BFO }			
+			available = { has_completed_focus = BFO_focus_unlock_concern_all }			
 			research_bonus = { air_equipment = 0.15 }
 			
 			traits = { naval_aircraft_manufacturer }
@@ -222,9 +267,11 @@ ideas = {
 	industrial_concern = {
 		
 		lukoil = {
+
+			picture = GFX_idea_lukoil
 			
 			allowed = { tag = BFO }
-			#vailable = { has_completed_focus = BFO }			
+			available = { has_completed_focus = BFO_focus_unlock_concern }			
 			research_bonus = {
 				industry = 0.05
 				synth_resources = 0.15
@@ -237,10 +284,12 @@ ideas = {
 			}
 		}
 		
-		rostselmash = {
+		azovsteel = {
+
+			picture = GFX_idea_azovsteel
 			
 			allowed = { tag = BFO }
-			#vailable = { has_completed_focus = BFO }			
+			available = { has_completed_focus = BFO_focus_unlock_concern }			
 			research_bonus = { industry = 0.15 }
 
 			traits = { industrial_concern }
@@ -250,10 +299,12 @@ ideas = {
 			}
 		}
 
-		honor = {
+		huawei = {
+
+			picture = GFX_idea_huawei
 			
 			allowed = { tag = BFO }
-			#vailable = { has_completed_focus = BFO }			
+			available = { has_completed_focus = BFO_focus_unlock_concern }			
 			research_bonus = { electronics = 0.15 }
 			
 			traits = { electronics_concern }
@@ -264,10 +315,12 @@ ideas = {
 		
 		designer = yes
 		
-		azovsteel = {
+		bayraktar = {
+
+			picture = GFX_idea_azovsteel
 			
 			allowed = { tag = BFO }
-			#vailable = { has_completed_focus = BFO }			
+			available = { has_completed_focus = BFO_focus_unlock_concern_all }			
 			research_bonus = { artillery = 0.15 }
 			
 			traits = { artillery_manufacturer }
@@ -277,10 +330,12 @@ ideas = {
 			}
 		}
 		
-		hohol_research = {
+		lockheed_martin = {
+
+			picture = GFX_idea_lockheed_martin
 
 			allowed = { tag = BFO }
-			#vailable = { has_completed_focus = BFO }			
+			available = { has_completed_focus = BFO_focus_unlock_concern_all }				
 			research_bonus = { infantry_weapons = 0.15 }
 			
 			traits = { infantry_equipment_manufacturer }
@@ -293,23 +348,10 @@ ideas = {
 		ktm = {
 			
 			allowed = { tag = BFO }
-			#vailable = { has_completed_focus = BFO }			
+			available = { has_completed_focus = BFO_focus_unlock_concern_all }			
 			research_bonus = { motorized_equipment = 0.15 }
 			
 			traits = { motorized_equipment_manufacturer }
-		}
-	}
-
-	hidden_ideas = {
-		
-		BFO_rebels_not_killed = {
-			allowed = { always = no }
-			removal_cost = -1
-		}
-
-		BFO_rebels_killed = {
-			allowed = { always = no }
-			removal_cost = -1
 		}
 	}
 }

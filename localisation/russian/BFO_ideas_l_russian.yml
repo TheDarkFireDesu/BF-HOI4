@@ -1,10 +1,11 @@
 ﻿l_russian:
 
  brusco: "Brusco"
- boshki: "Boshki"
- geakvape: "GeakVape"
+ bosHki: "Boshki"
+ geekvape: "GeekVape"
  voopoo: "Voopoo"
  smoant: "Smoant"
+ elfbar: "Elf Bar"
 
  donwerke: "DonWerke"
  dns: "DNS"
@@ -12,8 +13,11 @@
  aromatabak: "АромаТабак"
  citilink: "Citilink"
 
+ lukoil: "ЛукОйл"
  azovsteel: "Азовсталь"
- hohol_research: "Пiзда москалю"
+ huawei: "Huawei"
+ bayraktar: "Bayraktar"
+ lockheed_martin: "Lockheed Martin"
  ktm: "KTM"
 
  weak_economy: "Экономические проблемы: 3 стадия"
