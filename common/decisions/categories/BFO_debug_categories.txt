@@ -1,0 +1,11 @@
+BFO_debug_category = {
+
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_european_union
+
+	visible = {
+		is_debug = yes
+	}
+
+	priority = 1
+}

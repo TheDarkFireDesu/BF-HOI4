@@ -1,0 +1,90 @@
+characters = {
+
+	# LEADER - VOLODIMIR ZELENSKY
+	# ADVISOR - ARESTOVICH, PODOLYAK, JOHNSON, DANILOV
+
+	# MINISTER - KULEBA (MID), REZNIKOV (MINOBR), SHMIGAL (PR-MINISTER), KOMAROVSKY (MINZDRAV)
+
+	# FIELDMARSHAL - ZALYZNIY (GLAVKOM), SYRSKIY, SHAPTALA
+	# GENERALS - KIM, MARCHENKO, MIRGORODSKIY, KRYK, GALUSHKIN
+
+	# LEADERS
+
+	# VOLODIMIR ZELENSKY
+	UKR_zelensky = {
+		name = UKR_zelensky
+		portraits = {
+			civilian = {
+				large = GFX_zelensky_leader
+			}
+		}
+
+		country_leader = {
+			ideology = egorism_centrism
+			traits = {} # FIX
+			desc = UKR_zelensky
+		}
+	}
+
+	# FIELDMARHSAL
+
+	# ANDRIY ZALYZNIY
+	UKR_zalyzniy = {
+		name = UKR_zalyzniy
+		portraits = {
+			civilian = {
+				small = GFX_idea_zalyzniy # FIX
+			}
+			army = {
+				large = GFX_zalyzniy_fieldmarshal # FIX
+				small = GFX_idea_zalyzniy
+			}
+		}
+		
+		field_marshal = {
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 5
+			traits = { armor_officer war_hero trickster panzer_expert skirmisher commando }
+		}
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token = zalyzniy
+			traits = { army_armored_3 }
+			cost = 200
+		}
+	}
+
+	# GENERAL
+
+	# MARCHENKO
+	UKR_marchenko = {
+		name = UKR_marchenko
+		portraits = {
+			civilian = {
+				small = GFX_idea_marchenko 
+			}
+			army = {
+				large = GFX_marchenko_general
+				small = GFX_idea_marchenko
+			}
+		}
+
+		corps_commander = {
+			skill = 5
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 4
+			traits = { war_hero brilliant_strategist engineer_officer trait_engineer fortress_buster } 
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = marchenko
+			traits = { army_chief_defensive_3} 
+		}
+	}
+}

@@ -1,0 +1,7 @@
+spriteTypes = {
+
+	spriteType = {
+		name = GFX_kusya_fieldmarshal
+		texturefile = gfx/leaders/BFO/GFX_kusya.dds
+	}
+}

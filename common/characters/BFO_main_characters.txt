@@ -120,27 +120,7 @@ characters = {
 	# FIELDMARSHAL
 	# FIELDMARSHAL
 
-	BFO_kusya = {
-		name = BFO_kusya
-		portraits = {
-			army = {
-				large = GFX_kusya_fieldmarshal
-				small = GFX_idea_kusya
-			}
-		}
-		field_marshal = {
-			visible = { has_completed_focus = BFO_focus_create_headquarters }
-
-			skill = 5
-			attack_skill = 5
-			defense_skill = 5
-			planning_skill = 5
-			logistics_skill = 5
-			traits = {trait_cautious armor_officer war_hero trickster panzer_expert skirmisher commando}
-		}
-	}
-
-	# KERIL FON TANKDROCHER - 50%
+	# KERIL FON TANKDROCHER
 	BFO_kirill = {
 		name = BFO_kirill
 		portraits = {
