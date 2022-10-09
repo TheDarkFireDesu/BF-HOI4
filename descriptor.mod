@@ -1,4 +1,4 @@
-version = "1.4.1a"
+version = "1.4.2"
 tags = {
 	"Alternative History"
 	"Events"

@@ -96,7 +96,7 @@ characters = {
 
 	# KULEBA
 	UKR_kuleba = {
-		name = UKR_johnson
+		name = UKR_kuleba
 		portraits = {
 			civilian = {
 				small = GFX_idea_kuleba
@@ -112,7 +112,7 @@ characters = {
 
 	# REZNIKOV 
 	UKR_reznikov = {
-		name = UKR_johnson
+		name = UKR_reznikov
 		portraits = {
 			civilian = {
 				small = GFX_idea_reznikov
@@ -128,7 +128,7 @@ characters = {
 
 	# SHMIGAL
 	UKR_shmigal = {
-		name = UKR_johnson
+		name = UKR_shmigal
 		portraits = {
 			civilian = {
 				small = GFX_idea_shmigal
@@ -144,7 +144,7 @@ characters = {
 
 	# KOMAROVSKY (MINZDRAV)
 	UKR_komarovsky = {
-		name = UKR_johnson
+		name = UKR_komarovsky
 		portraits = {
 			civilian = {
 				small = GFX_idea_komarovsky

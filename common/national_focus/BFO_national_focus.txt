@@ -245,7 +245,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_the_rise_of_bezbab
-		icon = GFX_goal_support_fascism
+		icon = GFX_focus_generic_strike_at_democracy1
 
 		cost = 0
 
@@ -675,6 +675,27 @@ focus_tree = {
 	}
 
 	focus = {
+		id = BFO_focus_ruslan
+		icon = GFX_goal
+
+		cost = 0
+
+		x = -5
+		y = 1
+		
+		available = { has_completed_focus = BFO_focus_win_ruslan }
+		prerequisite = { focus = BFO_focus_after_election }
+		relative_position_id = BFO_focus_after_election
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+
+			hidden_effect = {
+			}
+		}
+	}
+
+	focus = {
 		id = BFO_focus_administrative_reform
 		icon = GFX_goal_generic_improve_relations
 
@@ -697,7 +718,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_administrative_reform_next
+		id = BFO_focus_new_in_politic
 		icon = GFX_focus_renounce_the_treaty_of_trianon
 
 		cost = 5
@@ -714,13 +735,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_focus_dummy_2
+		id = BFO_focus_new_political_system
 		icon = GFX_goal_generic_neutrality_focus
 
 		cost = 5
 
-		prerequisite = { focus = BFO_administrative_reform_next }
-		relative_position_id = BFO_administrative_reform_next
+		prerequisite = { focus = BFO_focus_new_in_politic }
+		relative_position_id = BFO_focus_new_in_politic
 
 		x = 0
 		y = 2
@@ -731,7 +752,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_administrative_reform_next_next
+		id = BFO_focus_new_ex_politic
 		icon = GFX_goal_generic_major_alliance 
 
 		cost = 5
@@ -753,8 +774,8 @@ focus_tree = {
 
 		cost = 5
 
-		prerequisite = { focus = BFO_administrative_reform_next_next }
-		relative_position_id = BFO_administrative_reform_next_next
+		prerequisite = { focus = BFO_focus_new_ex_politic }
+		relative_position_id = BFO_focus_new_ex_politic
 
 		x = 0
 		y = 2
@@ -792,7 +813,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_good_pod
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_secret_weapon
 
 		cost = 5
 
@@ -810,7 +831,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_bad_pod
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_generic_cavalry
 
 		cost = 5
 
@@ -853,7 +874,7 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = BFO_focus_new_union }
-		prerequisite = { focus = BFO_focus_dummy_2 }
+		prerequisite = { focus = BFO_focus_new_political_system }
 		relative_position_id = BFO_focus_unlock_concern
 
 		x = 0
@@ -1407,7 +1428,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_escalation_with_hungary
-		icon = GFX_goal_support_fascism
+		icon = GFX_goal_generic_attack_allies
 
 		cost = 0
 
@@ -1440,7 +1461,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_annex_hungary
-		icon = GFX_goal_support_fascism
+		icon = GFX_goal_generic_political_pressure
 
 		cost = 0
 
@@ -1468,7 +1489,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_hungary_puppet
-		icon = GFX_goal_support_fascism
+		icon = GFX_goal_generic_alliance
 
 		cost = 0
 
@@ -1500,7 +1521,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_hungary_puppet_annexed
-		icon = GFX_goal_support_fascism
+		icon = GFX_goal_generic_military_deal
 
 		cost = 0
 
@@ -1552,7 +1573,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_war_with_italy
-		icon = GFX_focus_attack_italy
+		icon = GFX_goal_generic_attack_allies
 
 		cost = 2
 
@@ -1574,7 +1595,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_puppet_italy
-		icon = GFX_focus_attack_italy
+		icon = GFX_goal_generic_alliance
 
 		cost = 2
 
@@ -1623,7 +1644,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_escalation_with_switz
-		icon = GFX_goal_support_fascism
+		icon = GFX_goal_generic_attack_allies
 
 		cost = 0
 
@@ -1635,7 +1656,7 @@ focus_tree = {
 		prerequisite = { focus = BFO_focus_switzerland_way }
 		relative_position_id = BFO_focus_switzerland_way
 
-		x = 2
+		x = -2
 		y = 1
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION } 
@@ -1656,7 +1677,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_annex_switz
-		icon = GFX_goal_support_fascism
+		icon = GFX_goal_generic_political_pressure
 
 		cost = 0
 
@@ -1668,7 +1689,7 @@ focus_tree = {
 		prerequisite = { focus = BFO_focus_switzerland_way }
 		relative_position_id = BFO_focus_switzerland_way
 
-		x = -2
+		x = 2
 		y = 1
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION } 
@@ -1684,7 +1705,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_switz_puppet
-		icon = GFX_goal_support_fascism
+		icon = GFX_goal_generic_alliance
 
 		cost = 0
 
@@ -1716,7 +1737,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_switz_puppet_annexed
-		icon = GFX_goal_support_fascism
+		icon = GFX_goal_generic_military_deal
 
 		cost = 0
 
