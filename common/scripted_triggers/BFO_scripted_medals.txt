@@ -1,3 +1,7 @@
 should_have_bfo_medals_trigger = {
 	original_tag = BFO
 }
+
+should_have_ukr_medals_trigger = {
+	original_tag = UKR
+}

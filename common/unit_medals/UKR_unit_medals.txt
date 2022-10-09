@@ -4,7 +4,7 @@ unit_medals = {
 	
 	iron_cross_second_class = {
 		
-		available = { should_have_bfo_medals_trigger = yes }
+		available = { should_have_ukr_medals_trigger = yes }
 		frame = 1
 		icon = "GFX_medal_icon_ger"
 		
@@ -22,7 +22,7 @@ unit_medals = {
 	
 	knights_cross = {
 		
-		available = { should_have_bfo_medals_trigger = yes }
+		available = { should_have_ukr_medals_trigger = yes }
 		frame = 2
 		icon = "GFX_medal_icon_ger"
 		
@@ -40,7 +40,7 @@ unit_medals = {
 	
 	knights_cross_oak_leaves = {
 		
-		available = { should_have_bfo_medals_trigger = yes }
+		available = { should_have_ukr_medals_trigger = yes }
 		frame = 3
 		icon = "GFX_medal_icon_ger"
 		
@@ -57,9 +57,9 @@ unit_medals = {
 		
 	}
 	
-	knights_cross_swords_and_diamonds = {
+	hero_of_ukraine = {
 		
-		available = { should_have_bfo_medals_trigger = yes }
+		available = { should_have_ukr_medals_trigger = yes }
 		frame = 4
 		icon = "GFX_medal_icon_ger"
 		

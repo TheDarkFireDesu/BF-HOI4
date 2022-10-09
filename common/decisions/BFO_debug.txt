@@ -26,7 +26,7 @@ BFO_debug_category = {
 				transfer_state = 153
 				add_state_core = 153
 
-				change_tag_from = AUS
+				change_tag_from = ROOT
 			}
 		}
 	}
@@ -48,7 +48,68 @@ BFO_debug_category = {
 		icon = generic_form_nation
 
 		complete_effect = {
-			
+
+			UKR = {
+
+				transfer_state = 202
+				add_state_core = 202
+
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	ICH_create = {
+		available = {
+			is_ai = no
+			is_debug = yes
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		icon = generic_form_nation
+
+		complete_effect = {
+
+			ICH = {
+
+				transfer_state = 821
+				add_state_core = 821
+
+				change_tag_from = ROOT
+			}
+		}
+	}
+
+	BLR_create = {
+		available = {
+			is_ai = no
+			is_debug = yes
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		icon = generic_form_nation
+
+		complete_effect = {
+
+			BLR = {
+
+				transfer_state = 206
+				add_state_core = 206
+
+				change_tag_from = ROOT
+			}
 		}
 	}
 }

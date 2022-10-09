@@ -26,6 +26,138 @@ characters = {
 		}
 	}
 
+	# ADVISOR
+
+	# ARESTOVICH
+	UKR_arestovich = {
+		name = UKR_arestovich
+		portraits = {
+			civilian = {
+				small = GFX_idea_arestovich
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = arestovich
+			traits = { propaganda_expert }
+		}
+	}
+
+	# PODOLYAK
+	UKR_podolyak = {
+		name = UKR_podolyak
+		portraits = {
+			civilian = {
+				small = GFX_idea_podolyak 
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = podolyak
+			traits = { propaganda_expert }
+		}
+	}
+
+	# JONHSONUK
+	UKR_johnson = {
+		name = UKR_johnson
+		portraits = {
+			civilian = {
+				small = GFX_idea_johnson 
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = johnson
+			traits = { propaganda_expert }
+		}
+	}
+
+	# DANILOV
+	UKR_danilov = {
+		name = UKR_danilov
+		portraits = {
+			civilian = {
+				small = GFX_idea_danilov
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = danilov
+			traits = { propaganda_expert }
+		}
+	}
+
+	# MINISTER
+
+	# KULEBA
+	UKR_kuleba = {
+		name = UKR_johnson
+		portraits = {
+			civilian = {
+				small = GFX_idea_kuleba
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = kuleba
+			traits = { propaganda_expert }
+		}
+	}
+
+	# REZNIKOV 
+	UKR_reznikov = {
+		name = UKR_johnson
+		portraits = {
+			civilian = {
+				small = GFX_idea_reznikov
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = reznikov
+			traits = { propaganda_expert }
+		}
+	}
+
+	# SHMIGAL
+	UKR_shmigal = {
+		name = UKR_johnson
+		portraits = {
+			civilian = {
+				small = GFX_idea_shmigal
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = shmigal
+			traits = { propaganda_expert }
+		}
+	}
+
+	# KOMAROVSKY (MINZDRAV)
+	UKR_komarovsky = {
+		name = UKR_johnson
+		portraits = {
+			civilian = {
+				small = GFX_idea_komarovsky
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = komarovsky
+			traits = { propaganda_expert }
+		}
+	}	
+
 	# FIELDMARHSAL
 
 	# ANDRIY ZALYZNIY
@@ -58,7 +190,95 @@ characters = {
 		}
 	}
 
+	#SYRSKIY
+	UKR_syrskiy = {
+		name = UKR_syrskiy
+		portraits = {
+			civilian = {
+				small = GFX_idea_syrskiy # FIX
+			}
+			army = {
+				large = GFX_syrskiy_fieldmarshal # FIX
+				small = GFX_idea_syrskiy
+			}
+		}
+		
+		field_marshal = {
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 5
+			traits = { armor_officer war_hero trickster panzer_expert skirmisher commando }
+		}
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token = syrskiy
+			traits = { army_armored_3 }
+			cost = 200
+		}
+	}
+	
+	#SHAPTALA
+	UKR_shaptala = {
+		name = UKR_shaptala
+		portraits = {
+			civilian = {
+				small = GFX_idea_shaptala # FIX
+			}
+			army = {
+				large = GFX_shaptala_fieldmarshal # FIX
+				small = GFX_idea_shaptala
+			}
+		}
+		
+		field_marshal = {
+			skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 5
+			traits = { armor_officer war_hero trickster panzer_expert skirmisher commando }
+		}
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token = shaptala
+			traits = { army_armored_3 }
+			cost = 200
+		}
+	}
+
 	# GENERAL
+
+	# KIM
+	UKR_kim = {
+		name = UKR_kim
+		portraits = {
+			civilian = {
+				small = GFX_idea_kim
+			}
+			army = {
+				large = GFX_kim_general
+				small = GFX_idea_kim
+			}
+		}
+
+		corps_commander = {
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+			traits = { war_hero brilliant_strategist engineer_officer trait_engineer fortress_buster } 
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = kim
+			traits = { army_chief_defensive_3 } 
+		}
+	}
 
 	# MARCHENKO
 	UKR_marchenko = {
@@ -74,9 +294,9 @@ characters = {
 		}
 
 		corps_commander = {
-			skill = 5
+			skill = 4
 			attack_skill = 3
-			defense_skill = 5
+			defense_skill = 4
 			planning_skill = 3
 			logistics_skill = 4
 			traits = { war_hero brilliant_strategist engineer_officer trait_engineer fortress_buster } 
@@ -84,6 +304,90 @@ characters = {
 		advisor = {
 			slot = army_chief
 			idea_token = marchenko
+			traits = { army_chief_defensive_3} 
+		}
+	}
+
+	# MIRGORODSKIY
+	UKR_mirgorodskiy = {
+		name = UKR_mirgorodskiy
+		portraits = {
+			civilian = {
+				small = GFX_idea_mirgorodskiy
+			}
+			army = {
+				large = GFX_mirgorodskiy_general
+				small = GFX_idea_mirgorodskiy
+			}
+		}
+
+		corps_commander = {
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 4
+			traits = { war_hero brilliant_strategist engineer_officer trait_engineer fortress_buster } 
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = mirgorodskiy
+			traits = { army_chief_defensive_3} 
+		}
+	}
+
+	#KRYK
+	UKR_kryk = {
+		name = UKR_kryk
+		portraits = {
+			civilian = {
+				small = GFX_idea_kryk
+			}
+			army = {
+				large = GFX_kryk_general
+				small = GFX_idea_kryk
+			}
+		}
+
+		corps_commander = {
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 4
+			traits = { war_hero brilliant_strategist engineer_officer trait_engineer fortress_buster } 
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = kryk
+			traits = { army_chief_defensive_3} 
+		}
+	}
+
+	#GALUSHKIN
+	UKR_galushkin = {
+		name = UKR_galushkin
+		portraits = {
+			civilian = {
+				small = GFX_idea_galushkin
+			}
+			army = {
+				large = GFX_galushkin_general
+				small = GFX_idea_galushkin
+			}
+		}
+
+		corps_commander = {
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 4
+			traits = { war_hero brilliant_strategist engineer_officer trait_engineer fortress_buster } 
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = galushkin
 			traits = { army_chief_defensive_3} 
 		}
 	}

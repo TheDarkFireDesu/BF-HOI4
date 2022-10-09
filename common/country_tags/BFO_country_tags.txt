@@ -1,1 +1,4 @@
-BFO = "countries/SquadBB.txt"
+BFO = "countries/Bezbab.txt"
+UKR = "countries/Ukraine.txt"
+ICH = "countries/Ichkeria.txt"
+BLR = "countries/Belarus.txt"

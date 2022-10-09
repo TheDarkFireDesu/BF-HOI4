@@ -1,5 +1,0 @@
-spriteType = {
-	name = GFX_ICHKERIA_RADIO
-	texturefile = gfx/interface/topbar/musicplayer/ichkeria_radio.dds
-	noOfFrames = 2
-}	

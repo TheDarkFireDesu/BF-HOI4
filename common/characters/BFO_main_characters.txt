@@ -117,8 +117,6 @@ characters = {
 	}
 
 	# FIELDMARSHAL
-	# FIELDMARSHAL
-	# FIELDMARSHAL
 
 	# KERIL FON TANKDROCHER
 	BFO_kirill = {
@@ -152,7 +150,7 @@ characters = {
 		}
 	}
 
-	# RUSLAN FON PEDIK - %50
+	# RUSLAN FON PEDIK
 	BFO_ruslan = {
 		name = BFO_ruslan
 		portraits = {
@@ -291,8 +289,6 @@ characters = {
 		}
 	}
 
-	# GENERALS
-	# GENERALS
 	# GENERALS
 
 	# SANYA
@@ -469,8 +465,6 @@ characters = {
 	}
 
 	# ADMIRAL
-	# ADMIRAL
-	# ADMIRAL
 
 	# DONEL
 	BFO_donel = {
@@ -600,9 +594,7 @@ characters = {
 		}
 	}
 
-	# POLITICAL
-	# POLITICAL
-	# POLITICAL
+	# ADVISOR
 
 	# ALENA
 	BFO_sovec = {

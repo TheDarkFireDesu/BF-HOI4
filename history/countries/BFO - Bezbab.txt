@@ -61,3 +61,7 @@ recruit_character = BFO_coshalot
 recruit_character = BFO_sovec
 recruit_character = BFO_pehlik
 recruit_character = BFO_masanya
+
+# FUNNY
+recruit_character = BFO_ryan_gosler
+recruit_character = BFO_ilon_mask
