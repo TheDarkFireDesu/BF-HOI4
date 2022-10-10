@@ -65,7 +65,7 @@ characters = {
 			}
 			slot = political_advisor
 			idea_token = agarkoff
-			traits = { fortification_engineer } 
+			traits = { captain_of_industry } 
 		}
 	}
 
@@ -82,7 +82,7 @@ characters = {
 		
 		country_leader = {
 			ideology = despotism
-			traits = { first_lady } 
+			traits = { popular_queen } 
 			desc = BFO_david_desc # WIP
 		}
 		advisor = {
@@ -92,7 +92,7 @@ characters = {
 			}
 			slot = political_advisor
 			idea_token = david 
-			traits = { industry_reformer captain_of_industry }
+			traits = { princess_of_terror }
 		}
 	}
 
@@ -138,14 +138,14 @@ characters = {
 			defense_skill = 4
 			planning_skill = 4
 			logistics_skill = 5
-			traits = {trait_cautious armor_officer war_hero trickster panzer_expert skirmisher commando}
+			traits = { trait_cautious armor_officer war_hero trickster panzer_expert skirmisher commando }
 		}
 		advisor = {
 			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = high_command
 			ledger = army
 			idea_token = kirill
-			traits = {army_armored_3}
+			traits = { army_armored_3 }
 			cost = 200
 		}
 	}
@@ -174,19 +174,26 @@ characters = {
 			defense_skill = 5
 			planning_skill = 4
 			logistics_skill = 5
-			traits = {trait_cautious naval_invader war_hero urban_assault_specialist naval_liason}
+			traits = { trait_cautious naval_invader war_hero urban_assault_specialist naval_liason }
 		}
 		country_leader = {
 			ideology = anarchist_communism
-			traits = {dictator dislikes_germany} 
+			traits = { dictator } 
 			desc = BFO_ruslan_desc
 		}
+		advisor = {
+			available = { NOT = { has_completed_focus = BFO_focus_win_ruslan } }
+			slot = political_advisor
+			idea_token = ruslan
+			traits = { prince_of_terror }
+		}
+
 		advisor = {
 			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = high_command
 			ledger = army
 			idea_token = ruslan
-			traits = {army_cavalry_3}
+			traits = { army_cavalry_3 }
 			cost = 200
 		}
 	}
@@ -626,7 +633,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = pehlik
-			traits = { }
+			traits = { backroom_backstabber }
 		}
 	}
 
@@ -642,7 +649,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = masanya
-			traits = { }
+			traits = { quartermaster_general }
 		}
 	}
 }

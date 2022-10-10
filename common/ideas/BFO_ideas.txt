@@ -5,7 +5,6 @@ ideas = {
 		weak_economy = {
 			
 			allowed = { always = no}
-
 			removal_cost = -1
 
 			picture = GFX_generic # FIX
@@ -23,7 +22,6 @@ ideas = {
 		weak_economy_2 = {
 			
 			allowed = { always = no}
-
 			removal_cost = -1
 
 			picture = GFX_generic # FIX
@@ -41,7 +39,6 @@ ideas = {
 		weak_economy_3 = {
 			
 			allowed = { always = no}
-
 			removal_cost = -1
 
 			picture = GFX_generic # FIX
@@ -55,7 +52,58 @@ ideas = {
 				conversion_cost_mil_to_civ_factor = 0.1
 			}
 		}
+
+		# BEZBABNIY UNIVERSITY
+		bezbab_university = {
+
+			allowed = { always = no}
+			removal_cost = -1
+
+			picture = GFX_generic # FIX
+			
+			modifier = { research_speed_factor = 0.1 }
+		}
+
+		# 
+		we_like_all = {
+
+			allowed = { always = no}
+			removal_cost = -1
+
+			picture = GFX_generic # FIX
+			
+			modifier = { 
+				
+				democratic_acceptance = 15
+				communism_acceptance = 15
+				fascism_acceptance = 15
+				neutrality_acceptance = 15
+				egorism_acceptance = 15
+			
+			}
+		}
+
+		# INTERVENTION IDEA
+		bezbab_intervention = {
+
+			allowed = { always = no}
+			removal_cost = -1
+
+			picture = GFX_generic # FIX
+			
+			modifier = {  
+
+				send_volunteer_size = 20
+				send_volunteer_factor = 0.20
+				send_volunteers_tension = -1
+				send_volunteer_divisions_required = -1
+
+			}
+		}
 	}
+
+	
+
 
 	# CONCERN
 	# CONCERN
