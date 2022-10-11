@@ -27,7 +27,7 @@ focus_tree = {
 
 		cost = 0
 
-		x = 17
+		x = 18
 		y = 0
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -271,7 +271,7 @@ focus_tree = {
 
 		cost = 0
 
-		x = 6
+		x = 7
 		y = 0
 
 		available = { 
@@ -286,6 +286,8 @@ focus_tree = {
 
 		completion_reward = {
 
+			add_ideas = BFO_rise_of_bezbab
+
 			hidden_effect = {
 
 				drop_cosmetic_tag = yes
@@ -299,6 +301,149 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = BFO_focus_army_reform
+		icon = GFX_focus_BUL_support_macedonian_organizations
+
+		cost = 0
+
+		prerequisite = { focus = BFO_focus_the_rise_of_bezbab }
+		relative_position_id = BFO_focus_the_rise_of_bezbab
+
+		x = 0
+		y = 1
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = { add_ideas = BFO_war_doctrine }
+	}
+
+	focus = {
+		id = BFO_focus_antigerman_wall
+		icon = GFX_focus_BUL_support_macedonian_organizations
+
+		cost = 0
+
+		prerequisite = { focus = BFO_focus_army_reform }
+		relative_position_id = BFO_focus_the_rise_of_bezbab
+
+		x = 1
+		y = 2
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = { 
+			
+			848 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 6680 
+					instant_build = yes
+				}
+
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 6678
+					instant_build = yes
+				}
+			}
+
+			153 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 9636
+					instant_build = yes
+				}
+
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 673
+					instant_build = yes
+				}
+
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 11634
+					instant_build = yes
+				}
+			}
+
+			152 = {
+
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 688
+					instant_build = yes
+				}
+
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 3703
+					instant_build = yes
+				}
+
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 6708
+					instant_build = yes
+				}
+
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 732
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BFO_focus_logi_improve
+		icon = GFX_focus_BUL_support_macedonian_organizations
+
+		cost = 0
+
+		prerequisite = { focus = BFO_focus_antigerman_wall }
+		relative_position_id = BFO_focus_antigerman_wall
+
+		x = 0
+		y = 1
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = { 
+			
+			every_owned_state = {
+				add_dynamic_modifier = {
+					modifier = BFO_logi_improve_modifiers
+					scope = BFO
+				}
+			}
+
+
+		}
+	}
 
 	focus = {
 		id = BFO_focus_military_revolt
@@ -307,11 +452,12 @@ focus_tree = {
 		cost = 2
 
 		available = { has_war = no }
-		prerequisite = { focus = BFO_focus_the_rise_of_bezbab }
+		prerequisite = { focus = BFO_focus_expanded_agency }
+		prerequisite = { focus = BFO_focus_logi_improve }
 		relative_position_id = BFO_focus_the_rise_of_bezbab
 
 		x = 0
-		y = 1
+		y = 4
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 
@@ -375,8 +521,9 @@ focus_tree = {
 
 		cost = 1
 
-		prerequisite = { focus = BFO_focus_military_revolt}
-		relative_position_id = BFO_focus_military_revolt
+		prerequisite = { focus = BFO_focus_economic_reform_roadwork }
+		prerequisite = { focus = BFO_focus_economic_reform_oil_next }
+		relative_position_id = BFO_focus_war_economic
 
 		x = 0
 		y = 1
@@ -420,17 +567,57 @@ focus_tree = {
 	}
 
 	focus = {
+		id = BFO_focus_improve_agency
+		icon = GFX_focus_SWI_embrace_rote_drei
+
+		cost = 1
+
+
+		prerequisite = { focus = BFO_focus_army_reform }
+		relative_position_id = BFO_focus_army_reform
+
+		x = -1
+		y = 1
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = { add_ideas = BFO_improve_agency_1 }
+	}
+
+	focus = {
+		id = BFO_focus_expanded_agency
+		icon = GFX_focus_generic_secret_service_agency
+
+		cost = 1
+
+		prerequisite = { focus = BFO_focus_improve_agency }
+		relative_position_id = BFO_focus_improve_agency
+
+		x = 0
+		y = 1
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = { 
+			swap_ideas = {
+				add_idea = BFO_improve_agency_2
+				remove_idea = BFO_improve_agency_1
+			}
+		}
+	}
+
+	focus = {
 		id = BFO_focus_dora_milkis
 		icon = GFX_focus_generic_self_propelled_gun
 
 		cost = 1
 
 
-		prerequisite = { focus = BFO_focus_return_a_seaport}
-		relative_position_id = BFO_focus_return_a_seaport
+		prerequisite = { focus = BFO_focus_military_revolt }
+		relative_position_id = BFO_focus_military_revolt
 
 		x = 0
-		y = 2
+		y = 1
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -827,7 +1014,7 @@ focus_tree = {
 		prerequisite = { focus = BFO_focus_the_rise_of_bezbab }
 		relative_position_id = BFO_focus_the_rise_of_bezbab
 
-		x = 4
+		x = 5
 		y = 1
 
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -887,7 +1074,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 
-		completion_reward = { add_ideas = we_like_all }
+		completion_reward = { add_ideas = BFO_we_like_all }
 	}
 
 	focus = {
@@ -989,7 +1176,7 @@ focus_tree = {
 
 			add_political_power = 50
 			add_research_slot = 1
-			add_ideas = bezbab_university
+			add_ideas = BFO_bezbab_university
 		}
 	}
 
@@ -1021,7 +1208,7 @@ focus_tree = {
 		prerequisite = { focus = BFO_focus_the_rise_of_bezbab }
 		relative_position_id = BFO_focus_the_rise_of_bezbab
 
-		x = -4
+		x = -5
 		y = 1
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1032,21 +1219,14 @@ focus_tree = {
 
 		completion_reward = {
 
-			custom_effect_tooltip = BFO_cet_economic_reform
-
-			hidden_effect = {
-				
-				swap_ideas = {
-					remove_idea = weak_economy
-					add_idea = weak_economy_2
-				}
+			add_ideas = BFO_war_economic_prepare
 	
-				add_tech_bonus = {
-					bonus = 1.0
-					uses = 3
-					category = industry
-				}
-			}
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 3
+				category = industry
+
+		}
 		}
 	}
 
@@ -1071,14 +1251,15 @@ focus_tree = {
 
 		completion_reward = {
 
-			swap_ideas = {
-				remove_idea = weak_economy_2
-				add_idea = weak_economy_3
+			add_offsite_building = {
+				type = industrial_complex 
+				level = 3
 			}
-
-			add_ideas = GER_grosraumwirtschaft # FIX
+			add_offsite_building = {
+				type = arms_factory 
+				level = 5
+			}  
 		}
-
 	}
 
 	focus = {
@@ -1103,7 +1284,7 @@ focus_tree = {
 
 		complete_tooltip = {
 			every_state = {
-				limit = { has_state_flag = GER_industrial_effort_2IC } # FIX
+				limit = { has_state_flag = BFO_industrial_effort_2IC } # FIX
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -1130,7 +1311,7 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = GER_industrial_effort_2IC # FIX
+				set_state_flag = BFO_industrial_effort_2IC # FIX
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -1146,7 +1327,7 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = GER_industrial_effort_2IC # FIX
+				set_state_flag = BFO_industrial_effort_2IC # FIX
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -1162,7 +1343,7 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = GER_industrial_effort_2IC # FIX
+				set_state_flag = BFO_industrial_effort_2IC # FIX
 			}
 		}
 	}
@@ -1186,10 +1367,10 @@ focus_tree = {
 
 		complete_tooltip = {
 			every_state = {
-				limit = { has_state_flag = GER_industrial_effort_2_2IC } # FIX
+				limit = { has_state_flag = BFO_industrial_effort_2_2IC } 
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = industrial_complex
+					type = infrastructure
 					level = 2
 					instant_build = yes
 				}
@@ -1202,56 +1383,56 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
-						building = industrial_complex
+						building = infrastructure
 						size > 1
 						include_locked = yes
 					}
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = industrial_complex
+					type = infrastructure
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = GER_industrial_effort_2_2IC # FIX
+				set_state_flag = BFO_industrial_effort_2_2IC
 			}
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
-						building = industrial_complex
+						building = infrastructure
 						size > 1
 						include_locked = yes
 					}
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = industrial_complex
+					type = infrastructure
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = GER_industrial_effort_2_2IC # FIX
+				set_state_flag = BFO_industrial_effort_2_2IC 
 			}
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
-						building = industrial_complex
+						building = infrastructure
 						size > 1
 						include_locked = yes
 					}
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = industrial_complex
+					type = infrastructure
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = GER_industrial_effort_2_2IC # FIX
+				set_state_flag = BFO_industrial_effort_2_2IC 
 			}
 		}
 	}
 
 	focus = {
-		id = BFO_war_economic
+		id = BFO_focus_war_economic
 		icon = GFX_goal_generic_construct_mil_factory
 
 		
@@ -1369,7 +1550,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_economic_reform_oil_next
+		id = BFO_focus_economic_reform_oil_next
 		icon = GFX_focus_generic_rubber
 
 		cost = 3
@@ -1466,30 +1647,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_extra_tech_slot
-		icon = GFX_focus_research
-		text = extra_tech_slot
-
-		prerequisite = { focus = BFO_economic_reform_oil_next }
-		prerequisite = { focus = BFO_focus_economic_reform_roadwork }
-		relative_position_id = BFO_focus_economic_reform_next
-
-		x = 0
-		y = 3
-		cost = 1
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-
-	focus = {
 		id = BFO_focus_the_start_of_new_nation
 		icon = GFX_focus_SWI_dissolve_the_federal_council
 
@@ -1497,15 +1654,18 @@ focus_tree = {
 
 		prerequisite = { focus = BFO_focus_dora_milkis }
 		prerequisite = { focus = BFO_focus_political_power }
-		prerequisite = { focus = BFO_extra_tech_slot }
+		prerequisite = { focus = BFO_focus_return_a_seaport }
 
-		x = 6
+		x = 7
 		y = 6
 
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 
 		completion_reward = {
-			#remove_ideas = d
+			swap_ideas = {
+				remove_idea = BFO_rise_of_bezbab
+				add_idea = BFO_start_of_new_nation
+			}
 		}
 	}
 
@@ -1526,7 +1686,7 @@ focus_tree = {
 			factor = 10
 		}
 
-		completion_reward = { add_ideas = bezbab_intervention }
+		completion_reward = { add_ideas = BFO_bezbab_intervention }
 
 	}
 

@@ -2,59 +2,38 @@ ideas = {
 
 	country = {
 
-		weak_economy = {
-			
+		BFO_rise_of_bezbab = {
+
 			allowed = { always = no}
 			removal_cost = -1
 
 			picture = GFX_generic # FIX
 			
-			modifier = {
-
-				industrial_capacity_dockyard = -0.15
-				industrial_capacity_factory = -0.15
-
-				conversion_cost_civ_to_mil_factor = 0.5
-				conversion_cost_mil_to_civ_factor = 0.5
+			modifier = { 
+				
+				industry_repair_factor = 0.1
+				max_command_power = 20
+				surrender_limit = 0.1
 			}
 		}
 
-		weak_economy_2 = {
-			
+		BFO_start_of_new_nation = {
+
 			allowed = { always = no}
 			removal_cost = -1
 
 			picture = GFX_generic # FIX
 			
-			modifier = {
-
-				industrial_capacity_dockyard = -0.10
-				industrial_capacity_factory = -0.10
-
-				conversion_cost_civ_to_mil_factor = 0.25
-				conversion_cost_mil_to_civ_factor = 0.25
-			}
-		}
-
-		weak_economy_3 = {
-			
-			allowed = { always = no}
-			removal_cost = -1
-
-			picture = GFX_generic # FIX
-			
-			modifier = {
-
-				industrial_capacity_dockyard = -0.05
-				industrial_capacity_factory = -0.05
-
-				conversion_cost_civ_to_mil_factor = 0.1
-				conversion_cost_mil_to_civ_factor = 0.1
+			modifier = { 
+				
+				industry_repair_factor = 0.25
+				max_command_power = 40
+				surrender_limit = 0.35
 			}
 		}
 
 		# BEZBABNIY UNIVERSITY
-		bezbab_university = {
+		BFO_bezbab_university = {
 
 			allowed = { always = no}
 			removal_cost = -1
@@ -65,7 +44,7 @@ ideas = {
 		}
 
 		# 
-		we_like_all = {
+		BFO_we_like_all = {
 
 			allowed = { always = no}
 			removal_cost = -1
@@ -84,7 +63,7 @@ ideas = {
 		}
 
 		# INTERVENTION IDEA
-		bezbab_intervention = {
+		BFO_bezbab_intervention = {
 
 			allowed = { always = no}
 			removal_cost = -1
@@ -100,9 +79,50 @@ ideas = {
 
 			}
 		}
-	}
 
-	
+		BFO_war_doctrine = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture =  MEX_politicised_army_2
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+
+		BFO_war_economic_prepare = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture =  generic_goods_red_bonus
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		BFO_improve_agency_1 = {
+			picture = SWI_buero_ha
+			allowed = { original_tag = BFO }
+			removal_cost = -1 
+
+			modifier = {
+				intel_network_gain_factor = 0.25
+				intelligence_agency_defense = -0.15
+			}
+		}
+
+		BFO_improve_agency_2 = {
+			picture = SWI_buero_ha
+			allowed = { original_tag = BFO }
+			removal_cost = -1 
+
+			modifier = {
+				intel_network_gain_factor = 0.45
+				intelligence_agency_defense = -0.10
+				operative_slot = 1
+			}
+		}
 
 
 	# CONCERN

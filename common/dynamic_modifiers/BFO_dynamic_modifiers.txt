@@ -1,0 +1,6 @@
+BFO_logi_improve_modifiers = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_military_plans 
+
+	local_supplies = 0.5
+}
