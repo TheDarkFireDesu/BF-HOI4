@@ -1,0 +1,21 @@
+﻿l_russian:
+ 
+  WUN: "Женския"
+  WUN_DEF: "Женския"
+  WUN_ADJ: "Женск."
+
+  WUN_egorism: "Женский Союз"
+  WUN_egorism_DEF: "Женский Союз"
+  WUN_egorism_ADJ: "Женск."
+
+  WUN_fascism: "Женский Рейх"
+  WUN_fascism_DEF: "Женский Рейх"
+  WUN_fascism_ADJ: "Женск."
+
+  WUN_communism: "Анархическое Женское Объединение"
+  WUN_communism_DEF: "Анархическое Женское Объединение"
+  WUN_communism_ADJ: "Женск."
+
+  WUN_democracy: "Женская Республика"
+  WUN_democracy_DEF: "Женская Республика"
+  WUN_democracy_ADJ: "Женск."

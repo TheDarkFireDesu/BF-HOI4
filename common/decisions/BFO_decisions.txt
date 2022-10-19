@@ -1,4 +1,45 @@
-BFO_revolt_category = {
+BFO_create_nation = {
 
-	
+	BFO_create_WUN = {
+
+		available = {
+			2 = { is_owned_and_controlled_by = BFO }
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		icon = generic_form_nation
+
+		complete_effect = {
+
+			WUN = {
+				
+				#transfer_state = 162
+				#add_state_core = 162
+
+				#transfer_state = 157
+				#add_state_core = 157
+
+				#transfer_state = 2
+				#add_state_core = 2
+
+				transfer_state = 117
+				add_state_core = 117
+
+				transfer_state = 849
+				add_state_core = 849
+
+				transfer_state = 156
+				add_state_core = 156
+
+				transfer_state = 115
+				add_state_core = 115
+			}
+		}
+	}
 }

@@ -1,4 +1,4 @@
-BFO_revolt_category = {
+BFO_create_nation = {
 
 	icon = generic_formable_nations
 	picture = GFX_decision_cat_generic_european_union

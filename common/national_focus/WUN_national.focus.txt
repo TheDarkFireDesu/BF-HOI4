@@ -1,11 +1,11 @@
 focus_tree = {
-	id = UKR_FOCUS
+	id = WUN_FOCUS
 
 	country = { 
 		factor = 0
 		modifier = {
 			add = 10
-			tag = UKR
+			tag = WUN
 		} 
 	}
 

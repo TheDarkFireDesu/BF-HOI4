@@ -1,4 +1,4 @@
-capital = 117 #Kiev
+capital = 202 #Kiev
 
 oob = "UKR_1936"
 
@@ -97,15 +97,31 @@ set_popularities = {
 }
 
 # LEADER
-recruit_character = WUN_Valeriya
+recruit_character = UKR_zelensky
 
 # ADVISOR
+recruit_character = UKR_arestovich
+recruit_character = UKR_podolyak
+recruit_character = UKR_johnson
+recruit_character = UKR_danilov
 
 # MINISTER
+recruit_character = UKR_kuleba
+recruit_character = UKR_reznikov
+recruit_character = UKR_shmigal
+recruit_character = UKR_komarovsky
 
 # FIELDMARSHAL
+recruit_character = UKR_zalyzniy
+recruit_character = UKR_syrskiy
+recruit_character = UKR_shaptala
 
 # GENERAL
+recruit_character = UKR_kim
+recruit_character = UKR_marchenko
+recruit_character = UKR_kryk
+recruit_character = UKR_mirgorodskiy
+recruit_character = UKR_galushkin
 
 
 

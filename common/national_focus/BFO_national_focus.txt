@@ -286,7 +286,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			add_ideas = BFO_rise_of_bezbab
+			#add_ideas = BFO_rise_of_bezbab
 
 			hidden_effect = {
 
@@ -1509,7 +1509,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BFO_economic_reform_oil
+		id = BFO_focus_economic_reform_oil
 		icon = GFX_focus_generic_rubber
 
 		cost = 3
@@ -1555,8 +1555,8 @@ focus_tree = {
 
 		cost = 3
 
-		prerequisite = { focus = BFO_economic_reform_oil}
-		relative_position_id = BFO_economic_reform_oil
+		prerequisite = { focus = BFO_focus_economic_reform_oil}
+		relative_position_id = BFO_focus_economic_reform_oil
 
 		x = 0
 		y = 2
@@ -2557,6 +2557,125 @@ focus_tree = {
 		x = 30
 		y = 7
 
+
+		completion_reward = {
+
+			custom_effect_tooltip = BFO_cet_focus_revanche
+		}
+	}
+
+	focus = {
+		id = BFO_focus_women_union
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+
+		cost = 1
+
+		available = { 2 = { is_controlled_by = BFO } }
+		prerequisite = { focus = BFO_focus_revanche }
+		relative_position_id = BFO_focus_revanche
+
+
+		x = 0
+		y = 1
+
+		completion_reward = {
+			
+			WUN = {
+				transfer_state = 117
+				add_state_core = 117
+
+				transfer_state = 849
+				add_state_core = 849
+
+				transfer_state = 156
+				add_state_core = 156
+
+				transfer_state = 115
+				add_state_core = 115
+			}
+
+			diplomatic_relation = {
+				country = WUN
+				relation = puppet
+			}
+		}
+	}
+
+	focus = {
+		id = BFO_focus_artem_and_ksuha
+		icon = GFX_focus_POL_ukrainian_army
+
+		cost = 1
+
+		prerequisite = { focus = BFO_focus_women_union }
+		relative_position_id = BFO_focus_women_union
+		mutually_exclusive = {
+			focus = BFO_focus_artem_and_valeryia
+			focus = BFO_focus_artem_and_mirka
+		}
+
+		x = 2
+		y = 1
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = BFO_focus_artem_and_mirka
+		icon = GFX_focus_POL_ukrainian_army
+
+		cost = 1
+
+		prerequisite = { focus = BFO_focus_women_union }
+		relative_position_id = BFO_focus_women_union
+		mutually_exclusive = {
+			focus = BFO_focus_artem_and_ksuha
+			focus = BFO_focus_artem_and_valeryia
+		}
+
+		x = -2
+		y = 1
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = BFO_focus_artem_and_valeryia
+		icon = GFX_focus_POL_ukrainian_army
+
+		cost = 1
+
+		prerequisite = { focus = BFO_focus_women_union }
+		relative_position_id = BFO_focus_women_union
+		mutually_exclusive = {
+			focus = BFO_focus_artem_and_ksuha
+			focus = BFO_focus_artem_and_mirka
+		}
+
+		x = 0
+		y = 1
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = BFO_focus_dummy
+		icon = GFX_focus_POL_ukrainian_army
+
+		cost = 1
+
+		#prerequisite = { focus = BFO_focus_women_union }
+		relative_position_id = BFO_focus_women_union
+
+		x = 0
+		y = 8
+
 		completion_reward = {
 
 		}
@@ -2568,8 +2687,8 @@ focus_tree = {
 
 		cost = 1
 
-		prerequisite = { focus = BFO_focus_revanche }
-		relative_position_id = BFO_focus_revanche
+		#prerequisite = { focus = BFO_focus_women_union }
+		relative_position_id = BFO_focus_dummy
 
 		x = -7
 		y = 1
@@ -2585,8 +2704,8 @@ focus_tree = {
 
 		cost = 1
 
-		prerequisite = { focus = BFO_focus_revanche }
-		relative_position_id = BFO_focus_revanche
+		#prerequisite = { focus = BFO_focus_women_union }
+		relative_position_id = BFO_focus_dummy
 
 		x = 7
 		y = 1
@@ -2598,12 +2717,12 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_belarusian_way
-		icon = GFX_goal_support_fascism
+		icon = GFX_focus_BUL_support_macedonian_organizations
 
 		cost = 1
 
-		prerequisite = { focus = BFO_focus_revanche }
-		relative_position_id = BFO_focus_revanche
+		#prerequisite = { focus = BFO_focus_women_union }
+		relative_position_id = BFO_focus_dummy
 
 		x = 0
 		y = 1

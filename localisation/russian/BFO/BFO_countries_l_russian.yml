@@ -12,14 +12,10 @@
   BFO_fascism_DEF: "Безбабная Рейх"
   BFO_fascism_ADJ: "Безбабн."
 
-  BFO_communism: "Рабочая Безбабная Красная Республика"
-  BFO_communism_DEF: "Рабочая Безбабная Красная Республика"
+  BFO_communism: "Анархическое Безбабное Объединение"
+  BFO_communism_DEF: "Анархическое Безбабное Объединение"
   BFO_communism_ADJ: "Безбабн."
 
   BFO_democracy: "Безбабная Республика"
   BFO_democracy_DEF: "Безбабная Республика"
   BFO_democracy_ADJ: "Безбабн."
-
-  VTE: "Вольная территория егорят"
-  VTE_DEF: "Вольная территория егорят"
-  VTE_ADJ: "Егорск."
