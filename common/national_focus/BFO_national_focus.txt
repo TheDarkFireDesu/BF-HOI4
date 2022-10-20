@@ -303,7 +303,7 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_army_reform
-		icon = GFX_focus_BUL_support_macedonian_organizations
+		icon = GFX_focus_generic_combined_arms
 
 		cost = 0
 
@@ -324,8 +324,8 @@ focus_tree = {
 
 	focus = {
 		id = BFO_focus_antigerman_wall
-		icon = GFX_focus_BUL_support_macedonian_organizations
-
+		icon = GFX_goal_fortify_the_westwall
+		
 		cost = 0
 
 		prerequisite = { focus = BFO_focus_army_reform }
@@ -1662,16 +1662,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = BFO_rise_of_bezbab
-				add_idea = BFO_start_of_new_nation
-			}
+			#swap_ideas = {
+				#remove_idea = BFO_rise_of_bezbab
+				#add_idea = BFO_start_of_new_nation
+			#}
 		}
 	}
 
 	focus = {
 		id = BFO_focus_prepare_to_war_with_ger
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_spr_anarchism_knows_no_borders
 
 		cost = 0
 

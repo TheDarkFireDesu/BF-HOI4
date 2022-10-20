@@ -1,71 +1,63 @@
-BFO (MAIN)
-{
-	# LEADER
-	INTERIM_COUNCIL = YES
-	EGOR = YES
-	AGARKOFF = YES
+BFO 
+	INTERIM_COUNCIL - yes
+	EGOR - yes
+	ALINA - yes
+	NIKITUS - no #
+	JENYA - yes
 
-	# FIELMARSHAL
-	KERIL = YES
+	KIRILL - yes
+	RUSLAN - yes
+	ARTEM - yes
+	KOSOV S. - yes
+	NOSIREV - yes
 
-	# GENERAL
+	MISHA - yes
+	BEVZ S. - yes
+	NEKIT - yes
+	VLADIK - no #
+	ARTEM G. - yes
+	NIKITA - no # - to admiral
+	TIMUR - yes
 
-	# ADMIRAL
+	DONEL - yes
+	KARAS - no #
+	COSHALOT - no #
+	KSUHA - yes
+	NIKITA KOK - no #
 
-	# ADVISOR
-}
+	SOVEC - yes
+	PEHLIK - no #
+	MASANYA - yes
 
-UKR (MAIN)
-{
-	# LEADER
-	ZELENSKY = YES
+	RYAN - yes
+	MASK - yes
+	KUSYA - yes
+BFO
 
-	# FIELMARSHAL
-	ZALYZNIY = YES
+NEEDED TO FIX - 7
 
-	# GENERAL
+WUN
+	VALERIA - yes
+	DASHA - yes
+	INNA - yes
+	MIRKA - no #
+	SASHA - no #
+	NADUV - yes
+	SONYA - yes
+	SOFA - yes
+	NATAHA - yes
+	NASTYA - yes
+	NASTENA - no #
+	VLADA - yes
+	MARTISHKA - no #
+	ANNYA - no #
+	VIKA - yes
+	ALBINA - yes
+	BOGDAN - no #
+WUN
 
-	# ADMIRAL
+NEEDED TO FIX - 6
 
-	# ADVISOR
-}
+UKR
 
-WUN 
-{	
-	# LEADER
-	VALERIYA = YES
-	
-	# FIELMARSHAL
-
-	# GENERAL
-
-	# ADMIRAL
-
-	# ADVISOR
-}
-
-ICH (MAIN)
-{
-	# LEADER
-
-	# FIELMARSHAL
-
-	# GENERAL
-
-	# ADMIRAL
-
-	# ADVISOR
-}
-
-BLR (MAIN) 
-{
-	# LEADER
-
-	# FIELMARSHAL
-
-	# GENERAL
-
-	# ADMIRAL
-
-	# ADVISOR
-}
+UKR

@@ -1,4 +1,4 @@
-capital = 117 #Kiev
+capital = 2 #Kiev
 
 oob = "UKR_1936"
 
@@ -104,8 +104,6 @@ recruit_character = WUN_Valeriya
 # MINISTER
 
 # FIELDMARSHAL
+recruit_character = WUN_Mirka
 
 # GENERAL
-
-
-
