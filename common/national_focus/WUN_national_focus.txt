@@ -1,0 +1,189 @@
+focus_tree = {
+	id = WUN_FOCUS
+
+	country = { 
+		factor = 0
+		modifier = {
+			add = 10
+			tag = WUN
+		} 
+	}
+
+	initial_show_position = { focus = BFO_focus_austrian_rebellion }
+
+	default = no
+
+	focus = {
+		id = WUN_focus_marriage
+		icon = GFX_goal_support_fascism
+
+		cost = 0
+
+		x = 15
+		y = 0
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = WUN_focus_marriage_with_valeriya
+		icon = GFX_goal_support_fascism
+
+		cost = 0
+
+		prerequisite = { focus = WUN_focus_marriage }
+		mutually_exclusive = { focus = WUN_focus_marriage_with_mirka }
+		mutually_exclusive = { focus = WUN_focus_marriage_with_ksuha }
+		relative_position_id = WUN_focus_marriage 
+
+		x = 2
+		y = 1
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			promote_character = WUN_valeriya
+
+			set_country_leader_portrait = {
+				portrait = GFX_artem_valeriya
+			}
+		}
+	}
+
+	focus = {
+		id = WUN_focus_marriage_with_ksuha
+		icon = GFX_goal_support_fascism
+
+		cost = 0
+
+		x = 0
+		y = 1
+
+		prerequisite = { focus = WUN_focus_marriage }
+		mutually_exclusive = { focus = WUN_focus_marriage_with_valeriya }
+		mutually_exclusive = { focus = WUN_focus_marriage_with_mirka }
+		relative_position_id = WUN_focus_marriage 
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			promote_character = WUN_ksuha
+
+			set_country_leader_portrait = {
+				portrait = GFX_artem_ksuha
+			}
+		}
+	}
+
+	focus = {
+		id = WUN_focus_marriage_with_mirka
+		icon = GFX_goal_support_fascism
+
+		cost = 0
+
+		x = -2
+		y = 1
+
+		prerequisite = { focus = WUN_focus_marriage }
+		mutually_exclusive = { focus = WUN_focus_marriage_with_valeriya }
+		mutually_exclusive = { focus = WUN_focus_marriage_with_ksuha }
+		relative_position_id = WUN_focus_marriage 
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			promote_character = WUN_mirka
+
+			set_country_leader_portrait = {
+				portrait = GFX_artem_mirka
+			}
+		}
+	}
+
+	focus = {
+		id = WUN_focus_be_a_puppet
+		icon = GFX_goal_support_fascism
+
+		cost = 2
+
+		x = -3
+		y = 2
+
+		prerequisite = { 
+			focus = WUN_focus_marriage_with_valeriya
+			focus = WUN_focus_marriage_with_ksuha
+			focus = WUN_focus_marriage_with_mirka }
+		mutually_exclusive = { focus = WUN_focus_own_way }
+		relative_position_id = WUN_focus_marriage 
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = WUN_focus_own_way
+		icon = GFX_goal_support_fascism
+
+		cost = 2
+
+		x = 3
+		y = 2
+
+		prerequisite = { 
+			focus = WUN_focus_marriage_with_valeriya
+			focus = WUN_focus_marriage_with_ksuha
+			focus = WUN_focus_marriage_with_mirka }
+		mutually_exclusive = { focus = WUN_focus_be_a_puppet }
+		relative_position_id = WUN_focus_marriage 
+		
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 12
+		}
+
+		completion_reward = {
+			promote_character = WUN_eva
+
+			remove_country_leader_role = {
+				character = WUN_valeriya
+				ideology = egorism_centrism
+			}
+			remove_country_leader_role = {
+				character = WUN_ksuha
+				ideology = egorism_centrism
+			}
+			remove_country_leader_role = {
+				character = WUN_mirka
+				ideology = egorism_centrism
+			}
+		}
+	}
+}

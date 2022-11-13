@@ -2618,7 +2618,9 @@ focus_tree = {
 		y = 1
 
 		completion_reward = {
-
+			WUN = {
+				complete_national_focus = WUN_focus_marriage_with_ksuha
+			}
 		}
 	}
 
@@ -2639,7 +2641,9 @@ focus_tree = {
 		y = 1
 
 		completion_reward = {
-
+			WUN = {
+				complete_national_focus = WUN_focus_marriage_with_mirka
+			}
 		}
 	}
 
@@ -2660,7 +2664,9 @@ focus_tree = {
 		y = 1
 
 		completion_reward = {
-
+			WUN = {
+				complete_national_focus = WUN_focus_marriage_with_valeriya
+			}
 		}
 	}
 

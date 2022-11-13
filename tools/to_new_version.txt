@@ -1,0 +1,15 @@
+0.1.7.0
+
+ALL:
+- work with medals
+- fix bugs
+
+BFO:
+- change focus
+- add gfx
+- rework funny characters
+
+WUN:
+- add flag
+- new focus
+- add gfx

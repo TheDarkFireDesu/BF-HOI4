@@ -23,7 +23,7 @@ spriteTypes = {
 	# FIELDMARSHAL
 	spriteType = {
 		name = GFX_sofa_fieldmarshal # hari
-		texturefile = gfx/leaders/WUN/GFX_valeriya.dds
+		texturefile = gfx/leaders/WUN/GFX_sofa.dds
 	}
 	spriteType = {
 		name = GFX_naduv_fieldmarshal # nadya
