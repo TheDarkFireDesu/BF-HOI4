@@ -1,0 +1,16 @@
+spriteTypes = {
+
+	# WUN
+	spriteType = {
+		name = GFX_artem_mirka # WIP
+		texturefile = gfx/leaders/BFO/funny/GFX_kusya.dds
+	}
+	spriteType = {
+		name = GFX_artem_valeriya # WIP
+		texturefile = gfx/leaders/BFO/funny/GFX_kusya.dds
+	}
+	spriteType = {
+		name = GFX_artem_ksuha # WIP
+		texturefile = gfx/leaders/BFO/funny/GFX_kusya.dds
+	}
+}

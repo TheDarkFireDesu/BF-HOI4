@@ -97,13 +97,28 @@ set_popularities = {
 }
 
 # LEADER
-recruit_character = WUN_Valeriya
-
-# ADVISOR
-
-# MINISTER
+recruit_character = WUN_valeriya
+recruit_character = WUN_mirka
+recruit_character = WUN_ksuha
+recruit_character = WUN_eva
 
 # FIELDMARSHAL
-recruit_character = WUN_Mirka
+recruit_character = WUN_sofa
+recruit_character = WUN_naduv
+recruit_character = WUN_nastya
+recruit_character = WUN_nataha
+recruit_character = WUN_maha
 
 # GENERAL
+recruit_character = WUN_dasha
+recruit_character = WUN_inna
+recruit_character = WUN_sonya
+recruit_character = WUN_sonya_t
+recruit_character = WUN_sonya_n
+recruit_character = WUN_anna
+recruit_character = WUN_sasha
+
+# ADMIRAL
+recruit_character = WUN_vlada
+recruit_character = WUN_bogdan
+recruit_character = WUN_alena

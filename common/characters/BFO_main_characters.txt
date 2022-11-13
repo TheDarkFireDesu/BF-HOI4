@@ -48,13 +48,13 @@ characters = {
 		gender = female
 		portraits = {
 			civilian = {
-				large = GFX_alina_advisor
+				large = GFX_alina_leader
 				small = GFX_idea_agarkoff
 			}
 		}
 
 		country_leader = {
-			ideology = liberalism
+			ideology = egorism_centrism
 			traits = { great_architect } 
 			desc = BFO_alina_desc # WIP
 		}
@@ -75,13 +75,13 @@ characters = {
 		gender = female
 		portraits = {
 			civilian = {
-				large = GFX_jenya_advisor
+				large = GFX_jenya_leader
 				small = GFX_idea_jenya
 			}
 		}
 		
 		country_leader = {
-			ideology = despotism
+			ideology = egorism_centrism
 			traits = { popular_queen } 
 			desc = BFO_david_desc # WIP
 		}
@@ -110,7 +110,7 @@ characters = {
 		}
 
 		country_leader = {
-			ideology = nazism
+			ideology = egorism_centrism
 			traits = {} 
 			desc = BFO_nikitus_desc # WIP
 		}
@@ -471,6 +471,107 @@ characters = {
 		}
 	}
 
+	# ARKASHA
+	BFO_arkasha = {
+		name = BFO_arkasha
+		portraits = {
+			civilian = {
+				small = GFX_idea_arkasha
+			}
+			army = {
+				large = GFX_arkasha_general 
+			}
+		}
+
+		corps_commander = {
+			visible = { has_completed_focus = BFO_focus_create_headquarters }
+
+			skill = 5
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 3
+			traits = {} # FIX
+		}
+	}
+
+	# GLUH
+	BFO_artem_g = {
+		name = BFO_artem_g
+		portraits = {
+			civilian = {
+				small = GFX_idea_artem_g
+			}
+			army = {
+				large = GFX_artem_g_general 
+			}
+		}
+
+		corps_commander = {
+			visible = { has_completed_focus = BFO_focus_create_headquarters }
+
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 3
+			traits = {} # FIX
+		}
+	}
+
+	# EVSEY
+	BFO_evsey = {
+		name = BFO_evsey
+		portraits = {
+			civilian = {
+				small = GFX_idea_artem_g
+			}
+			army = {
+				large = GFX_evsey_general 
+			}
+		}
+
+		corps_commander = {
+			visible = { has_completed_focus = BFO_focus_create_headquarters }
+
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+			traits = {} # FIX
+		}
+	}
+
+	# MASANYA
+	BFO_masanya = {
+		name = BFO_masanya
+		portraits = {
+			civilian = {
+				small = GFX_idea_masanya
+			}
+			army = {
+				large = GFX_masanya_general 
+			}
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = masanya
+			traits = { quartermaster_general }
+		}
+		corps_commander = {
+			visible = { has_completed_focus = BFO_focus_create_headquarters }
+
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+			traits = {} # FIX
+		}
+	}
+
 	# ADMIRAL
 
 	# DONEL
@@ -541,15 +642,11 @@ characters = {
 	BFO_karas = {
 		name = BFO_karas
 		portraits = {
-			civilian = {
-				small = GFX_idea_karas # WIP
-			}
 			army = {
 				large = GFX_portrait_BFO_karas # WIP
 				small = GFX_idea_karas # WIP
 			}
 		}
-
 		navy_leader = {
 			visible = { has_completed_focus = BFO_focus_military_revolt }
 
@@ -560,7 +657,6 @@ characters = {
 			coordination_skill = 3
 			traits = {superior_tactician ironside spotter }
 		}
-
 		advisor = {
 			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = navy_chief
@@ -573,15 +669,11 @@ characters = {
 	BFO_coshalot = {
 		name = BFO_coshalot
 		portraits = {
-			civilian = {
-				small = GFX_idea_coshalot # WIP
-			}
 			army = {
 				large = GFX_portrait_BFO_coshalot # WIP
 				small = GFX_idea_coshalot # WIP
 			}
 		}
-
 		navy_leader = {
 			visible = { has_completed_focus = BFO_focus_military_revolt }
 
@@ -592,12 +684,28 @@ characters = {
 			coordination_skill = 2
 			traits = {seawolf silent_hunter torpedo_expert lone_wolf superior_tactician}
 		}
-
 		advisor = {
 			available = { has_completed_focus = BFO_focus_create_headquarters }
 			slot = air_chief
 			idea_token = vlad_coshalot
 			traits = {air_air_combat_training_3}
+		}
+	}
+
+	BFO_stepa = {
+		name = BFO_stepa
+		portraits = {
+			army = {
+				large = GFX_stepa_admiral
+			}
+		}
+		navy_leader = {
+			skill = 3
+			attack_skill = 4
+			defense_skill = 4
+			maneuvering_skill = 4
+			coordination_skill = 2
+			traits = {seawolf silent_hunter torpedo_expert lone_wolf superior_tactician}
 		}
 	}
 
@@ -634,22 +742,6 @@ characters = {
 			slot = political_advisor
 			idea_token = pehlik
 			traits = { backroom_backstabber }
-		}
-	}
-
-	# MASANYA
-	BFO_masanya = {
-		name = BFO_masanya
-		portraits = {
-			civilian = {
-				small = GFX_idea_masanya
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = masanya
-			traits = { quartermaster_general }
 		}
 	}
 }

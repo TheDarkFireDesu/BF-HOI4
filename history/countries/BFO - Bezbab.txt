@@ -50,6 +50,10 @@ recruit_character = BFO_nekit
 recruit_character = BFO_nikita
 recruit_character = BFO_timur
 recruit_character = BFO_vladik
+recruit_character = BFO_arkasha
+recruit_character = BFO_artem_g
+recruit_character = BFO_evsey
+recruit_character = BFO_masanya
 
 # NAVAL GENERAL
 recruit_character = BFO_donel
@@ -60,7 +64,6 @@ recruit_character = BFO_coshalot
 # ADVISOR
 recruit_character = BFO_sovec
 recruit_character = BFO_pehlik
-recruit_character = BFO_masanya
 
 # FUNNY
 recruit_character = BFO_ryan_gosler

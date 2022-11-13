@@ -1,5 +1,7 @@
 spriteTypes = {
 
+	# 17 gfx
+
 	# LEADER
 	spriteType = {
 		name = GFX_zelensky_leader
@@ -11,17 +13,14 @@ spriteTypes = {
 		name = GFX_arestovich_advisor
 		texturefile = gfx/leaders/UKR/GFX_arestovich.dds
 	}
-
 	spriteType = {
 		name = GFX_podolyak_advisor
 		texturefile = gfx/leaders/UKR/GFX_podolyak.dds
 	}
-
 	spriteType = {
 		name = GFX_jonhson_advisor
 		texturefile = gfx/leaders/UKR/GFX_johnson.dds
 	}
-
 	spriteType = {
 		name = GFX_danilov_advisor
 		texturefile = gfx/leaders/UKR/GFX_danilov.dds
@@ -32,17 +31,14 @@ spriteTypes = {
 		name = GFX_kuleba_advisor
 		texturefile = gfx/leaders/UKR/GFX_kuleba.dds
 	}
-
 	spriteType = {
 		name = GFX_reznikov_advisor
 		texturefile = gfx/leaders/UKR/GFX_reznikov.dds
 	}
-
 	spriteType = {
 		name = GFX_shmigal_advisor
 		texturefile = gfx/leaders/UKR/GFX_shmigal.dds
 	}
-
 	spriteType = {
 		name = GFX_komarovsky_advisor
 		texturefile = gfx/leaders/UKR/GFX_komarovsky.dds
@@ -53,12 +49,10 @@ spriteTypes = {
 		name = GFX_zalyzniy_fieldmarshal
 		texturefile = gfx/leaders/UKR/GFX_zalyzniy.dds
 	}
-
 	spriteType = {
 		name = GFX_syrskiy_fieldmarshal
 		texturefile = gfx/leaders/UKR/GFX_syrskiy.dds
 	}
-
 	spriteType = {
 		name = GFX_shaptala_fieldmarshal
 		texturefile = gfx/leaders/UKR/GFX_shaptala.dds
@@ -69,22 +63,18 @@ spriteTypes = {
 		name = GFX_kim_general
 		texturefile = gfx/leaders/UKR/GFX_kim.dds
 	}
-
 	spriteType = {
 		name = GFX_marchenko_general
 		texturefile = gfx/leaders/UKR/GFX_marchenko.dds
 	}
-
 	spriteType = {
 		name = GFX_mirgorodskiy_general
 		texturefile = gfx/leaders/UKR/GFX_mirgorodskiy.dds
 	}
-
 	spriteType = {
 		name = GFX_kryk_general
 		texturefile = gfx/leaders/UKR/GFX_kryk.dds
 	}
-
 	spriteType = {
 		name = GFX_galushkin_general
 		texturefile = gfx/leaders/UKR/GFX_galushkin.dds

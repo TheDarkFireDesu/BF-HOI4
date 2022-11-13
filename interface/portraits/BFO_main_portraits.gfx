@@ -1,13 +1,23 @@
 spriteTypes = {
+
+	# 17 gfx
+
 	# LEADER
+	spriteType = {
+		name = GFX_interim_council
+		texturefile = gfx/leaders/BFO/GFX_interim_council.dds
+	}
 	spriteType = {
 		name = GFX_egor_leader
 		texturefile = gfx/leaders/BFO/GFX_egor.dds
 	}
-
 	spriteType = {
-		name = GFX_interim_council
-		texturefile = gfx/leaders/BFO/GFX_interim_council.dds
+		name = GFX_alina_leader
+		texturefile = gfx/leaders/BFO/GFX_alina.dds
+	}
+	spriteType = {
+		name = GFX_jenya_leader
+		texturefile = gfx/leaders/BFO/GFX_jenya.dds
 	}
 
 	# FIELDMARSHAL
@@ -15,22 +25,18 @@ spriteTypes = {
 		name = GFX_keril_fieldmarshal
 		texturefile = gfx/leaders/BFO/GFX_keril.dds
 	}
-
 	spriteType = {
 		name = GFX_ruslan_fieldmarshal
 		texturefile = gfx/leaders/BFO/GFX_ruslan.dds
 	}
-
 	spriteType = {
 		name = GFX_sanya_k_fieldmarshal
 		texturefile = gfx/leaders/BFO/GFX_sanya_k.dds
 	}
-
 	spriteType = {
 		name = GFX_artem_n_fieldmarshal
 		texturefile = gfx/leaders/BFO/GFX_artem_n.dds
 	}
-
 	spriteType = {
 		name = GFX_artem_fieldmarshal
 		texturefile = gfx/leaders/BFO/GFX_artem.dds
@@ -41,30 +47,41 @@ spriteTypes = {
 		name = GFX_sanya_b_general
 		texturefile = gfx/leaders/BFO/GFX_sanya_b.dds
 	}
-
 	spriteType = {
 		name = GFX_misha_general
 		texturefile = gfx/leaders/BFO/GFX_misha.dds
 	}
-
 	spriteType = {
 		name = GFX_nekit_general
 		texturefile = gfx/leaders/BFO/GFX_nekit.dds 
 	}
-
 	spriteType = {
-		name = GFX_nikita_gemeral
+		name = GFX_nikita_gemeral # WIP
 		texturefile = gfx/leaders/BFO/GFX_nikita.dds
 	}
-
 	spriteType = {
 		name = GFX_timur_general
 		texturefile = gfx/leaders/BFO/GFX_timur.dds 
 	}
-
 	spriteType = {
-		name = GFX_vladik_general
+		name = GFX_vladik_general # WIP
 		texturefile = gfx/leaders/BFO/GFX_vladik.dds
+	}
+	spriteType = {
+		name = GFX_arkasha_general
+		texturefile = gfx/leaders/BFO/GFX_arkasha.dds
+	}
+	spriteType = {
+		name = GFX_artem_g_general
+		texturefile = gfx/leaders/BFO/GFX_artem_g.dds
+	}
+	spriteType = {
+		name = GFX_evsey_general
+		texturefile = gfx/leaders/BFO/GFX_evsey.dds
+	}
+	spriteType = {
+		name = GFX_masanya_general
+		texturefile = gfx/leaders/BFO/GFX_masanya.dds
 	}
 
 	# ADMIRAL
@@ -72,35 +89,24 @@ spriteTypes = {
 		name = GFX_donel_admiral
 		texturefile = gfx/leaders/BFO/GFX_donel.dds
 	}
-
 	spriteType = {
 		name = GFX_ksuha_admiral
 		texturefile = gfx/leaders/BFO/GFX_ksuha.dds
 	}
-
 	spriteType = {
-		name = GFX_karas_admiral
+		name = GFX_karas_admiral # WIP
 		texturefile = gfx/leaders/BFO/GFX_karas.dds
 	}
-
 	spriteType = {
-		name = GFX_coshalot_admiral
+		name = GFX_stepa_admiral
+		texturefile = gfx/leaders/BFO/GFX_stepa.dds
+	}
+	spriteType = {
+		name = GFX_coshalot_admiral # WIP
 		texturefile = gfx/leaders/BFO/GFX_coshalot.dds
 	}
-
-	# ADVISOR
 	spriteType = {
-		name = GFX_jenya_advisor
-		texturefile = gfx/leaders/BFO/GFX_jenya.dds
-	}
-
-	spriteType = {
-		name = GFX_alena_advisor
-		texturefile = gfx/leaders/BFO/GFX_alena.dds
-	}
-
-	spriteType = {
-		name = GFX_alina_advisor
-		texturefile = gfx/leaders/BFO/GFX_alina.dds
+		name = GFX_cocush_admiral # WIP
+		texturefile = gfx/leaders/BFO/GFX_cocush.dds
 	}
 }

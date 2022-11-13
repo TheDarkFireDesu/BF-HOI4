@@ -1,8 +1,11 @@
 characters = {
 	
-	WUN_Valeriya = {
-		name = WUN_Valeriya
+	WUN_valeriya = {
+		name = WUN_valeriya
 		portraits = {
+			civilian = {
+				large = GFX_valeriya_leader
+			}
 			army = {
 				large = GFX_valeriya_leader
 				small = GFX_idea_valeryia
@@ -11,9 +14,7 @@ characters = {
 		country_leader = {
 			ideology = egorism_centrism
 		}
-
 		field_marshal = {
-
 			skill = 5
 			attack_skill = 5
 			defense_skill = 5
@@ -24,21 +25,352 @@ characters = {
 	}
 
 	WUN_mirka = {
-		name = WUN_Valeriya
+		name = WUN_mirka
 		portraits = {
+			civilian = {
+				large = GFX_mirka_leader
+			}
 			army = {
-				large = GFX_mirka_fieldmarshal
+				large = GFX_mirka_leader
 				small = GFX_idea_mirka
 			}
 		}
+		country_leader = {
+			ideology = egorism_centrism
+		}
 		field_marshal = {
-
 			skill = 5
 			attack_skill = 5
 			defense_skill = 5
 			planning_skill = 5
 			logistics_skill = 5
 			traits = {trait_cautious armor_officer war_hero trickster panzer_expert skirmisher commando}
+		}
+	}
+
+	WUN_ksuha = {
+		name = WUN_ksuha
+		portraits = {
+			civilian = {
+				large = GFX_ksuha_leader
+			}
+			army = {
+				large = GFX_ksuha_leader
+				small = GFX_idea_ksuha
+			}
+		}
+		country_leader = {
+			ideology = egorism_centrism
+		}
+		field_marshal = {
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			traits = {trait_cautious armor_officer war_hero trickster panzer_expert skirmisher commando}
+		}
+	}
+
+	WUN_eva = {
+		name = WUN_eva
+		portraits = {
+			civilian = {
+				large = GFX_eva_leader
+			}
+			army = {
+				large = GFX_eva_leader
+				small = GFX_idea_eva
+			}
+		}
+		country_leader = {
+			ideology = egorism_centrism
+		}
+		field_marshal = {
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			traits = {trait_cautious armor_officer war_hero trickster panzer_expert skirmisher commando}
+		}
+	}
+
+	
+	# FIELDMARSHAL
+	WUN_sofa = {
+		name = WUN_sofa
+		portraits = {
+			army = {
+				large = GFX_sofa_fieldmarshal
+				small = GFX_idea_sofa
+			}
+		}
+		field_marshal = {
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			traits = {trait_cautious armor_officer war_hero trickster panzer_expert skirmisher commando}
+		}
+	}
+
+	WUN_naduv = {
+		name = WUN_naduv
+		portraits = {
+			army = {
+				large = GFX_naduv_fieldmarshal
+				small = GFX_idea_naduv
+			}
+		}
+		field_marshal = {
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			traits = {trait_cautious armor_officer war_hero trickster panzer_expert skirmisher commando}
+		}
+	}
+
+	WUN_nastya = {
+		name = WUN_nastya
+		portraits = {
+			army = {
+				large = GFX_nastya_fieldmarshal
+				small = GFX_idea_nastya
+			}
+		}
+		field_marshal = {
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			traits = {trait_cautious armor_officer war_hero trickster panzer_expert skirmisher commando}
+		}
+	}
+
+	WUN_nataha = {
+		name = WUN_nataha
+		portraits = {
+			army = {
+				large = GFX_nataha_fieldmarshal
+				small = GFX_idea_nataha
+			}
+		}
+		field_marshal = {
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			traits = {trait_cautious armor_officer war_hero trickster panzer_expert skirmisher commando}
+		}
+	}
+
+	WUN_maha = {
+		name = WUN_maha
+		portraits = {
+			army = {
+				large = GFX_maha_fieldmarshal
+				small = GFX_idea_maha
+			}
+		}
+		field_marshal = {
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			traits = {trait_cautious armor_officer war_hero trickster panzer_expert skirmisher commando}
+		}
+	}
+
+	# GENERAL
+
+	WUN_dasha = {
+		name = WUN_dasha
+		portraits = {
+			army = {
+				large = GFX_dasha_general
+				small = GFX_idea_dasha
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+			traits = { war_hero brilliant_strategist engineer_officer trait_engineer fortress_buster } 
+		}
+	}
+
+	WUN_inna = {
+		name = WUN_inna
+		portraits = {
+			army = {
+				large = GFX_inna_general
+				small = GFX_idea_inna
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+			traits = { war_hero brilliant_strategist engineer_officer trait_engineer fortress_buster } 
+		}
+	}
+
+	WUN_sonya = {
+		name = WUN_sonya
+		portraits = {
+			civilian = {
+				large = GFX_sonya_general
+			}
+			army = {
+				large = GFX_sonya_general
+				small = GFX_idea_sonya
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+			traits = { war_hero brilliant_strategist engineer_officer trait_engineer fortress_buster } 
+		}
+	}
+
+	WUN_sonya_t = {
+		name = WUN_sonya_t
+		portraits = {
+			army = {
+				large = GFX_sonya_t_general
+				small = GFX_idea_sonya_t
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+			traits = { war_hero brilliant_strategist engineer_officer trait_engineer fortress_buster } 
+		}
+	}
+
+	WUN_sonya_n = {
+		name = WUN_sonya_n 
+		portraits = {
+			army = {
+				large = GFX_sonya_n_general
+				small = GFX_idea_sonya_n 
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+			traits = { war_hero brilliant_strategist engineer_officer trait_engineer fortress_buster } 
+		}
+	}
+
+	WUN_anna = {
+		name = WUN_anna
+		portraits = {
+			army = {
+				large = GFX_anna_general
+				small = GFX_idea_anna
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+			traits = { war_hero brilliant_strategist engineer_officer trait_engineer fortress_buster } 
+		}
+	}
+
+	WUN_sasha = {
+		name = WUN_sasha
+		portraits = {
+			army = {
+				large = GFX_sasha_general
+				small = GFX_idea_sasha
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+			traits = { war_hero brilliant_strategist engineer_officer trait_engineer fortress_buster } 
+		}
+	}
+
+	# ADMIRAL
+	WUN_vlada = {
+		name = WUN_vlada
+		portraits = {
+			army = {
+				large = GFX_vlada_admiral
+				small = GFX_idea_vlada
+			}
+		}
+		navy_leader = {
+			skill = 3
+			attack_skill = 4
+			defense_skill = 4
+			maneuvering_skill = 4
+			coordination_skill = 2
+			traits = {seawolf silent_hunter torpedo_expert lone_wolf superior_tactician}
+		}
+	}
+
+	WUN_bogdan = {
+		name = WUN_sasha
+		portraits = {
+			army = {
+				large = GFX_bogdan_admiral
+				small = GFX_idea_bogdan
+			}
+		}
+		navy_leader = {
+			skill = 3
+			attack_skill = 4
+			defense_skill = 4
+			maneuvering_skill = 4
+			coordination_skill = 2
+			traits = {seawolf silent_hunter torpedo_expert lone_wolf superior_tactician}
+		}
+	}
+
+	WUN_alena = {
+		name = WUN_alena
+		portraits = {
+			army = {
+				large = GFX_alena_admiral
+				small = GFX_idea_alena
+			}
+		}
+		navy_leader = {
+			skill = 3
+			attack_skill = 4
+			defense_skill = 4
+			maneuvering_skill = 4
+			coordination_skill = 2
+			traits = {seawolf silent_hunter torpedo_expert lone_wolf superior_tactician}
 		}
 	}
 }

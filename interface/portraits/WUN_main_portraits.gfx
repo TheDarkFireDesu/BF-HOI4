@@ -1,0 +1,88 @@
+spriteTypes = {
+
+	# 19 gfx
+
+	# LEADER
+	spriteType = {
+		name = GFX_valeriya_leader # valera
+		texturefile = gfx/leaders/WUN/GFX_valeriya.dds
+	}
+	spriteType = {
+		name = GFX_mirka_leader # miro WIP
+		texturefile = gfx/leaders/WUN/GFX_mirka.dds
+	}
+	spriteType = {
+		name = GFX_ksuha_leader # ksu
+		texturefile = gfx/leaders/BFO/GFX_ksuha.dds
+	}
+	spriteType = {
+		name = GFX_eva_leader # eva
+		texturefile = gfx/leaders/WUN/GFX_eva.dds
+	}
+
+	# FIELDMARSHAL
+	spriteType = {
+		name = GFX_sofa_fieldmarshal # hari
+		texturefile = gfx/leaders/WUN/GFX_valeriya.dds
+	}
+	spriteType = {
+		name = GFX_naduv_fieldmarshal # nadya
+		texturefile = gfx/leaders/WUN/GFX_naduv.dds
+	}
+	spriteType = {
+		name = GFX_nataha_fieldmarshal # bra
+		texturefile = gfx/leaders/WUN/GFX_nataha.dds
+	}
+	spriteType = {
+		name = GFX_nastya_fieldmarshal # eli
+		texturefile = gfx/leaders/WUN/GFX_nastya.dds
+	}
+	spriteType = {
+		name = GFX_maha_fieldmarshal # masha WIP
+		texturefile = gfx/leaders/WUN/GFX_maha.dds
+	}
+
+	# GENERAL
+	spriteType = {
+		name = GFX_dasha_general # daha
+		texturefile = gfx/leaders/WUN/GFX_dasha.dds
+	}
+	spriteType = {
+		name = GFX_inna_general # innulik
+		texturefile = gfx/leaders/WUN/GFX_inna.dds
+	}
+	spriteType = {
+		name = GFX_sonya_general # juli
+		texturefile = gfx/leaders/WUN/GFX_sonya.dds
+	}
+	spriteType = {
+		name = GFX_sonya_t_general # teo
+		texturefile = gfx/leaders/WUN/GFX_sonya_t.dds
+	}
+	spriteType = {
+		name = GFX_sonya_n_general # nerush
+		texturefile = gfx/leaders/WUN/GFX_sonya_n.dds
+	}
+	spriteType = {
+		name = GFX_anna_general # anna WIP
+		texturefile = gfx/leaders/WUN/GFX_anna.dds
+	}
+	spriteType = {
+		name = GFX_sasha_general # sasha WIP
+		texturefile = gfx/leaders/WUN/GFX_sasha.dds
+	}
+
+	# ADMIRAL
+	spriteType = {
+		name = GFX_vlada_admiral # vlada
+		texturefile = gfx/leaders/WUN/GFX_vlada.dds
+	}
+	spriteType = {
+		name = GFX_bogdan_admiral # bogd WIP
+		texturefile = gfx/leaders/WUN/GFX_bogdan.dds
+	}
+	spriteType = {
+		name = GFX_alena_admiral # alen
+		texturefile = gfx/leaders/WUN/GFX_alena.dds
+	}
+}
