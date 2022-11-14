@@ -177,7 +177,7 @@ characters = {
 			traits = { trait_cautious naval_invader war_hero urban_assault_specialist naval_liason }
 		}
 		country_leader = {
-			ideology = anarchist_communism
+			ideology = egorism_centrism
 			traits = { dictator } 
 			desc = BFO_ruslan_desc
 		}

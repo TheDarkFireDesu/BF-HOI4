@@ -112,4 +112,31 @@ BFO_debug_category = {
 			}
 		}
 	}
+
+	WUN_create = {
+		available = {
+			is_ai = no
+			is_debug = yes
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		icon = generic_form_nation
+
+		complete_effect = {
+
+			WUN = {
+
+				transfer_state = 2
+				add_state_core = 157
+
+				change_tag_from = ROOT
+			}
+		}
+	}
 }

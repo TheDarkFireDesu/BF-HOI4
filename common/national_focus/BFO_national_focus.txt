@@ -707,15 +707,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 
 		completion_reward = {
-			set_politics = {
-				ruling_party = communism
-				elections_allowed = no
-			}
-
-			promote_character = {
-				character = BFO_ruslan
-				ideology = anarchist_communism
-			} 
+			promote_character = BFO_ruslan
 		}
 	}
 
@@ -733,15 +725,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 
 		completion_reward = {
-			set_politics = {
-				ruling_party = democratic
-				elections_allowed = yes
-			}
-
-			promote_character = {
-				character = BFO_agarkoff
-				ideology = liberalism
-			} 
+			promote_character = BFO_agarkoff
 		}
 	}
 
@@ -759,14 +743,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 
 		completion_reward = {
-			set_politics = {
-				ruling_party = neutrality
-			}
-
-			promote_character = {
-				character = BFO_david
-				ideology = despotism
-			} 
+			promote_character = BFO_david
 		}
 	}
 
@@ -784,14 +761,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 
 		completion_reward = {
-			set_politics = {
-				ruling_party = communism
-			}
-
-			promote_character = {
-				character = BFO_nikitus
-				ideology = nazism
-			} 
+			promote_character = BFO_nikitus
 		}
 	}
 
@@ -809,11 +779,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 
 		completion_reward = {
-
-			promote_character = {
-				character = BFO_egor
-				ideology = egorism_centrism
-			} 
+			promote_character = BFO_egor
 		}
 	}
 
@@ -841,60 +807,13 @@ focus_tree = {
 			unlock_national_focus = BFO_focus_prepare_to_war_with_ger
 
 			hidden_effect = {
-					BFO = { set_country_flag = BFO_election_is_end_flag }
-
-				IF = {
-					limit = { has_completed_focus = BFO_focus_win_ruslan }
-
-					set_popularities = {
-						democratic = 10
-						neutrality = 10
-						fascism = 10
-						egorism = 10
-						communism = 60
-					}
-				}
-				ELSE_IF = {
-					limit = { has_completed_focus = BFO_focus_win_alina }
-					
-					set_popularities = {
-						democratic = 60
-						neutrality = 10
-						fascism = 10
-						egorism = 10
-						communism = 10
-					}
-				}
-				ELSE_IF = {
-					limit = { has_completed_focus = BFO_focus_win_jenya }
-					
-					set_popularities = {
-						democratic = 10
-						neutrality = 60
-						fascism = 10
-						egorism = 10
-						communism = 10
-					}
-				}
-				ELSE_IF = {
-					limit = { has_completed_focus = BFO_focus_win_nikita }
-					
-					set_popularities = {
-						democratic = 10
-						neutrality = 10
-						fascism = 60
-						egorism = 10
-						communism = 10
-					}
-				}
-				ELSE = {
-					set_popularities = {
-						democratic = 10
-						neutrality = 10
-						fascism = 10
-						egorism = 60
-						communism = 10
-					}
+				BFO = { set_country_flag = BFO_election_is_end_flag }					
+				set_popularities = {
+					democratic = 10
+					neutrality = 10
+					fascism = 10
+					egorism = 60
+					communism = 10
 				}
 			}
 		}
