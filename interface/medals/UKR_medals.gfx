@@ -1,0 +1,18 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_UKR_medal_1
+		texturefile = gfx/interface/medals/UKR/GFX_UKR_medal_1.dds
+	}
+	spriteType = {
+		name = GFX_UKR_medal_2
+		texturefile = gfx/interface/medals/UKR/GFX_UKR_medal_2.dds
+	}
+	spriteType = {
+		name = GFX_UKR_medal_3
+		texturefile = gfx/interface/medals/UKR/GFX_UKR_medal_3.dds
+	}
+	spriteType = {
+		name = GFX_UKR_medal_4
+		texturefile = gfx/interface/medals/UKR/GFX_UKR_medal_4.dds
+	}
+}

@@ -2,47 +2,42 @@
 
 unit_medals = {
 	
-	iron_cross_second_class = {
-		
+	defender_of_the_fatherland = {
+
 		available = { should_have_ukr_medals_trigger = yes }
-		frame = 1
-		icon = "GFX_medal_icon_ger"
+		icon = GFX_UKR_medal_1
 		
 		cost = @cost
 		
 		unit_modifiers = {
 			army_org_factor = 0.1
 		}
-		
 		one_time_effect = {
 			add_divisional_commander_xp = 100
 		}
-		
 	}
 	
-	knights_cross = {
+	
+	for_impeccable_service_second_class = {
 		
 		available = { should_have_ukr_medals_trigger = yes }
-		frame = 2
-		icon = "GFX_medal_icon_ger"
+		icon = GFX_UKR_medal_2
 		
 		cost = @cost
 		
 		unit_modifiers = {
 			recon_factor = 0.15
 		}
-		
 		one_time_effect = {
 			add_divisional_commander_xp = 100
 		}
 		
 	}
 	
-	knights_cross_oak_leaves = {
+	for_impeccable_service_first_class = {
 		
 		available = { should_have_ukr_medals_trigger = yes }
-		frame = 3
-		icon = "GFX_medal_icon_ger"
+		icon = GFX_UKR_medal_3
 		
 		cost = @cost
 		
@@ -50,7 +45,6 @@ unit_medals = {
 			army_fuel_consumption_factor = -0.075
 			supply_consumption_factor = -0.075
 		}
-		
 		one_time_effect = {
 			add_divisional_commander_xp = 100
 		}
@@ -60,18 +54,15 @@ unit_medals = {
 	hero_of_ukraine = {
 		
 		available = { should_have_ukr_medals_trigger = yes }
-		frame = 4
-		icon = "GFX_medal_icon_ger"
+		icon = GFX_UKR_medal_4
 		
 		cost = @cost
 		
 		unit_modifiers = {
 			breakthrough_factor = 0.075
 		}
-		
 		one_time_effect = {
 			add_divisional_commander_xp = 100
 		}
-		
 	}
 }

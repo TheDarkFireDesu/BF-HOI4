@@ -1,7 +1,6 @@
-should_have_bfo_medals_trigger = {
-	original_tag = BFO
-}
-
-should_have_ukr_medals_trigger = {
-	original_tag = UKR
-}
+should_have_bfo_medals_trigger = { original_tag = BFO }
+should_have_ukr_medals_trigger = { original_tag = UKR }
+should_have_wun_medals_trigger = { original_tag = WUN }
+should_have_ich_medals_trigger = { original_tag = ICH }
+should_have_blr_medals_trigger = { original_tag = BLR }
+should_have_ani_medals_trigger = { original_tag = ANI }
