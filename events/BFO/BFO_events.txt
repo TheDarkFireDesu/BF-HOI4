@@ -26,33 +26,54 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = bfo_news_events.1.a
+		name = bfo_election.1.a
 		hidden_effect = {
 			complete_national_focus = BFO_focus_win_ruslan
 		}
 	}
 	option = {
-		name = bfo_news_events.1.b
+		name = bfo_election.1.b
 		hidden_effect = {
 			complete_national_focus = BFO_focus_win_alina
 		}
 	}
 	option = {
-		name = bfo_news_events.1.c
+		name = bfo_election.1.c
 		hidden_effect = {
 			complete_national_focus = BFO_focus_win_jenya
 		}
 	}
 	option = {
-		name = bfo_news_events.1.e
+		name = bfo_election.1.e
 		hidden_effect = {
 			complete_national_focus = BFO_focus_win_nikita
 		}
 	}
 	option = {
-		name = bfo_news_events.1.f
+		name = bfo_election.1.f
 		hidden_effect = {
 			complete_national_focus = BFO_focus_win_egor
+		}
+	}
+}
+
+country_event = {
+	id = bfo_election.2
+	title = bfo_election.2.t
+	desc = bfo_election.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = bfo_election.2.a # Политика федерализации
+		hidden_effect = {
+			complete_national_focus = BFO_focus_federalization
+		}
+	}
+	option = {
+		name = bfo_election.2.b # Политика унитаризации
+		hidden_effect = {
+			complete_national_focus = BFO_focus_unitarity
 		}
 	}
 }

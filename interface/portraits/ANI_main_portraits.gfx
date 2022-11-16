@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_ryan_gosler_general
+		texturefile = gfx/leaders/ANI/GFX_ryan_gosler.dds
+	}
+}

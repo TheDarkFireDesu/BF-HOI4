@@ -1,0 +1,28 @@
+
+set_politics = {
+	ruling_party = egorism
+	last_election = "1933.4.5"
+	election_frequency = 96
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 0
+	fascism = 0
+	communism = 0
+	egorism = 100
+}
+
+# LEADER
+recruit_character = CAT_monti
+
+# FIELDMARSHAL
+recruit_character = CAT_kusya
+recruit_character = CAT_chopix
+
+
+# GENERAL
+recruit_character = CAT_chopix_jun
+
+
+# ADMIRAL

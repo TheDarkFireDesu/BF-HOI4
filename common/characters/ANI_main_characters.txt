@@ -1,15 +1,15 @@
 characters = {
-	BFO_ilon_mask = {
-		name = BFO_ilon_mask
+	
+	# Fieldmarshal
+	
+	ANI_ryan_gosler = {
+		name = ANI_ryan_gosler
 		portraits = {
 			army = {
-				large = GFX_ilon_mask_general
-				small = GFX_idea_ilon
+				large = GFX_ryan_gosler_general
 			}
 		}
 		field_marshal = {
-			visible = { has_completed_focus = BFO_focus_create_headquarters }
-
 			skill = 5
 			attack_skill = 5
 			defense_skill = 5

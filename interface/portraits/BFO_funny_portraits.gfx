@@ -1,15 +1,4 @@
 spriteTypes = {
-
-	spriteType = {
-		name = GFX_kusya_fieldmarshal
-		texturefile = gfx/leaders/BFO/funny/GFX_kusya.dds
-	}
-
-	spriteType = {
-		name = GFX_ryan_gosler_general
-		texturefile = gfx/leaders/BFO/funny/GFX_ryan_gosler.dds
-	}
-
 	spriteType = {
 		name = GFX_ilon_mask_general
 		texturefile = gfx/leaders/BFO/funny/GFX_ilon_mask.dds

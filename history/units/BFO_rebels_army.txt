@@ -23,39 +23,52 @@ division_template = {
 }
 
 units = {
-
     division= {	
 		name = "За Мариуполь!"
 		location = 668
 		division_template = "Sturm-otryadi im. Egora"
-		start_experience_factor = 0.5
+		start_experience_factor = 1
 	}
-
 	division= {	
 		name = "За Бучу!" 
-		location = 6673
+		location = 668
 		division_template = "Sturm-otryadi im. Egora"
-		start_experience_factor = 0.5
+		start_experience_factor = 0.8
 	}
-
 	division= {	
 		name = "За Лисичанск!" 
 		location = 6673
 		division_template = "Sturm-otryadi im. Egora"
 		start_experience_factor = 1
 	}
-
+	division= {	
+		name = "За Херсон!"
+		location = 6673
+		division_template = "Sturm-otryadi im. Egora"
+		start_experience_factor = 0.8
+	}
 	division= {	
 		name = "За Ирпень!"
 		location = 3675
 		division_template = "Sturm-otryadi im. Egora"
 		start_experience_factor = 0.5
 	}
-
 	division= {	
-		name = "За Изюм!"
+		name = "За Донецк!"
 		location = 3675
 		division_template = "Sturm-otryadi im. Egora"
 		start_experience_factor = 0.5
+	}
+	division= {	
+		name = "За Луганск!"
+		location = 3675
+		division_template = "Sturm-otryadi im. Egora"
+		start_experience_factor = 1
+	}
+	division= {	
+		name = "За Мелитополь!"
+		location = 3675
+		division_template = "Sturm-otryadi im. Egora"
+		start_experience_factor = 1
 	}
 }

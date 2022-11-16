@@ -1,0 +1,76 @@
+characters = {
+
+	# Leaders
+	CAT_monti = {
+		name = CAT_monti
+		portraits = {
+			civilian = {
+				large = GFX_monti_leader
+			}
+		}
+
+		country_leader = {
+			ideology = egorism_centrism
+			traits = {}
+			desc = CAT_monti
+		}
+	}
+
+	# Fieldmarshal
+
+	CAT_kusya = {
+		name = CAT_kusya
+		portraits = {
+			army = {
+				large = GFX_kusya_fieldmarshal
+				small = GFX_idea_kusya
+			}
+		}
+		field_marshal = {
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			traits = {trait_cautious armor_officer war_hero trickster panzer_expert skirmisher commando}
+		}
+	}
+
+	CAT_chopix = {
+		name = CAT_chopix
+		portraits = {
+			army = {
+				large = GFX_chopix_fieldmarshal
+				small = GFX_idea_chopix
+			}
+		}
+		field_marshal = {
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			traits = {trait_cautious armor_officer war_hero trickster panzer_expert skirmisher commando}
+		}
+	}
+
+	# Generals
+
+	CAT_chopix_jun = {
+		name = CAT_chopix_jun
+		portraits = {
+			army = {
+				large = GFX_chopix_jun_general
+				small = GFX_idea_chopix
+			}
+		}
+		corps_commander = {
+			skill = 5
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
+			traits = {organizer offensive_doctrine aggressive_assaulter desert_fox skirmisher commando}
+		}
+	}
+}

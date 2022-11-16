@@ -1,0 +1,23 @@
+spriteTypes = {
+	# LEADER
+	spriteType = {
+		name = GFX_monti_leader
+		texturefile = gfx/leaders/CAT/GFX_monti.dds
+	}
+
+	# FIELDMARSHAL
+	spriteType = {
+		name = GFX_kusya_fieldmarshal
+		texturefile = gfx/leaders/CAT/GFX_kusya.dds
+	}
+	spriteType = {
+		name = GFX_chopix_fieldmarshal
+		texturefile = gfx/leaders/CAT/GFX_chopix.dds
+	}
+
+	# GENERALS
+	spriteType = {
+		name = GFX_chopix_jun_general
+		texturefile = gfx/leaders/CAT/GFX_chopix_jun.dds
+	}
+}
